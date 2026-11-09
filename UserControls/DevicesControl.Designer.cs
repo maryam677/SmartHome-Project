@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DevicesControl));
             lblDevicesTitle = new Label();
             lblDevicesSubtitle = new Label();
             btnAddDevice = new Button();
@@ -70,6 +71,9 @@
             lblonline3 = new Label();
             lblGarage = new Label();
             lblGarageDoor = new Label();
+            piccamera1 = new PictureBox();
+            picdoorlock = new PictureBox();
+            pictureBox1 = new PictureBox();
             pnlOfflineDevices.SuspendLayout();
             pnlTotalDevices.SuspendLayout();
             pnlOnlineDevices.SuspendLayout();
@@ -79,6 +83,9 @@
             pnlSmartLock.SuspendLayout();
             pnlSmartPlug.SuspendLayout();
             pnlGarage.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)piccamera1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)picdoorlock).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
             // lblDevicesTitle
@@ -208,6 +215,7 @@
             // pnlCamera
             // 
             pnlCamera.BackColor = Color.FromArgb(32, 38, 77);
+            pnlCamera.Controls.Add(piccamera1);
             pnlCamera.Controls.Add(btnCameraDetails);
             pnlCamera.Controls.Add(lblCameraStatus);
             pnlCamera.Controls.Add(lblCameraRoom);
@@ -224,7 +232,7 @@
             btnCameraDetails.Cursor = Cursors.Hand;
             btnCameraDetails.FlatAppearance.BorderSize = 0;
             btnCameraDetails.FlatStyle = FlatStyle.Flat;
-            btnCameraDetails.Location = new Point(360, 99);
+            btnCameraDetails.Location = new Point(379, 95);
             btnCameraDetails.Name = "btnCameraDetails";
             btnCameraDetails.Size = new Size(94, 29);
             btnCameraDetails.TabIndex = 3;
@@ -237,16 +245,17 @@
             // 
             lblCameraStatus.AutoSize = true;
             lblCameraStatus.ForeColor = Color.FromArgb(90, 220, 150);
-            lblCameraStatus.Location = new Point(26, 95);
+            lblCameraStatus.Location = new Point(173, 106);
             lblCameraStatus.Name = "lblCameraStatus";
             lblCameraStatus.Size = new Size(75, 23);
             lblCameraStatus.TabIndex = 2;
             lblCameraStatus.Text = "● Online";
+            lblCameraStatus.Click += lblCameraStatus_Click;
             // 
             // lblCameraRoom
             // 
             lblCameraRoom.AutoSize = true;
-            lblCameraRoom.Location = new Point(26, 55);
+            lblCameraRoom.Location = new Point(173, 44);
             lblCameraRoom.Name = "lblCameraRoom";
             lblCameraRoom.Size = new Size(77, 23);
             lblCameraRoom.TabIndex = 1;
@@ -256,7 +265,7 @@
             // 
             lblCameraName.AutoSize = true;
             lblCameraName.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblCameraName.Location = new Point(26, 20);
+            lblCameraName.Location = new Point(173, 16);
             lblCameraName.Name = "lblCameraName";
             lblCameraName.Size = new Size(192, 28);
             lblCameraName.TabIndex = 0;
@@ -379,6 +388,7 @@
             // pnlSmartLock
             // 
             pnlSmartLock.BackColor = Color.FromArgb(32, 38, 77);
+            pnlSmartLock.Controls.Add(picdoorlock);
             pnlSmartLock.Controls.Add(btnview);
             pnlSmartLock.Controls.Add(lblonline);
             pnlSmartLock.Controls.Add(lblenterence2);
@@ -395,7 +405,7 @@
             btnview.Cursor = Cursors.Hand;
             btnview.FlatAppearance.BorderSize = 0;
             btnview.FlatStyle = FlatStyle.Flat;
-            btnview.Location = new Point(360, 100);
+            btnview.Location = new Point(360, 95);
             btnview.Name = "btnview";
             btnview.Size = new Size(94, 29);
             btnview.TabIndex = 7;
@@ -408,7 +418,7 @@
             // 
             lblonline.AutoSize = true;
             lblonline.ForeColor = Color.FromArgb(90, 220, 150);
-            lblonline.Location = new Point(46, 100);
+            lblonline.Location = new Point(157, 109);
             lblonline.Name = "lblonline";
             lblonline.Size = new Size(65, 20);
             lblonline.TabIndex = 6;
@@ -417,17 +427,18 @@
             // lblenterence2
             // 
             lblenterence2.AutoSize = true;
-            lblenterence2.Location = new Point(46, 60);
+            lblenterence2.Location = new Point(156, 47);
             lblenterence2.Name = "lblenterence2";
             lblenterence2.Size = new Size(66, 20);
             lblenterence2.TabIndex = 5;
             lblenterence2.Text = "Entrance";
+            lblenterence2.Click += lblenterence2_Click;
             // 
             // lblsmartdoor
             // 
             lblsmartdoor.AutoSize = true;
             lblsmartdoor.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblsmartdoor.Location = new Point(46, 25);
+            lblsmartdoor.Location = new Point(140, 16);
             lblsmartdoor.Name = "lblsmartdoor";
             lblsmartdoor.Size = new Size(171, 28);
             lblsmartdoor.TabIndex = 4;
@@ -493,6 +504,7 @@
             // pnlGarage
             // 
             pnlGarage.BackColor = Color.FromArgb(32, 38, 77);
+            pnlGarage.Controls.Add(pictureBox1);
             pnlGarage.Controls.Add(btnview3);
             pnlGarage.Controls.Add(lblonline3);
             pnlGarage.Controls.Add(lblGarage);
@@ -522,7 +534,7 @@
             // 
             lblonline3.AutoSize = true;
             lblonline3.ForeColor = Color.FromArgb(90, 220, 150);
-            lblonline3.Location = new Point(46, 100);
+            lblonline3.Location = new Point(183, 106);
             lblonline3.Name = "lblonline3";
             lblonline3.Size = new Size(75, 23);
             lblonline3.TabIndex = 6;
@@ -531,21 +543,48 @@
             // lblGarage
             // 
             lblGarage.AutoSize = true;
-            lblGarage.Location = new Point(46, 60);
+            lblGarage.Location = new Point(183, 60);
             lblGarage.Name = "lblGarage";
             lblGarage.Size = new Size(65, 23);
             lblGarage.TabIndex = 5;
             lblGarage.Text = "Garage";
+            lblGarage.Click += lblGarage_Click;
             // 
             // lblGarageDoor
             // 
             lblGarageDoor.AutoSize = true;
             lblGarageDoor.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblGarageDoor.Location = new Point(26, 25);
+            lblGarageDoor.Location = new Point(173, 25);
             lblGarageDoor.Name = "lblGarageDoor";
             lblGarageDoor.Size = new Size(132, 28);
             lblGarageDoor.TabIndex = 4;
             lblGarageDoor.Text = "Garage Door";
+            // 
+            // piccamera1
+            // 
+            piccamera1.Image = (Image)resources.GetObject("piccamera1.Image");
+            piccamera1.Location = new Point(46, 16);
+            piccamera1.Name = "piccamera1";
+            piccamera1.Size = new Size(60, 50);
+            piccamera1.TabIndex = 4;
+            piccamera1.TabStop = false;
+            // 
+            // picdoorlock
+            // 
+            picdoorlock.Image = (Image)resources.GetObject("picdoorlock.Image");
+            picdoorlock.Location = new Point(46, 16);
+            picdoorlock.Name = "picdoorlock";
+            picdoorlock.Size = new Size(48, 62);
+            picdoorlock.TabIndex = 10;
+            picdoorlock.TabStop = false;
+            // 
+            // pictureBox1
+            // 
+            pictureBox1.Location = new Point(18, 21);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(103, 62);
+            pictureBox1.TabIndex = 8;
+            pictureBox1.TabStop = false;
             // 
             // DevicesControl
             // 
@@ -586,6 +625,9 @@
             pnlSmartPlug.PerformLayout();
             pnlGarage.ResumeLayout(false);
             pnlGarage.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)piccamera1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)picdoorlock).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -634,5 +676,8 @@
         private Label lblonline3;
         private Label lblGarage;
         private Label lblGarageDoor;
+        private PictureBox piccamera1;
+        private PictureBox picdoorlock;
+        private PictureBox pictureBox1;
     }
 }

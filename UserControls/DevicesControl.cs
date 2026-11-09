@@ -65,5 +65,20 @@ namespace WinFormsApp2.UserControls
                 form.ShowDialog(this);
             }
         }
+
+        private void lblCameraStatus_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblenterence2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblGarage_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
