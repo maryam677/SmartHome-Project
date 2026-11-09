@@ -80,5 +80,25 @@ namespace WinFormsApp2.UserControls
         {
 
         }
+
+        private void lblliving4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblonline4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblsamrtplug_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

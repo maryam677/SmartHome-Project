@@ -42,6 +42,7 @@
             lblOnlineText = new Label();
             lblOnlineCount = new Label();
             pnlCamera = new Panel();
+            piccamera1 = new PictureBox();
             btnCameraDetails = new Button();
             lblCameraStatus = new Label();
             lblCameraRoom = new Label();
@@ -57,35 +58,40 @@
             lblGarden = new Label();
             lblBackyardCamera = new Label();
             pnlSmartLock = new Panel();
+            picdoorlock = new PictureBox();
             btnview = new Button();
             lblonline = new Label();
             lblenterence2 = new Label();
             lblsmartdoor = new Label();
             pnlSmartPlug = new Panel();
+            picsmartcurtins = new PictureBox();
             btnview5 = new Button();
             lblonline5 = new Label();
             lblsamrtplug = new Label();
             lblSmartPlug = new Label();
             pnlGarage = new Panel();
+            picphoto3 = new PictureBox();
             btnview3 = new Button();
             lblonline3 = new Label();
             lblGarage = new Label();
             lblGarageDoor = new Label();
-            piccamera1 = new PictureBox();
-            picdoorlock = new PictureBox();
-            pictureBox1 = new PictureBox();
+            picsmartplug1 = new PictureBox();
+            picbackyard = new PictureBox();
             pnlOfflineDevices.SuspendLayout();
             pnlTotalDevices.SuspendLayout();
             pnlOnlineDevices.SuspendLayout();
             pnlCamera.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)piccamera1).BeginInit();
             pnlCurtains.SuspendLayout();
             pnlBackyardCamera.SuspendLayout();
             pnlSmartLock.SuspendLayout();
-            pnlSmartPlug.SuspendLayout();
-            pnlGarage.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)piccamera1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)picdoorlock).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            pnlSmartPlug.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)picsmartcurtins).BeginInit();
+            pnlGarage.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)picphoto3).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)picsmartplug1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)picbackyard).BeginInit();
             SuspendLayout();
             // 
             // lblDevicesTitle
@@ -226,6 +232,15 @@
             pnlCamera.Size = new Size(500, 155);
             pnlCamera.TabIndex = 8;
             // 
+            // piccamera1
+            // 
+            piccamera1.Image = (Image)resources.GetObject("piccamera1.Image");
+            piccamera1.Location = new Point(46, 16);
+            piccamera1.Name = "piccamera1";
+            piccamera1.Size = new Size(60, 50);
+            piccamera1.TabIndex = 4;
+            piccamera1.TabStop = false;
+            // 
             // btnCameraDetails
             // 
             btnCameraDetails.BackColor = Color.FromArgb(112, 72, 220);
@@ -274,6 +289,7 @@
             // pnlCurtains
             // 
             pnlCurtains.BackColor = Color.FromArgb(32, 38, 77);
+            pnlCurtains.Controls.Add(picsmartcurtins);
             pnlCurtains.Controls.Add(btnview4);
             pnlCurtains.Controls.Add(lblonline4);
             pnlCurtains.Controls.Add(lblliving4);
@@ -303,26 +319,28 @@
             // 
             lblonline4.AutoSize = true;
             lblonline4.ForeColor = Color.FromArgb(90, 220, 150);
-            lblonline4.Location = new Point(46, 100);
+            lblonline4.Location = new Point(157, 106);
             lblonline4.Name = "lblonline4";
             lblonline4.Size = new Size(75, 23);
             lblonline4.TabIndex = 6;
             lblonline4.Text = "● Online";
+            lblonline4.Click += lblonline4_Click;
             // 
             // lblliving4
             // 
             lblliving4.AutoSize = true;
-            lblliving4.Location = new Point(46, 60);
+            lblliving4.Location = new Point(156, 60);
             lblliving4.Name = "lblliving4";
             lblliving4.Size = new Size(104, 23);
             lblliving4.TabIndex = 5;
             lblliving4.Text = "Living Room";
+            lblliving4.Click += lblliving4_Click;
             // 
             // lblSmartCurtains
             // 
             lblSmartCurtains.AutoSize = true;
             lblSmartCurtains.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblSmartCurtains.Location = new Point(46, 25);
+            lblSmartCurtains.Location = new Point(140, 21);
             lblSmartCurtains.Name = "lblSmartCurtains";
             lblSmartCurtains.Size = new Size(154, 28);
             lblSmartCurtains.TabIndex = 4;
@@ -331,6 +349,7 @@
             // pnlBackyardCamera
             // 
             pnlBackyardCamera.BackColor = Color.FromArgb(32, 38, 77);
+            pnlBackyardCamera.Controls.Add(picbackyard);
             pnlBackyardCamera.Controls.Add(btnview6);
             pnlBackyardCamera.Controls.Add(lblOffline);
             pnlBackyardCamera.Controls.Add(lblGarden);
@@ -360,7 +379,7 @@
             // 
             lblOffline.AutoSize = true;
             lblOffline.ForeColor = Color.FromArgb(240, 120, 120);
-            lblOffline.Location = new Point(46, 100);
+            lblOffline.Location = new Point(157, 106);
             lblOffline.Name = "lblOffline";
             lblOffline.Size = new Size(75, 23);
             lblOffline.TabIndex = 6;
@@ -369,7 +388,7 @@
             // lblGarden
             // 
             lblGarden.AutoSize = true;
-            lblGarden.Location = new Point(46, 60);
+            lblGarden.Location = new Point(156, 60);
             lblGarden.Name = "lblGarden";
             lblGarden.Size = new Size(66, 23);
             lblGarden.TabIndex = 5;
@@ -379,7 +398,7 @@
             // 
             lblBackyardCamera.AutoSize = true;
             lblBackyardCamera.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblBackyardCamera.Location = new Point(46, 25);
+            lblBackyardCamera.Location = new Point(135, 25);
             lblBackyardCamera.Name = "lblBackyardCamera";
             lblBackyardCamera.Size = new Size(176, 28);
             lblBackyardCamera.TabIndex = 4;
@@ -398,6 +417,15 @@
             pnlSmartLock.Name = "pnlSmartLock";
             pnlSmartLock.Size = new Size(500, 155);
             pnlSmartLock.TabIndex = 9;
+            // 
+            // picdoorlock
+            // 
+            picdoorlock.Image = (Image)resources.GetObject("picdoorlock.Image");
+            picdoorlock.Location = new Point(46, 16);
+            picdoorlock.Name = "picdoorlock";
+            picdoorlock.Size = new Size(48, 62);
+            picdoorlock.TabIndex = 10;
+            picdoorlock.TabStop = false;
             // 
             // btnview
             // 
@@ -447,6 +475,7 @@
             // pnlSmartPlug
             // 
             pnlSmartPlug.BackColor = Color.FromArgb(32, 38, 77);
+            pnlSmartPlug.Controls.Add(picsmartplug1);
             pnlSmartPlug.Controls.Add(btnview5);
             pnlSmartPlug.Controls.Add(lblonline5);
             pnlSmartPlug.Controls.Add(lblsamrtplug);
@@ -456,6 +485,15 @@
             pnlSmartPlug.Name = "pnlSmartPlug";
             pnlSmartPlug.Size = new Size(500, 155);
             pnlSmartPlug.TabIndex = 9;
+            // 
+            // picsmartcurtins
+            // 
+            picsmartcurtins.Image = (Image)resources.GetObject("picsmartcurtins.Image");
+            picsmartcurtins.Location = new Point(46, 21);
+            picsmartcurtins.Name = "picsmartcurtins";
+            picsmartcurtins.Size = new Size(48, 50);
+            picsmartcurtins.TabIndex = 10;
+            picsmartcurtins.TabStop = false;
             // 
             // btnview5
             // 
@@ -476,7 +514,7 @@
             // 
             lblonline5.AutoSize = true;
             lblonline5.ForeColor = Color.FromArgb(90, 220, 150);
-            lblonline5.Location = new Point(46, 100);
+            lblonline5.Location = new Point(183, 106);
             lblonline5.Name = "lblonline5";
             lblonline5.Size = new Size(75, 23);
             lblonline5.TabIndex = 6;
@@ -485,17 +523,18 @@
             // lblsamrtplug
             // 
             lblsamrtplug.AutoSize = true;
-            lblsamrtplug.Location = new Point(46, 60);
+            lblsamrtplug.Location = new Point(183, 60);
             lblsamrtplug.Name = "lblsamrtplug";
             lblsamrtplug.Size = new Size(80, 23);
             lblsamrtplug.TabIndex = 5;
             lblsamrtplug.Text = "Bedroom";
+            lblsamrtplug.Click += lblsamrtplug_Click;
             // 
             // lblSmartPlug
             // 
             lblSmartPlug.AutoSize = true;
             lblSmartPlug.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblSmartPlug.Location = new Point(26, 25);
+            lblSmartPlug.Location = new Point(173, 25);
             lblSmartPlug.Name = "lblSmartPlug";
             lblSmartPlug.Size = new Size(117, 28);
             lblSmartPlug.TabIndex = 4;
@@ -504,7 +543,7 @@
             // pnlGarage
             // 
             pnlGarage.BackColor = Color.FromArgb(32, 38, 77);
-            pnlGarage.Controls.Add(pictureBox1);
+            pnlGarage.Controls.Add(picphoto3);
             pnlGarage.Controls.Add(btnview3);
             pnlGarage.Controls.Add(lblonline3);
             pnlGarage.Controls.Add(lblGarage);
@@ -514,6 +553,15 @@
             pnlGarage.Name = "pnlGarage";
             pnlGarage.Size = new Size(500, 155);
             pnlGarage.TabIndex = 9;
+            // 
+            // picphoto3
+            // 
+            picphoto3.Image = (Image)resources.GetObject("picphoto3.Image");
+            picphoto3.Location = new Point(46, 21);
+            picphoto3.Name = "picphoto3";
+            picphoto3.Size = new Size(60, 62);
+            picphoto3.TabIndex = 8;
+            picphoto3.TabStop = false;
             // 
             // btnview3
             // 
@@ -560,31 +608,23 @@
             lblGarageDoor.TabIndex = 4;
             lblGarageDoor.Text = "Garage Door";
             // 
-            // piccamera1
+            // picsmartplug1
             // 
-            piccamera1.Image = (Image)resources.GetObject("piccamera1.Image");
-            piccamera1.Location = new Point(46, 16);
-            piccamera1.Name = "piccamera1";
-            piccamera1.Size = new Size(60, 50);
-            piccamera1.TabIndex = 4;
-            piccamera1.TabStop = false;
+            picsmartplug1.Image = (Image)resources.GetObject("picsmartplug1.Image");
+            picsmartplug1.Location = new Point(46, 21);
+            picsmartplug1.Name = "picsmartplug1";
+            picsmartplug1.Size = new Size(60, 62);
+            picsmartplug1.TabIndex = 9;
+            picsmartplug1.TabStop = false;
             // 
-            // picdoorlock
+            // picbackyard
             // 
-            picdoorlock.Image = (Image)resources.GetObject("picdoorlock.Image");
-            picdoorlock.Location = new Point(46, 16);
-            picdoorlock.Name = "picdoorlock";
-            picdoorlock.Size = new Size(48, 62);
-            picdoorlock.TabIndex = 10;
-            picdoorlock.TabStop = false;
-            // 
-            // pictureBox1
-            // 
-            pictureBox1.Location = new Point(18, 21);
-            pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(103, 62);
-            pictureBox1.TabIndex = 8;
-            pictureBox1.TabStop = false;
+            picbackyard.Image = (Image)resources.GetObject("picbackyard.Image");
+            picbackyard.Location = new Point(39, 25);
+            picbackyard.Name = "picbackyard";
+            picbackyard.Size = new Size(55, 58);
+            picbackyard.TabIndex = 8;
+            picbackyard.TabStop = false;
             // 
             // DevicesControl
             // 
@@ -615,19 +655,22 @@
             pnlOnlineDevices.PerformLayout();
             pnlCamera.ResumeLayout(false);
             pnlCamera.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)piccamera1).EndInit();
             pnlCurtains.ResumeLayout(false);
             pnlCurtains.PerformLayout();
             pnlBackyardCamera.ResumeLayout(false);
             pnlBackyardCamera.PerformLayout();
             pnlSmartLock.ResumeLayout(false);
             pnlSmartLock.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)picdoorlock).EndInit();
             pnlSmartPlug.ResumeLayout(false);
             pnlSmartPlug.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)picsmartcurtins).EndInit();
             pnlGarage.ResumeLayout(false);
             pnlGarage.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)piccamera1).EndInit();
-            ((System.ComponentModel.ISupportInitialize)picdoorlock).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)picphoto3).EndInit();
+            ((System.ComponentModel.ISupportInitialize)picsmartplug1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)picbackyard).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -678,6 +721,10 @@
         private Label lblGarageDoor;
         private PictureBox piccamera1;
         private PictureBox picdoorlock;
+        private PictureBox picphoto3;
+        private PictureBox picsmartcurtins;
         private PictureBox pictureBox1;
+        private PictureBox picsmartplug1;
+        private PictureBox picbackyard;
     }
 }
