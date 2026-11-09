@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using WinFormsApp2;
 
 namespace SmartHome
 {
@@ -243,15 +244,16 @@ namespace SmartHome
 
         private void btnadd_Click_1(object sender, EventArgs e)
         {
-            using (frmAddDevice popup = new frmAddDevice())
+            main parentForm = (main)this.FindForm();
+
+
+            if (parentForm != null)
             {
-                if (popup.ShowDialog() == DialogResult.OK)
-                {
-                }
+                parentForm.OpenDevicesPage();
             }
         }
+   
+    
+
     }
-
-
 }
-

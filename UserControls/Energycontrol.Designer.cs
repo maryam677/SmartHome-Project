@@ -1462,7 +1462,7 @@
             // 
             lblsaving.Font = new Font("Segoe UI", 11F);
             lblsaving.ForeColor = Color.White;
-            lblsaving.Location = new Point(68, 250);
+            lblsaving.Location = new Point(17, 250);
             lblsaving.Name = "lblsaving";
             lblsaving.Size = new Size(159, 25);
             lblsaving.TabIndex = 4;
