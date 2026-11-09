@@ -65,5 +65,7 @@ namespace WinFormsApp2.UserControls
                 form.ShowDialog(this);
             }
         }
+
+       
     }
 }
