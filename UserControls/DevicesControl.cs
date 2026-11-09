@@ -66,39 +66,6 @@ namespace WinFormsApp2.UserControls
             }
         }
 
-        private void lblCameraStatus_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void lblenterence2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void lblGarage_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void lblliving4_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void lblonline4_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void lblsamrtplug_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-
-        }
+    
     }
 }

@@ -265,7 +265,7 @@
             lblCameraStatus.Size = new Size(75, 23);
             lblCameraStatus.TabIndex = 2;
             lblCameraStatus.Text = "● Online";
-            lblCameraStatus.Click += lblCameraStatus_Click;
+            
             // 
             // lblCameraRoom
             // 
@@ -324,7 +324,7 @@
             lblonline4.Size = new Size(75, 23);
             lblonline4.TabIndex = 6;
             lblonline4.Text = "● Online";
-            lblonline4.Click += lblonline4_Click;
+           
             // 
             // lblliving4
             // 
@@ -334,7 +334,7 @@
             lblliving4.Size = new Size(104, 23);
             lblliving4.TabIndex = 5;
             lblliving4.Text = "Living Room";
-            lblliving4.Click += lblliving4_Click;
+           
             // 
             // lblSmartCurtains
             // 
@@ -460,7 +460,7 @@
             lblenterence2.Size = new Size(66, 20);
             lblenterence2.TabIndex = 5;
             lblenterence2.Text = "Entrance";
-            lblenterence2.Click += lblenterence2_Click;
+           
             // 
             // lblsmartdoor
             // 
@@ -528,7 +528,7 @@
             lblsamrtplug.Size = new Size(80, 23);
             lblsamrtplug.TabIndex = 5;
             lblsamrtplug.Text = "Bedroom";
-            lblsamrtplug.Click += lblsamrtplug_Click;
+            
             // 
             // lblSmartPlug
             // 
@@ -596,7 +596,7 @@
             lblGarage.Size = new Size(65, 23);
             lblGarage.TabIndex = 5;
             lblGarage.Text = "Garage";
-            lblGarage.Click += lblGarage_Click;
+            
             // 
             // lblGarageDoor
             // 
