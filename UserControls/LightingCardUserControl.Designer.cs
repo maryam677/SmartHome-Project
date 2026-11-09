@@ -74,7 +74,8 @@
             pnlCard.Location = new Point(0, 0);
             pnlCard.Margin = new Padding(3, 4, 3, 4);
             pnlCard.Name = "pnlCard";
-            pnlCard.Size = new Size(304, 488);
+            pnlCard.Padding = new Padding(12);
+            pnlCard.Size = new Size(405, 488);
             pnlCard.TabIndex = 0;
             // 
             // lblOnline
@@ -286,7 +287,7 @@
             Controls.Add(pnlCard);
             Margin = new Padding(3, 4, 3, 4);
             Name = "LightingCardUserControl";
-            Size = new Size(304, 488);
+            Size = new Size(405, 488);
             pnlCard.ResumeLayout(false);
             pnlCard.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)picRoom).EndInit();
