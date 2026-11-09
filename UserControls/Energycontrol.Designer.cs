@@ -211,7 +211,6 @@
             lbldec = new Label();
             lbldevices = new Label();
             lbladd = new Label();
-            lblgood = new Label();
             panel3.SuspendLayout();
             pnlTotalEnergy.SuspendLayout();
             panel1.SuspendLayout();
@@ -2181,23 +2180,12 @@
             lbladd.TabIndex = 1;
             lbladd.Text = "My devices\r\n";
             // 
-            // lblgood
-            // 
-            lblgood.Font = new Font("Segoe UI", 14F);
-            lblgood.ForeColor = Color.IndianRed;
-            lblgood.Location = new Point(336, 13);
-            lblgood.Name = "lblgood";
-            lblgood.Size = new Size(194, 32);
-            lblgood.TabIndex = 25;
-            lblgood.Text = "GOOD Morning ";
-            // 
             // Energycontrol
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             AutoScroll = true;
             BackColor = Color.FromArgb(15, 17, 30);
-            Controls.Add(lblgood);
             Controls.Add(pnladd);
             Controls.Add(pnlwea);
             Controls.Add(pnlenergy);
@@ -2429,6 +2417,5 @@
         private Label lblof;
         private Label lblnooo;
         private Button btnadd;
-        private Label lblgood;
     }
 }
