@@ -66,6 +66,6 @@ namespace WinFormsApp2.UserControls
             }
         }
 
-       
+    
     }
 }
