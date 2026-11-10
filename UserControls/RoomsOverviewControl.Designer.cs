@@ -130,7 +130,7 @@ partial class RoomsOverviewControl
         tableLayoutMain.RowStyles.Add(new RowStyle());
         tableLayoutMain.RowStyles.Add(new RowStyle());
         tableLayoutMain.RowStyles.Add(new RowStyle(SizeType.Percent, 100F));
-        tableLayoutMain.Size = new Size(931, 832);
+        tableLayoutMain.Size = new Size(1049, 832);
         tableLayoutMain.TabIndex = 0;
         // 
         // panelHeader
@@ -144,7 +144,7 @@ partial class RoomsOverviewControl
         panelHeader.Margin = new Padding(3, 4, 3, 4);
         panelHeader.MinimumSize = new Size(0, 85);
         panelHeader.Name = "panelHeader";
-        panelHeader.Size = new Size(871, 85);
+        panelHeader.Size = new Size(989, 85);
         panelHeader.TabIndex = 0;
         // 
         // lblRoomsOverview
@@ -182,7 +182,7 @@ partial class RoomsOverviewControl
         flowStats.Margin = new Padding(3, 4, 3, 4);
         flowStats.Name = "flowStats";
         flowStats.Padding = new Padding(0, 11, 0, 11);
-        flowStats.Size = new Size(871, 214);
+        flowStats.Size = new Size(989, 118);
         flowStats.TabIndex = 1;
         // 
         // statRooms
@@ -297,7 +297,7 @@ partial class RoomsOverviewControl
         statDevices.BackColor = Color.FromArgb(40, 40, 70);
         statDevices.Controls.Add(statDevices_val);
         statDevices.Controls.Add(statDevices_cap);
-        statDevices.Location = new Point(0, 107);
+        statDevices.Location = new Point(741, 11);
         statDevices.Margin = new Padding(0, 0, 18, 11);
         statDevices.Name = "statDevices";
         statDevices.Size = new Size(229, 85);
@@ -334,11 +334,11 @@ partial class RoomsOverviewControl
         flowRoomCards.Controls.Add(card4);
         flowRoomCards.Controls.Add(card5);
         flowRoomCards.Dock = DockStyle.Fill;
-        flowRoomCards.Location = new Point(30, 340);
+        flowRoomCards.Location = new Point(30, 244);
         flowRoomCards.Margin = new Padding(3, 4, 3, 4);
         flowRoomCards.Name = "flowRoomCards";
         flowRoomCards.Padding = new Padding(0, 11, 0, 0);
-        flowRoomCards.Size = new Size(871, 467);
+        flowRoomCards.Size = new Size(989, 563);
         flowRoomCards.TabIndex = 2;
         // 
         // card1
@@ -1120,12 +1120,13 @@ partial class RoomsOverviewControl
         // 
         AutoScaleDimensions = new SizeF(8F, 20F);
         AutoScaleMode = AutoScaleMode.Font;
+        AutoScroll = true;
         BackColor = Color.FromArgb(15, 15, 35);
         Controls.Add(tableLayoutMain);
         Font = new Font("Segoe UI", 9F);
         Margin = new Padding(3, 4, 3, 4);
         Name = "RoomsOverviewControl";
-        Size = new Size(931, 832);
+        Size = new Size(1049, 832);
         tableLayoutMain.ResumeLayout(false);
         tableLayoutMain.PerformLayout();
         panelHeader.ResumeLayout(false);

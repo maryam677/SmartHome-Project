@@ -1,17 +1,17 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <root>
-  <!-- 
-    Microsoft ResX Schema 
-    
+  <!--
+    Microsoft ResX Schema
+
     Version 2.0
-    
-    The primary goals of this format is to allow a simple XML format 
-    that is mostly human readable. The generation and parsing of the 
-    various data types are done through the TypeConverter classes 
+
+    The primary goals of this format is to allow a simple XML format
+    that is mostly human readable. The generation and parsing of the
+    various data types are done through the TypeConverter classes
     associated with the data types.
-    
+
     Example:
-    
+
     ... ado.net/XML headers & schema ...
     <resheader name="resmimetype">text/microsoft-resx</resheader>
     <resheader name="version">2.0</resheader>
@@ -26,36 +26,36 @@
         <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
         <comment>This is a comment</comment>
     </data>
-                
-    There are any number of "resheader" rows that contain simple 
+
+    There are any number of "resheader" rows that contain simple
     name/value pairs.
-    
-    Each data row contains a name, and value. The row also contains a 
-    type or mimetype. Type corresponds to a .NET class that support 
-    text/value conversion through the TypeConverter architecture. 
-    Classes that don't support this are serialized and stored with the 
+
+    Each data row contains a name, and value. The row also contains a
+    type or mimetype. Type corresponds to a .NET class that support
+    text/value conversion through the TypeConverter architecture.
+    Classes that don't support this are serialized and stored with the
     mimetype set.
-    
-    The mimetype is used for serialized objects, and tells the 
-    ResXResourceReader how to depersist the object. This is currently not 
+
+    The mimetype is used for serialized objects, and tells the
+    ResXResourceReader how to depersist the object. This is currently not
     extensible. For a given mimetype the value must be set accordingly:
-    
-    Note - application/x-microsoft.net.object.binary.base64 is the format 
-    that the ResXResourceWriter will generate, however the reader can 
+
+    Note - application/x-microsoft.net.object.binary.base64 is the format
+    that the ResXResourceWriter will generate, however the reader can
     read any of the formats listed below.
-    
+
     mimetype: application/x-microsoft.net.object.binary.base64
-    value   : The object must be serialized with 
+    value   : The object must be serialized with
             : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
             : and then encoded with base64 encoding.
-    
+
     mimetype: application/x-microsoft.net.object.soap.base64
-    value   : The object must be serialized with 
+    value   : The object must be serialized with
             : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
             : and then encoded with base64 encoding.
 
     mimetype: application/x-microsoft.net.object.bytearray.base64
-    value   : The object must be serialized into a byte array 
+    value   : The object must be serialized into a byte array
             : using a System.ComponentModel.TypeConverter
             : and then encoded with base64 encoding.
     -->
@@ -117,65 +117,25 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="picFrontCamera.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
-        DAAACwwBP0AiyAAABDJJREFUWEftlttrHGUYxhdFbRpFMbU2tnhI8QSNZyIIelNpqzcFQbwRhF74D0QT
-        qU1jTVIpbYmoYJNUd5JmZ3ZnZmd2ZvZ8PmR3NpNjY5OmzXbbbJJNNhsNlepV4ZH5QgMdQ8xQDwh54McM
-        M3w87+Gb9xuLZVObWkOZTKYiHE3XxxKqFour12NxFRvF642A491g7AJsNP8rzYhDDCM2sixbYfRZU+m0
-        tkfNjl7p18ZghnRmCByvgGYEgt0hwcFKYOwiGLsLNCPmWVasNfrdJk0bqxkZvVg+P3YZZhganoCD1U0E
-        UCcjaHkth4bKBXxauYC2uhy6T8dIQIzd9bPNxtcYfVd1YfxK+tLlGZhFdgeJedfhPjTtKKNp2xLq71pc
-        pWFLCVSzCpZT4GBl1ehLlE4P7h8euYiR0UlTqNkRYm7r9OOLxxfx/d5lwtHtS2i4ZxGN95bw2X0lHKkq
-        guuJgnd6YLOL+43+lkRS61azozCLxxshAbS//xOaHlnCmbeX0bFvGS3VZXxeUUJT5QKO3r9C50fjcEkB
-        iKLvnNHfEgylpmLxLMwQT/SDcypkkzXXFPDJ3Ys4Vl1G684yMTz24AJaH57H8ap5HN82j/ZXp6G4wxBE
-        X97ob3F7Qr/5/HGYIRhKkV3OcjIati6QkutZNz+wYnzi0SJOP1ZE+645wtc1swgEk1Dcod+N/han4Lkh
-        K0FYKRr6db37W+jl17PneBmNlSUc3lIimbdVzeNUdRHfPDGHjqdncPa5GfzwfAFnawuIRDPwemM3jP4W
-        u12Ycgpu0IwT+nW9+1uILi/J3sHKaHmmgCNbS2h5aB4ndxTx7ZOzxNT28jS4umvgX78K4WCetC4UTv25
-        Bd3nHN0sJ8EsgughVTjz4TjJnvR61xy6np0B88o1uN/KI7Ivh+iBHBJtk0imBhCN9tFGf0tXl/WAnqU+
-        Qs3gcnlJACwVRmv1HE5sX8m+e08BrjeuIv5uDiMfXMLYoUlko+fRlx5COJx6x+hPRFF0yu4QYQa9CrzT
-        TSad/atBnNpZxHdPzaLnhWkob+aRPjiF3McTGHNdQDozjGRqsN/ouyqKonYzdr7MOxWYQZb9ZC/ok07s
-        VNHzXg69ddOQ9+bRVz8JVRlFIqkhkdJ+iUT6dht9b1PHj721LCdOSbIfZvB4QxBEL5l0+rDxeKPwBxII
-        BBMIR9L651dQFP+LRr81pR+dvTTfwPGS5hTc1/WNthFElw+S5CdB6G1xCl790x6X3cEvN3wcr6VkMonh
-        4WFMTEwQNE1DNBqFLMugaRqSJCEQCMC47m9TMBjsV1WVBKGTSqXg8/nA8zwoigLHcXowWeO6f0wUZYOO
-        8fm/Jqfg1fv73wRgtVq36LtckgI3je/uWPo/nSD61kV0+eH2RPSzYMC4/o5ld7hIaf+CmyyvDFit7EvG
-        9Zva1P9SfwBndoM3SxTQ0wAAAABJRU5ErkJggg==
-</value>
-  </data>
-  <data name="picBackyardCamera.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
-        DAAACwwBP0AiyAAABDJJREFUWEftlttrHGUYxhdFbRpFMbU2tnhI8QSNZyIIelNpqzcFQbwRhF74D0QT
-        qU1jTVIpbYmoYJNUd5JmZ3ZnZmd2ZvZ8PmR3NpNjY5OmzXbbbJJNNhsNlepV4ZH5QgMdQ8xQDwh54McM
-        M3w87+Gb9xuLZVObWkOZTKYiHE3XxxKqFour12NxFRvF642A491g7AJsNP8rzYhDDCM2sixbYfRZU+m0
-        tkfNjl7p18ZghnRmCByvgGYEgt0hwcFKYOwiGLsLNCPmWVasNfrdJk0bqxkZvVg+P3YZZhganoCD1U0E
-        UCcjaHkth4bKBXxauYC2uhy6T8dIQIzd9bPNxtcYfVd1YfxK+tLlGZhFdgeJedfhPjTtKKNp2xLq71pc
-        pWFLCVSzCpZT4GBl1ehLlE4P7h8euYiR0UlTqNkRYm7r9OOLxxfx/d5lwtHtS2i4ZxGN95bw2X0lHKkq
-        guuJgnd6YLOL+43+lkRS61azozCLxxshAbS//xOaHlnCmbeX0bFvGS3VZXxeUUJT5QKO3r9C50fjcEkB
-        iKLvnNHfEgylpmLxLMwQT/SDcypkkzXXFPDJ3Ys4Vl1G684yMTz24AJaH57H8ap5HN82j/ZXp6G4wxBE
-        X97ob3F7Qr/5/HGYIRhKkV3OcjIati6QkutZNz+wYnzi0SJOP1ZE+645wtc1swgEk1Dcod+N/han4Lkh
-        K0FYKRr6db37W+jl17PneBmNlSUc3lIimbdVzeNUdRHfPDGHjqdncPa5GfzwfAFnawuIRDPwemM3jP4W
-        u12Ycgpu0IwT+nW9+1uILi/J3sHKaHmmgCNbS2h5aB4ndxTx7ZOzxNT28jS4umvgX78K4WCetC4UTv25
-        Bd3nHN0sJ8EsgughVTjz4TjJnvR61xy6np0B88o1uN/KI7Ivh+iBHBJtk0imBhCN9tFGf0tXl/WAnqU+
-        Qs3gcnlJACwVRmv1HE5sX8m+e08BrjeuIv5uDiMfXMLYoUlko+fRlx5COJx6x+hPRFF0yu4QYQa9CrzT
-        TSad/atBnNpZxHdPzaLnhWkob+aRPjiF3McTGHNdQDozjGRqsN/ouyqKonYzdr7MOxWYQZb9ZC/ok07s
-        VNHzXg69ddOQ9+bRVz8JVRlFIqkhkdJ+iUT6dht9b1PHj721LCdOSbIfZvB4QxBEL5l0+rDxeKPwBxII
-        BBMIR9L651dQFP+LRr81pR+dvTTfwPGS5hTc1/WNthFElw+S5CdB6G1xCl790x6X3cEvN3wcr6VkMonh
-        4WFMTEwQNE1DNBqFLMugaRqSJCEQCMC47m9TMBjsV1WVBKGTSqXg8/nA8zwoigLHcXowWeO6f0wUZYOO
-        8fm/Jqfg1fv73wRgtVq36LtckgI3je/uWPo/nSD61kV0+eH2RPSzYMC4/o5ld7hIaf+CmyyvDFit7EvG
-        9Zva1P9SfwBndoM3SxTQ0wAAAABJRU5ErkJggg==
-</value>
-  </data>
-  <data name="picBanner.Image" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Screenshot 2026-11-03 021030.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="picAlert.Image" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Screenshot 2026-11-03 021030.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="picHeaderIcon.Image" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Icons\nav_security.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="picDoorLock.Image" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Icons\btn_lock.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
+  <metadata name="tmrAuto.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <metadata name="tmrUi.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>132, 17</value>
+  </metadata>
+  <metadata name="col4.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="col3.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="col2.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="col1.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>25</value>
+  </metadata>
 </root>
