@@ -47,5 +47,32 @@ namespace WinFormsApp2.UserControls
         {
             UpdateClock();
         }
+
+        private void cardLivingRoom_Load(object sender, EventArgs e)
+        {
+        }
+
+        private void btnLight_Click(object sender, EventArgs e)
+        {
+            Form1 popup = new Form1();
+            popup.ShowDialog();
+        }
+
+        private void cardLivingRoom_Click(object sender, EventArgs e)
+        {
+        }
+
+        private void btnSettings_Click(object sender, EventArgs e)
+        {
+            Form1 popup = new Form1();
+            popup.ShowDialog();
+        }
+
+        private void cardBedroom_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
+
+

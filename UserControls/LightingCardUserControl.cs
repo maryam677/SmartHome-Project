@@ -187,5 +187,10 @@ namespace WinFormsApp2.UserControls
             }
             IsFavorite = !IsFavorite;
         }
+
+        private void pnlCard_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

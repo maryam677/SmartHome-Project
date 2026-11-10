@@ -77,6 +77,7 @@
             pnlCard.Padding = new Padding(12);
             pnlCard.Size = new Size(405, 488);
             pnlCard.TabIndex = 0;
+            pnlCard.Paint += pnlCard_Paint;
             // 
             // lblOnline
             // 
