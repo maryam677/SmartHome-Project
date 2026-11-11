@@ -12,6 +12,47 @@ public partial class RoomsOverviewControl : UserControl
     {
         InitializeComponent();
         WireRoomCardEvents();
+        UpdateRoomCounters();
+    }
+
+    private void AddRoom_Click(object? sender, EventArgs e)
+    {
+        using var dialog = new Popups.AddRoomForm();
+        dialog.ShowDialog(this);
+    }
+
+    private void DeleteRoom_Click(object? sender, EventArgs e)
+    {
+        if (sender is not Button { Parent: Panel card }) return;
+        if (MessageBox.Show(this, "Delete this room?", "Delete Room",
+            MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2) != DialogResult.Yes) return;
+        flowRoomCards.Controls.Remove(card);
+        card.Dispose();
+        UpdateRoomCounters();
+    }
+
+    private void UpdateRoomCounters()
+    {
+        var cards = flowRoomCards.Controls.OfType<Panel>().ToArray();
+        Label Field(Panel card, string suffix) => card.Controls.OfType<Label>()
+            .Single(label => label.Name == card.Name + suffix);
+        int active = cards.Count(card => Field(card, "_status").Text.Contains("Online"));
+        statRooms_val.Text = $"{active} / {cards.Length}";
+        statRooms_badge.Text = active > 0 ? "\u25CF Online" : "\u25CF Offline";
+        statRooms_badge.ForeColor = active > 0 ? Color.LightGreen : Muted;
+        int lights = 0, devices = 0;
+        double temperature = 0;
+        foreach (var card in cards)
+        {
+            var counts = System.Text.RegularExpressions.Regex.Matches(Field(card, "_counts").Text, @"\d+");
+            lights += int.Parse(counts[0].Value);
+            devices += int.Parse(counts[1].Value);
+            var value = System.Text.RegularExpressions.Regex.Match(Field(card, "_temp").Text, @"\d+");
+            temperature += double.Parse(value.Value, System.Globalization.CultureInfo.InvariantCulture);
+        }
+        statLights_val.Text = lights.ToString();
+        statDevices_val.Text = devices.ToString();
+        statTemp_val.Text = cards.Length == 0 ? "\u2014" : $"{temperature / cards.Length:0.#}\u00B0C";
     }
 
     private void WireRoomCardEvents()
@@ -24,7 +65,7 @@ public partial class RoomsOverviewControl : UserControl
 
             foreach (Control c in card.Controls)
             {
-                if (c is not Button b) continue;
+                if (c is not Button b || b.Name.EndsWith("_delete")) continue;
                 if (b.Text == "★")
                 {
                     b.Click += StarButton_Click;

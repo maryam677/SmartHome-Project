@@ -16,9 +16,40 @@ namespace WinFormsApp2.UserControls
         public DevicesControl()
         {
             InitializeComponent();
+            UpdateDeviceCounters();
         }
 
 
+
+        private IEnumerable<Panel> DeviceCards =>
+            new[] { pnlCamera, pnlSmartLock, pnlGarage, pnlCurtains, pnlSmartPlug, pnlBackyardCamera }.Where(card => card.Parent == this);
+
+        private void DeleteDevice_Click(object? sender, EventArgs e)
+        {
+            if (sender is not Button { Parent: Panel card }) return;
+            if (MessageBox.Show(this, "Delete this device?", "Delete Device",
+                MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2) != DialogResult.Yes) return;
+            Controls.Remove(card);
+            card.Dispose();
+            SuspendLayout();
+            int index = 0;
+            foreach (var remaining in DeviceCards)
+            {
+                remaining.Location = new Point(25 + index % 2 * 525, 263 + index / 2 * 174);
+                index++;
+            }
+            ResumeLayout(true);
+            UpdateDeviceCounters();
+        }
+
+        private void UpdateDeviceCounters()
+        {
+            int total = DeviceCards.Count();
+            int offline = DeviceCards.Count(card => card == pnlBackyardCamera);
+            lblTotalCount.Text = total.ToString();
+            lblOnlineCount.Text = (total - offline).ToString();
+            lblOfflineCount.Text = offline.ToString();
+        }
 
         private void btnViewDevice_Click(object sender, EventArgs e)
         {
