@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using WinFormsApp2.Popups;
 
 
+
 namespace WinFormsApp2
 {
     public partial class auth : UserControl
@@ -17,11 +18,55 @@ namespace WinFormsApp2
         public auth()
         {
             InitializeComponent();
+
+            int overviewInset = pnlOverview.ClientSize.Width * 15 / 353;
+            int chartSize = Math.Min(180, label4.Left - 2 * overviewInset);
+            AutomationDonutChart chart = new AutomationDonutChart
+            {
+                EnabledCount = 4,
+                DisabledCount = 1,
+                Size = new Size(chartSize, chartSize),
+                Location = new Point(overviewInset, overviewTitle.Bottom + overviewInset)
+            };
+
+            pnlOverview.Controls.Add(chart);
+            chart.BringToFront();
+
+            void UpdateOverviewCounts()
+            {
+                label4.Text =
+                    $"{chart.EnabledCount + (long)chart.DisabledCount} Total\n" +
+                    $"{chart.EnabledCount} Enabled\n" +
+                    $"{chart.DisabledCount} Disabled";
+            }
+
+            chart.CountsChanged += (_, _) => UpdateOverviewCounts();
+            UpdateOverviewCounts();
+
+            int scheduleInset = lblScheduleTitle.Left;
+            int timelineTop = lblScheduleTitle.Bottom + 8;
+            AutomationTimeline timeline = new AutomationTimeline
+            {
+                Location = new Point(scheduleInset, timelineTop),
+                Size = new Size(
+                    pnlSchedule.ClientSize.Width - 2 * scheduleInset,
+                    pnlSchedule.ClientSize.Height - timelineTop - scheduleInset
+                ),
+                Anchor = AnchorStyles.Top |
+                         AnchorStyles.Left |
+                         AnchorStyles.Right |
+                         AnchorStyles.Bottom
+            };
+
+            pnlSchedule.Controls.Add(timeline);
+            timeline.BringToFront();
+
+
         }
 
-        
 
-       
+
+
 
 
         private void btnCreateRoutine_Click_1(object sender, EventArgs e)
@@ -132,8 +177,6 @@ namespace WinFormsApp2
                 form.ShowDialog(this);
             }
         }
-
-
 
     }
 }
