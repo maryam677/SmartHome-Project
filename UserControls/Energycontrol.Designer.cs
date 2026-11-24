@@ -422,7 +422,7 @@
             // 
             label10.Font = new Font("Segoe UI", 10F);
             label10.ForeColor = Color.Gold;
-            label10.Location = new Point(793, 11);
+            label10.Location = new Point(796, 11);
             label10.Name = "label10";
             label10.Size = new Size(32, 36);
             label10.TabIndex = 16;
