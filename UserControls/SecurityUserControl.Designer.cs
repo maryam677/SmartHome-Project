@@ -133,13 +133,13 @@ namespace WinFormsApp2.UserControls
             col2 = new DataGridViewTextBoxColumn();
             col1 = new DataGridViewTextBoxColumn();
             panel1 = new Panel();
-            lbl88 = new Label();
-            lbldaily = new Label();
-            pictureBox1 = new PictureBox();
-            lbl58 = new Label();
+            lbl95 = new Label();
             panel2 = new Panel();
             panel4 = new Panel();
-            lbl95 = new Label();
+            lbl58 = new Label();
+            pictureBox1 = new PictureBox();
+            lbldaily = new Label();
+            lbl88 = new Label();
             cardStatAlarm.SuspendLayout();
             cardStatZones.SuspendLayout();
             cardStatEvents.SuspendLayout();
@@ -164,8 +164,8 @@ namespace WinFormsApp2.UserControls
             pnl5.SuspendLayout();
             pnlTrack.SuspendLayout();
             panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
             // tmrAuto
@@ -1567,46 +1567,16 @@ namespace WinFormsApp2.UserControls
             panel1.Size = new Size(870, 259);
             panel1.TabIndex = 88;
             // 
-            // lbl88
+            // lbl95
             // 
-            lbl88.BackColor = Color.Transparent;
-            lbl88.Font = new Font("Segoe UI", 12F, FontStyle.Bold);
-            lbl88.ForeColor = Color.FromArgb(255, 255, 255);
-            lbl88.Location = new Point(30, 27);
-            lbl88.Name = "lbl88";
-            lbl88.Size = new Size(278, 38);
-            lbl88.TabIndex = 77;
-            lbl88.Text = "Daily Security Overview ";
-            // 
-            // lbldaily
-            // 
-            lbldaily.BackColor = Color.Transparent;
-            lbldaily.Font = new Font("Segoe UI", 12F, FontStyle.Bold);
-            lbldaily.ForeColor = Color.FromArgb(255, 255, 255);
-            lbldaily.Location = new Point(333, 39);
-            lbldaily.Name = "lbldaily";
-            lbldaily.Size = new Size(278, 207);
-            lbldaily.TabIndex = 78;
-            lbldaily.Text = "Total Events Today\r\n\r\nSecurity Alerts\r\n\r\nSystem Health\r\n\r\nOveralls System Security\r\n\r\n";
-            // 
-            // pictureBox1
-            // 
-            pictureBox1.Location = new Point(52, 100);
-            pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(189, 116);
-            pictureBox1.TabIndex = 79;
-            pictureBox1.TabStop = false;
-            // 
-            // lbl58
-            // 
-            lbl58.BackColor = Color.Transparent;
-            lbl58.Font = new Font("Segoe UI", 12F, FontStyle.Bold);
-            lbl58.ForeColor = Color.FromArgb(0, 192, 0);
-            lbl58.Location = new Point(571, 39);
-            lbl58.Name = "lbl58";
-            lbl58.Size = new Size(278, 207);
-            lbl58.TabIndex = 80;
-            lbl58.Text = "18\r\n\r\n0\r\n\r\nOptimal\r\n";
+            lbl95.BackColor = Color.Transparent;
+            lbl95.Font = new Font("Segoe UI", 9.5F, FontStyle.Bold);
+            lbl95.ForeColor = Color.Lime;
+            lbl95.Location = new Point(774, 210);
+            lbl95.Name = "lbl95";
+            lbl95.Size = new Size(75, 25);
+            lbl95.TabIndex = 82;
+            lbl95.Text = "95 ";
             // 
             // panel2
             // 
@@ -1625,21 +1595,50 @@ namespace WinFormsApp2.UserControls
             panel4.Size = new Size(164, 23);
             panel4.TabIndex = 28;
             // 
-            // lbl95
+            // lbl58
             // 
-            lbl95.BackColor = Color.Transparent;
-            lbl95.Font = new Font("Segoe UI", 9.5F, FontStyle.Bold);
-            lbl95.ForeColor = Color.Lime;
-            lbl95.Location = new Point(774, 210);
-            lbl95.Name = "lbl95";
-            lbl95.Size = new Size(75, 25);
-            lbl95.TabIndex = 82;
-            lbl95.Text = "95 ";
+            lbl58.BackColor = Color.Transparent;
+            lbl58.Font = new Font("Segoe UI", 12F, FontStyle.Bold);
+            lbl58.ForeColor = Color.FromArgb(0, 192, 0);
+            lbl58.Location = new Point(571, 39);
+            lbl58.Name = "lbl58";
+            lbl58.Size = new Size(278, 207);
+            lbl58.TabIndex = 80;
+            lbl58.Text = "18\r\n\r\n0\r\n\r\nOptimal\r\n";
+            // 
+            // pictureBox1
+            // 
+            pictureBox1.Location = new Point(52, 100);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(189, 116);
+            pictureBox1.TabIndex = 79;
+            pictureBox1.TabStop = false;
+            // 
+            // lbldaily
+            // 
+            lbldaily.BackColor = Color.Transparent;
+            lbldaily.Font = new Font("Segoe UI", 12F, FontStyle.Bold);
+            lbldaily.ForeColor = Color.FromArgb(255, 255, 255);
+            lbldaily.Location = new Point(333, 39);
+            lbldaily.Name = "lbldaily";
+            lbldaily.Size = new Size(278, 207);
+            lbldaily.TabIndex = 78;
+            lbldaily.Text = "Total Events Today\r\n\r\nSecurity Alerts\r\n\r\nSystem Health\r\n\r\nOveralls System Security\r\n\r\n";
+            // 
+            // lbl88
+            // 
+            lbl88.BackColor = Color.Transparent;
+            lbl88.Font = new Font("Segoe UI", 12F, FontStyle.Bold);
+            lbl88.ForeColor = Color.FromArgb(255, 255, 255);
+            lbl88.Location = new Point(30, 27);
+            lbl88.Name = "lbl88";
+            lbl88.Size = new Size(278, 38);
+            lbl88.TabIndex = 77;
+            lbl88.Text = "Daily Security Overview ";
             // 
             // SecurityUserControl
             // 
             AutoScaleMode = AutoScaleMode.None;
-            AutoScroll = true;
             BackColor = Color.FromArgb(14, 12, 38);
             Controls.Add(panel1);
             Controls.Add(pnlsys);
@@ -1684,8 +1683,8 @@ namespace WinFormsApp2.UserControls
             pnl5.ResumeLayout(false);
             pnlTrack.ResumeLayout(false);
             panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
         }
         #endregion
