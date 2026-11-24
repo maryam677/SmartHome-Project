@@ -228,7 +228,8 @@ namespace WinFormsApp2
 
             pnlMainArea.Controls.Clear();
 
-            page.Dock = DockStyle.Fill;
+            page.Dock = DockStyle.Top;
+            page.Height = 1450;
             pnlMainArea.Controls.Add(page);
 
             pnlProfileMenu.Visible = false;
