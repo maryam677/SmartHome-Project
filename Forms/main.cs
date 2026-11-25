@@ -30,6 +30,11 @@ namespace WinFormsApp2
             pnlMainArea.Controls.Add(home);
 
         }
+        public void OpenDevicesPage()
+        {
+           
+            btnDevices.PerformClick();
+        }
 
 
         private void button5_Click(object sender, EventArgs e)

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DevicesControl));
             lblDevicesTitle = new Label();
             lblDevicesSubtitle = new Label();
             btnAddDevice = new Button();
@@ -41,44 +42,66 @@
             lblOnlineText = new Label();
             lblOnlineCount = new Label();
             pnlCamera = new Panel();
+            piccamera1 = new PictureBox();
             btnCameraDetails = new Button();
             lblCameraStatus = new Label();
             lblCameraRoom = new Label();
             lblCameraName = new Label();
             pnlCurtains = new Panel();
+            piccurtains = new PictureBox();
             btnview4 = new Button();
             lblonline4 = new Label();
             lblliving4 = new Label();
             lblSmartCurtains = new Label();
             pnlBackyardCamera = new Panel();
+            piccamback = new PictureBox();
             btnview6 = new Button();
             lblOffline = new Label();
             lblGarden = new Label();
             lblBackyardCamera = new Label();
             pnlSmartLock = new Panel();
+            picdoorlock = new PictureBox();
             btnview = new Button();
             lblonline = new Label();
             lblenterence2 = new Label();
             lblsmartdoor = new Label();
             pnlSmartPlug = new Panel();
+            picsmartcurtins = new PictureBox();
             btnview5 = new Button();
             lblonline5 = new Label();
             lblsamrtplug = new Label();
             lblSmartPlug = new Label();
             pnlGarage = new Panel();
+            picphoto3 = new PictureBox();
             btnview3 = new Button();
             lblonline3 = new Label();
             lblGarage = new Label();
             lblGarageDoor = new Label();
+            picsmartplug1 = new PictureBox();
+            picbackyard = new PictureBox();
             pnlOfflineDevices.SuspendLayout();
             pnlTotalDevices.SuspendLayout();
             pnlOnlineDevices.SuspendLayout();
             pnlCamera.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)piccamera1).BeginInit();
             pnlCurtains.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)piccurtains).BeginInit();
             pnlBackyardCamera.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)piccamback).BeginInit();
             pnlSmartLock.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)picdoorlock).BeginInit();
             pnlSmartPlug.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)picsmartcurtins).BeginInit();
             pnlGarage.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)picphoto3).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)picsmartplug1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)picbackyard).BeginInit();
+            btnDeleteDevice0 = new Button();
+            btnDeleteDevice1 = new Button();
+            btnDeleteDevice2 = new Button();
+            btnDeleteDevice3 = new Button();
+            btnDeleteDevice4 = new Button();
+            btnDeleteDevice5 = new Button();
             SuspendLayout();
             // 
             // lblDevicesTitle
@@ -208,6 +231,7 @@
             // pnlCamera
             // 
             pnlCamera.BackColor = Color.FromArgb(32, 38, 77);
+            pnlCamera.Controls.Add(piccamera1);
             pnlCamera.Controls.Add(btnCameraDetails);
             pnlCamera.Controls.Add(lblCameraStatus);
             pnlCamera.Controls.Add(lblCameraRoom);
@@ -218,13 +242,22 @@
             pnlCamera.Size = new Size(500, 155);
             pnlCamera.TabIndex = 8;
             // 
+            // piccamera1
+            // 
+            piccamera1.Image = (Image)resources.GetObject("piccamera1.Image");
+            piccamera1.Location = new Point(46, 16);
+            piccamera1.Name = "piccamera1";
+            piccamera1.Size = new Size(60, 50);
+            piccamera1.TabIndex = 4;
+            piccamera1.TabStop = false;
+            // 
             // btnCameraDetails
             // 
             btnCameraDetails.BackColor = Color.FromArgb(112, 72, 220);
             btnCameraDetails.Cursor = Cursors.Hand;
             btnCameraDetails.FlatAppearance.BorderSize = 0;
             btnCameraDetails.FlatStyle = FlatStyle.Flat;
-            btnCameraDetails.Location = new Point(360, 99);
+            btnCameraDetails.Location = new Point(312, 95);
             btnCameraDetails.Name = "btnCameraDetails";
             btnCameraDetails.Size = new Size(94, 29);
             btnCameraDetails.TabIndex = 3;
@@ -237,16 +270,17 @@
             // 
             lblCameraStatus.AutoSize = true;
             lblCameraStatus.ForeColor = Color.FromArgb(90, 220, 150);
-            lblCameraStatus.Location = new Point(26, 95);
+            lblCameraStatus.Location = new Point(173, 106);
             lblCameraStatus.Name = "lblCameraStatus";
             lblCameraStatus.Size = new Size(75, 23);
             lblCameraStatus.TabIndex = 2;
             lblCameraStatus.Text = "● Online";
+            
             // 
             // lblCameraRoom
             // 
             lblCameraRoom.AutoSize = true;
-            lblCameraRoom.Location = new Point(26, 55);
+            lblCameraRoom.Location = new Point(173, 44);
             lblCameraRoom.Name = "lblCameraRoom";
             lblCameraRoom.Size = new Size(77, 23);
             lblCameraRoom.TabIndex = 1;
@@ -256,7 +290,7 @@
             // 
             lblCameraName.AutoSize = true;
             lblCameraName.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblCameraName.Location = new Point(26, 20);
+            lblCameraName.Location = new Point(173, 16);
             lblCameraName.Name = "lblCameraName";
             lblCameraName.Size = new Size(192, 28);
             lblCameraName.TabIndex = 0;
@@ -265,6 +299,7 @@
             // pnlCurtains
             // 
             pnlCurtains.BackColor = Color.FromArgb(32, 38, 77);
+            pnlCurtains.Controls.Add(picsmartcurtins);
             pnlCurtains.Controls.Add(btnview4);
             pnlCurtains.Controls.Add(lblonline4);
             pnlCurtains.Controls.Add(lblliving4);
@@ -275,13 +310,21 @@
             pnlCurtains.Size = new Size(500, 155);
             pnlCurtains.TabIndex = 9;
             // 
+            // piccurtains
+            // 
+            piccurtains.Location = new Point(26, 34);
+            piccurtains.Name = "piccurtains";
+            piccurtains.Size = new Size(164, 95);
+            piccurtains.TabIndex = 8;
+            piccurtains.TabStop = false;
+            // 
             // btnview4
             // 
             btnview4.BackColor = Color.FromArgb(112, 72, 220);
             btnview4.Cursor = Cursors.Hand;
             btnview4.FlatAppearance.BorderSize = 0;
             btnview4.FlatStyle = FlatStyle.Flat;
-            btnview4.Location = new Point(360, 100);
+            btnview4.Location = new Point(312, 100);
             btnview4.Name = "btnview4";
             btnview4.Size = new Size(94, 29);
             btnview4.TabIndex = 7;
@@ -294,26 +337,28 @@
             // 
             lblonline4.AutoSize = true;
             lblonline4.ForeColor = Color.FromArgb(90, 220, 150);
-            lblonline4.Location = new Point(46, 100);
+            lblonline4.Location = new Point(157, 106);
             lblonline4.Name = "lblonline4";
             lblonline4.Size = new Size(75, 23);
             lblonline4.TabIndex = 6;
             lblonline4.Text = "● Online";
+           
             // 
             // lblliving4
             // 
             lblliving4.AutoSize = true;
-            lblliving4.Location = new Point(46, 60);
+            lblliving4.Location = new Point(156, 60);
             lblliving4.Name = "lblliving4";
             lblliving4.Size = new Size(104, 23);
             lblliving4.TabIndex = 5;
             lblliving4.Text = "Living Room";
+           
             // 
             // lblSmartCurtains
             // 
             lblSmartCurtains.AutoSize = true;
             lblSmartCurtains.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblSmartCurtains.Location = new Point(46, 25);
+            lblSmartCurtains.Location = new Point(140, 21);
             lblSmartCurtains.Name = "lblSmartCurtains";
             lblSmartCurtains.Size = new Size(154, 28);
             lblSmartCurtains.TabIndex = 4;
@@ -322,6 +367,7 @@
             // pnlBackyardCamera
             // 
             pnlBackyardCamera.BackColor = Color.FromArgb(32, 38, 77);
+            pnlBackyardCamera.Controls.Add(picbackyard);
             pnlBackyardCamera.Controls.Add(btnview6);
             pnlBackyardCamera.Controls.Add(lblOffline);
             pnlBackyardCamera.Controls.Add(lblGarden);
@@ -332,13 +378,21 @@
             pnlBackyardCamera.Size = new Size(500, 155);
             pnlBackyardCamera.TabIndex = 9;
             // 
+            // piccamback
+            // 
+            piccamback.Location = new Point(26, 31);
+            piccamback.Name = "piccamback";
+            piccamback.Size = new Size(164, 95);
+            piccamback.TabIndex = 8;
+            piccamback.TabStop = false;
+            // 
             // btnview6
             // 
             btnview6.BackColor = Color.FromArgb(112, 72, 220);
             btnview6.Cursor = Cursors.Hand;
             btnview6.FlatAppearance.BorderSize = 0;
             btnview6.FlatStyle = FlatStyle.Flat;
-            btnview6.Location = new Point(360, 100);
+            btnview6.Location = new Point(312, 100);
             btnview6.Name = "btnview6";
             btnview6.Size = new Size(94, 29);
             btnview6.TabIndex = 7;
@@ -351,7 +405,7 @@
             // 
             lblOffline.AutoSize = true;
             lblOffline.ForeColor = Color.FromArgb(240, 120, 120);
-            lblOffline.Location = new Point(46, 100);
+            lblOffline.Location = new Point(157, 106);
             lblOffline.Name = "lblOffline";
             lblOffline.Size = new Size(75, 23);
             lblOffline.TabIndex = 6;
@@ -360,7 +414,7 @@
             // lblGarden
             // 
             lblGarden.AutoSize = true;
-            lblGarden.Location = new Point(46, 60);
+            lblGarden.Location = new Point(156, 60);
             lblGarden.Name = "lblGarden";
             lblGarden.Size = new Size(66, 23);
             lblGarden.TabIndex = 5;
@@ -370,7 +424,7 @@
             // 
             lblBackyardCamera.AutoSize = true;
             lblBackyardCamera.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblBackyardCamera.Location = new Point(46, 25);
+            lblBackyardCamera.Location = new Point(135, 25);
             lblBackyardCamera.Name = "lblBackyardCamera";
             lblBackyardCamera.Size = new Size(176, 28);
             lblBackyardCamera.TabIndex = 4;
@@ -379,6 +433,7 @@
             // pnlSmartLock
             // 
             pnlSmartLock.BackColor = Color.FromArgb(32, 38, 77);
+            pnlSmartLock.Controls.Add(picdoorlock);
             pnlSmartLock.Controls.Add(btnview);
             pnlSmartLock.Controls.Add(lblonline);
             pnlSmartLock.Controls.Add(lblenterence2);
@@ -389,13 +444,22 @@
             pnlSmartLock.Size = new Size(500, 155);
             pnlSmartLock.TabIndex = 9;
             // 
+            // picdoorlock
+            // 
+            picdoorlock.Image = (Image)resources.GetObject("picdoorlock.Image");
+            picdoorlock.Location = new Point(46, 16);
+            picdoorlock.Name = "picdoorlock";
+            picdoorlock.Size = new Size(48, 62);
+            picdoorlock.TabIndex = 10;
+            picdoorlock.TabStop = false;
+            // 
             // btnview
             // 
             btnview.BackColor = Color.FromArgb(112, 72, 220);
             btnview.Cursor = Cursors.Hand;
             btnview.FlatAppearance.BorderSize = 0;
             btnview.FlatStyle = FlatStyle.Flat;
-            btnview.Location = new Point(360, 100);
+            btnview.Location = new Point(312, 95);
             btnview.Name = "btnview";
             btnview.Size = new Size(94, 29);
             btnview.TabIndex = 7;
@@ -408,7 +472,7 @@
             // 
             lblonline.AutoSize = true;
             lblonline.ForeColor = Color.FromArgb(90, 220, 150);
-            lblonline.Location = new Point(46, 100);
+            lblonline.Location = new Point(157, 109);
             lblonline.Name = "lblonline";
             lblonline.Size = new Size(65, 20);
             lblonline.TabIndex = 6;
@@ -417,17 +481,18 @@
             // lblenterence2
             // 
             lblenterence2.AutoSize = true;
-            lblenterence2.Location = new Point(46, 60);
+            lblenterence2.Location = new Point(156, 47);
             lblenterence2.Name = "lblenterence2";
             lblenterence2.Size = new Size(66, 20);
             lblenterence2.TabIndex = 5;
             lblenterence2.Text = "Entrance";
+           
             // 
             // lblsmartdoor
             // 
             lblsmartdoor.AutoSize = true;
             lblsmartdoor.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblsmartdoor.Location = new Point(46, 25);
+            lblsmartdoor.Location = new Point(140, 16);
             lblsmartdoor.Name = "lblsmartdoor";
             lblsmartdoor.Size = new Size(171, 28);
             lblsmartdoor.TabIndex = 4;
@@ -436,6 +501,7 @@
             // pnlSmartPlug
             // 
             pnlSmartPlug.BackColor = Color.FromArgb(32, 38, 77);
+            pnlSmartPlug.Controls.Add(picsmartplug1);
             pnlSmartPlug.Controls.Add(btnview5);
             pnlSmartPlug.Controls.Add(lblonline5);
             pnlSmartPlug.Controls.Add(lblsamrtplug);
@@ -446,13 +512,22 @@
             pnlSmartPlug.Size = new Size(500, 155);
             pnlSmartPlug.TabIndex = 9;
             // 
+            // picsmartcurtins
+            // 
+            picsmartcurtins.Image = (Image)resources.GetObject("picsmartcurtins.Image");
+            picsmartcurtins.Location = new Point(46, 21);
+            picsmartcurtins.Name = "picsmartcurtins";
+            picsmartcurtins.Size = new Size(48, 50);
+            picsmartcurtins.TabIndex = 10;
+            picsmartcurtins.TabStop = false;
+            // 
             // btnview5
             // 
             btnview5.BackColor = Color.FromArgb(112, 72, 220);
             btnview5.Cursor = Cursors.Hand;
             btnview5.FlatAppearance.BorderSize = 0;
             btnview5.FlatStyle = FlatStyle.Flat;
-            btnview5.Location = new Point(360, 100);
+            btnview5.Location = new Point(312, 100);
             btnview5.Name = "btnview5";
             btnview5.Size = new Size(94, 29);
             btnview5.TabIndex = 7;
@@ -465,7 +540,7 @@
             // 
             lblonline5.AutoSize = true;
             lblonline5.ForeColor = Color.FromArgb(90, 220, 150);
-            lblonline5.Location = new Point(46, 100);
+            lblonline5.Location = new Point(183, 106);
             lblonline5.Name = "lblonline5";
             lblonline5.Size = new Size(75, 23);
             lblonline5.TabIndex = 6;
@@ -474,17 +549,18 @@
             // lblsamrtplug
             // 
             lblsamrtplug.AutoSize = true;
-            lblsamrtplug.Location = new Point(46, 60);
+            lblsamrtplug.Location = new Point(183, 60);
             lblsamrtplug.Name = "lblsamrtplug";
             lblsamrtplug.Size = new Size(80, 23);
             lblsamrtplug.TabIndex = 5;
             lblsamrtplug.Text = "Bedroom";
+            
             // 
             // lblSmartPlug
             // 
             lblSmartPlug.AutoSize = true;
             lblSmartPlug.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblSmartPlug.Location = new Point(26, 25);
+            lblSmartPlug.Location = new Point(173, 25);
             lblSmartPlug.Name = "lblSmartPlug";
             lblSmartPlug.Size = new Size(117, 28);
             lblSmartPlug.TabIndex = 4;
@@ -493,6 +569,7 @@
             // pnlGarage
             // 
             pnlGarage.BackColor = Color.FromArgb(32, 38, 77);
+            pnlGarage.Controls.Add(picphoto3);
             pnlGarage.Controls.Add(btnview3);
             pnlGarage.Controls.Add(lblonline3);
             pnlGarage.Controls.Add(lblGarage);
@@ -503,13 +580,22 @@
             pnlGarage.Size = new Size(500, 155);
             pnlGarage.TabIndex = 9;
             // 
+            // picphoto3
+            // 
+            picphoto3.Image = (Image)resources.GetObject("picphoto3.Image");
+            picphoto3.Location = new Point(46, 21);
+            picphoto3.Name = "picphoto3";
+            picphoto3.Size = new Size(60, 62);
+            picphoto3.TabIndex = 8;
+            picphoto3.TabStop = false;
+            // 
             // btnview3
             // 
             btnview3.BackColor = Color.FromArgb(112, 72, 220);
             btnview3.Cursor = Cursors.Hand;
             btnview3.FlatAppearance.BorderSize = 0;
             btnview3.FlatStyle = FlatStyle.Flat;
-            btnview3.Location = new Point(360, 100);
+            btnview3.Location = new Point(312, 100);
             btnview3.Name = "btnview3";
             btnview3.Size = new Size(94, 29);
             btnview3.TabIndex = 7;
@@ -522,7 +608,7 @@
             // 
             lblonline3.AutoSize = true;
             lblonline3.ForeColor = Color.FromArgb(90, 220, 150);
-            lblonline3.Location = new Point(46, 100);
+            lblonline3.Location = new Point(183, 106);
             lblonline3.Name = "lblonline3";
             lblonline3.Size = new Size(75, 23);
             lblonline3.TabIndex = 6;
@@ -531,21 +617,40 @@
             // lblGarage
             // 
             lblGarage.AutoSize = true;
-            lblGarage.Location = new Point(46, 60);
+            lblGarage.Location = new Point(183, 60);
             lblGarage.Name = "lblGarage";
             lblGarage.Size = new Size(65, 23);
             lblGarage.TabIndex = 5;
             lblGarage.Text = "Garage";
+            
             // 
             // lblGarageDoor
             // 
             lblGarageDoor.AutoSize = true;
             lblGarageDoor.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblGarageDoor.Location = new Point(26, 25);
+            lblGarageDoor.Location = new Point(173, 25);
             lblGarageDoor.Name = "lblGarageDoor";
             lblGarageDoor.Size = new Size(132, 28);
             lblGarageDoor.TabIndex = 4;
             lblGarageDoor.Text = "Garage Door";
+            // 
+            // picsmartplug1
+            // 
+            picsmartplug1.Image = (Image)resources.GetObject("picsmartplug1.Image");
+            picsmartplug1.Location = new Point(46, 21);
+            picsmartplug1.Name = "picsmartplug1";
+            picsmartplug1.Size = new Size(60, 62);
+            picsmartplug1.TabIndex = 9;
+            picsmartplug1.TabStop = false;
+            // 
+            // picbackyard
+            // 
+            picbackyard.Image = (Image)resources.GetObject("picbackyard.Image");
+            picbackyard.Location = new Point(39, 25);
+            picbackyard.Name = "picbackyard";
+            picbackyard.Size = new Size(55, 58);
+            picbackyard.TabIndex = 8;
+            picbackyard.TabStop = false;
             // 
             // DevicesControl
             // 
@@ -553,6 +658,78 @@
             AutoScaleMode = AutoScaleMode.Font;
             AutoScroll = true;
             BackColor = Color.FromArgb(10, 15, 38);
+            btnDeleteDevice0.Name = "btnDeleteDevice0";
+            btnDeleteDevice0.Text = "Delete";
+            btnDeleteDevice0.BackColor = Color.FromArgb(192, 45, 55);
+            btnDeleteDevice0.ForeColor = Color.White;
+            btnDeleteDevice0.FlatStyle = FlatStyle.Flat;
+            btnDeleteDevice0.FlatAppearance.BorderSize = 0;
+            btnDeleteDevice0.Size = new Size(70, 29);
+            btnDeleteDevice0.Location = new Point(418, 95);
+            btnDeleteDevice0.TabIndex = 20;
+            btnDeleteDevice0.UseVisualStyleBackColor = false;
+            btnDeleteDevice0.Click += DeleteDevice_Click;
+            pnlCamera.Controls.Add(btnDeleteDevice0);
+            btnDeleteDevice1.Name = "btnDeleteDevice1";
+            btnDeleteDevice1.Text = "Delete";
+            btnDeleteDevice1.BackColor = Color.FromArgb(192, 45, 55);
+            btnDeleteDevice1.ForeColor = Color.White;
+            btnDeleteDevice1.FlatStyle = FlatStyle.Flat;
+            btnDeleteDevice1.FlatAppearance.BorderSize = 0;
+            btnDeleteDevice1.Size = new Size(70, 29);
+            btnDeleteDevice1.Location = new Point(418, 95);
+            btnDeleteDevice1.TabIndex = 20;
+            btnDeleteDevice1.UseVisualStyleBackColor = false;
+            btnDeleteDevice1.Click += DeleteDevice_Click;
+            pnlSmartLock.Controls.Add(btnDeleteDevice1);
+            btnDeleteDevice2.Name = "btnDeleteDevice2";
+            btnDeleteDevice2.Text = "Delete";
+            btnDeleteDevice2.BackColor = Color.FromArgb(192, 45, 55);
+            btnDeleteDevice2.ForeColor = Color.White;
+            btnDeleteDevice2.FlatStyle = FlatStyle.Flat;
+            btnDeleteDevice2.FlatAppearance.BorderSize = 0;
+            btnDeleteDevice2.Size = new Size(70, 29);
+            btnDeleteDevice2.Location = new Point(418, 100);
+            btnDeleteDevice2.TabIndex = 20;
+            btnDeleteDevice2.UseVisualStyleBackColor = false;
+            btnDeleteDevice2.Click += DeleteDevice_Click;
+            pnlGarage.Controls.Add(btnDeleteDevice2);
+            btnDeleteDevice3.Name = "btnDeleteDevice3";
+            btnDeleteDevice3.Text = "Delete";
+            btnDeleteDevice3.BackColor = Color.FromArgb(192, 45, 55);
+            btnDeleteDevice3.ForeColor = Color.White;
+            btnDeleteDevice3.FlatStyle = FlatStyle.Flat;
+            btnDeleteDevice3.FlatAppearance.BorderSize = 0;
+            btnDeleteDevice3.Size = new Size(70, 29);
+            btnDeleteDevice3.Location = new Point(418, 100);
+            btnDeleteDevice3.TabIndex = 20;
+            btnDeleteDevice3.UseVisualStyleBackColor = false;
+            btnDeleteDevice3.Click += DeleteDevice_Click;
+            pnlCurtains.Controls.Add(btnDeleteDevice3);
+            btnDeleteDevice4.Name = "btnDeleteDevice4";
+            btnDeleteDevice4.Text = "Delete";
+            btnDeleteDevice4.BackColor = Color.FromArgb(192, 45, 55);
+            btnDeleteDevice4.ForeColor = Color.White;
+            btnDeleteDevice4.FlatStyle = FlatStyle.Flat;
+            btnDeleteDevice4.FlatAppearance.BorderSize = 0;
+            btnDeleteDevice4.Size = new Size(70, 29);
+            btnDeleteDevice4.Location = new Point(418, 100);
+            btnDeleteDevice4.TabIndex = 20;
+            btnDeleteDevice4.UseVisualStyleBackColor = false;
+            btnDeleteDevice4.Click += DeleteDevice_Click;
+            pnlSmartPlug.Controls.Add(btnDeleteDevice4);
+            btnDeleteDevice5.Name = "btnDeleteDevice5";
+            btnDeleteDevice5.Text = "Delete";
+            btnDeleteDevice5.BackColor = Color.FromArgb(192, 45, 55);
+            btnDeleteDevice5.ForeColor = Color.White;
+            btnDeleteDevice5.FlatStyle = FlatStyle.Flat;
+            btnDeleteDevice5.FlatAppearance.BorderSize = 0;
+            btnDeleteDevice5.Size = new Size(70, 29);
+            btnDeleteDevice5.Location = new Point(418, 100);
+            btnDeleteDevice5.TabIndex = 20;
+            btnDeleteDevice5.UseVisualStyleBackColor = false;
+            btnDeleteDevice5.Click += DeleteDevice_Click;
+            pnlBackyardCamera.Controls.Add(btnDeleteDevice5);
             Controls.Add(pnlBackyardCamera);
             Controls.Add(pnlSmartLock);
             Controls.Add(pnlSmartPlug);
@@ -576,16 +753,24 @@
             pnlOnlineDevices.PerformLayout();
             pnlCamera.ResumeLayout(false);
             pnlCamera.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)piccamera1).EndInit();
             pnlCurtains.ResumeLayout(false);
             pnlCurtains.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)piccurtains).EndInit();
             pnlBackyardCamera.ResumeLayout(false);
             pnlBackyardCamera.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)piccamback).EndInit();
             pnlSmartLock.ResumeLayout(false);
             pnlSmartLock.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)picdoorlock).EndInit();
             pnlSmartPlug.ResumeLayout(false);
             pnlSmartPlug.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)picsmartcurtins).EndInit();
             pnlGarage.ResumeLayout(false);
             pnlGarage.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)picphoto3).EndInit();
+            ((System.ComponentModel.ISupportInitialize)picsmartplug1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)picbackyard).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -634,5 +819,20 @@
         private Label lblonline3;
         private Label lblGarage;
         private Label lblGarageDoor;
+        private Button btnDeleteDevice0;
+        private Button btnDeleteDevice1;
+        private Button btnDeleteDevice2;
+        private Button btnDeleteDevice3;
+        private Button btnDeleteDevice4;
+        private Button btnDeleteDevice5;
+        private PictureBox piccamera1;
+        private PictureBox piccurtains;
+        private PictureBox piccamback;
+        private PictureBox picdoorlock;
+        private PictureBox picphoto3;
+        private PictureBox picsmartcurtins;
+        private PictureBox pictureBox1;
+        private PictureBox picsmartplug1;
+        private PictureBox picbackyard;
     }
 }

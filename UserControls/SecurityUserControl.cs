@@ -19,11 +19,12 @@ namespace WinFormsApp2.UserControls
         public SecurityUserControl() : this(new SecurityService())
         {
         }
-
+       
         public SecurityUserControl(SecurityService service)
         {
             securityService = service;
             InitializeComponent();
+        
             if (LicenseManager.UsageMode == LicenseUsageMode.Designtime)
                 return;
 
@@ -194,8 +195,33 @@ namespace WinFormsApp2.UserControls
             }
             lblStatZones.Text = zones.Count.ToString();
             lblStatEvents.Text = securityService.LogCount.ToString();
-            dgvLog.DataSource = securityService.GetLog().OrderByDescending(x => x.Time).ThenByDescending(x => x.Id).ToList();
+
         }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void btnsystem_Click(object sender, EventArgs e)
+        {
+            string diagnosticsReport =
+        "SYSTEM DIAGNOSTICS REPORT \n\n" +
+        "• System Integrity: Optimal (100%)\n" +
+        "• Power Reserve: Stable (85% Battery)\n" +
+        "• Network Strength: Excellent (-55 dBm)\n" +
+        "• Security Firewall: Active & Secure\n\n" +
+        "Status: All security protocols operating normally.";
+
+            MessageBox.Show(diagnosticsReport, "System Health Diagnostics", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+     
     }
 
     // Kept in the approved Security files so no extra project files are required.
