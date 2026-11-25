@@ -41,7 +41,7 @@
             lblSunIcon = new Label();
             lblBrightness = new Label();
             lblBrightnessValue = new Label();
-            trackBrightness = new TrackBar();
+            trackBrightness = new WinFormsApp2.Controls.ModernSlider();
             btnToggle = new Button();
             btnSettings = new Button();
             pnlCard.SuspendLayout();
@@ -309,7 +309,7 @@
         private System.Windows.Forms.Label lblSunIcon;
         private System.Windows.Forms.Label lblBrightness;
         private System.Windows.Forms.Label lblBrightnessValue;
-        private System.Windows.Forms.TrackBar trackBrightness;
+        private WinFormsApp2.Controls.ModernSlider trackBrightness;
         private System.Windows.Forms.Button btnToggle;
         private System.Windows.Forms.Button btnSettings;
     }

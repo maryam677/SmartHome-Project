@@ -31,10 +31,23 @@ namespace WinFormsApp2.UserControls
 
             RefreshData();
 
+            AppData.DataChanged += OnDataChanged;
+
             visualizationPanel.StartListening();
 
             UpdateClock();
             timerClock.Start();
+        }
+
+        private void OnDataChanged()
+        {
+            if (IsDisposed) return;
+            if (InvokeRequired)
+            {
+                BeginInvoke(new Action(OnDataChanged));
+                return;
+            }
+            RefreshData();
         }
 
         // Called every time the lighting data changes
@@ -57,6 +70,12 @@ namespace WinFormsApp2.UserControls
         private void timerClock_Tick(object sender, EventArgs e)
         {
             UpdateClock();
+        }
+
+        protected override void OnHandleDestroyed(EventArgs e)
+        {
+            AppData.DataChanged -= OnDataChanged;
+            base.OnHandleDestroyed(e);
         }
     }
 }
