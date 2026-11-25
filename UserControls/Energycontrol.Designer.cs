@@ -1439,12 +1439,12 @@
             AutoScroll = true;
             AutoScrollMinSize = new Size(1603, 1056);
             BackColor = Color.FromArgb(15, 17, 30);
+            Controls.Add(pnlback);
             Controls.Add(panel1);
             Controls.Add(pnlchart);
             Controls.Add(pnlmydev);
             Controls.Add(pnlwea);
             Controls.Add(pnlenergysum);
-            Controls.Add(pnlback);
             Controls.Add(pnleco);
             Controls.Add(pnltop);
             Controls.Add(pnlpeak);
