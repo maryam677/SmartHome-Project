@@ -48,13 +48,13 @@
             lblCameraRoom = new Label();
             lblCameraName = new Label();
             pnlCurtains = new Panel();
-            piccurtains = new PictureBox();
+            
             btnview4 = new Button();
             lblonline4 = new Label();
             lblliving4 = new Label();
             lblSmartCurtains = new Label();
             pnlBackyardCamera = new Panel();
-            piccamback = new PictureBox();
+            
             btnview6 = new Button();
             lblOffline = new Label();
             lblGarden = new Label();
@@ -85,9 +85,9 @@
             pnlCamera.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)piccamera1).BeginInit();
             pnlCurtains.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)piccurtains).BeginInit();
+            
             pnlBackyardCamera.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)piccamback).BeginInit();
+            
             pnlSmartLock.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)picdoorlock).BeginInit();
             pnlSmartPlug.SuspendLayout();
@@ -312,11 +312,7 @@
             // 
             // piccurtains
             // 
-            piccurtains.Location = new Point(26, 34);
-            piccurtains.Name = "piccurtains";
-            piccurtains.Size = new Size(164, 95);
-            piccurtains.TabIndex = 8;
-            piccurtains.TabStop = false;
+            
             // 
             // btnview4
             // 
@@ -380,11 +376,8 @@
             // 
             // piccamback
             // 
-            piccamback.Location = new Point(26, 31);
-            piccamback.Name = "piccamback";
-            piccamback.Size = new Size(164, 95);
-            piccamback.TabIndex = 8;
-            piccamback.TabStop = false;
+           
+            
             // 
             // btnview6
             // 
@@ -756,10 +749,10 @@
             ((System.ComponentModel.ISupportInitialize)piccamera1).EndInit();
             pnlCurtains.ResumeLayout(false);
             pnlCurtains.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)piccurtains).EndInit();
+           
             pnlBackyardCamera.ResumeLayout(false);
             pnlBackyardCamera.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)piccamback).EndInit();
+            
             pnlSmartLock.ResumeLayout(false);
             pnlSmartLock.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)picdoorlock).EndInit();

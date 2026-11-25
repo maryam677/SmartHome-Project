@@ -72,10 +72,37 @@ namespace WinFormsApp2.UserControls
             UpdateClock();
         }
 
-        protected override void OnHandleDestroyed(EventArgs e)
-        {
-            AppData.DataChanged -= OnDataChanged;
-            base.OnHandleDestroyed(e);
+private void cardLivingRoom_Load(object sender, EventArgs e)
+{
+}
+
+private void btnLight_Click(object sender, EventArgs e)
+{
+    Form1 popup = new Form1();
+    popup.ShowDialog();
+}
+
+private void cardLivingRoom_Click(object sender, EventArgs e)
+{
+}
+
+private void btnSettings_Click(object sender, EventArgs e)
+{
+    Form1 popup = new Form1();
+    popup.ShowDialog();
+}
+
+private void cardBedroom_Click(object sender, EventArgs e)
+{
+}
+
+protected override void OnHandleDestroyed(EventArgs e)
+{
+    AppData.DataChanged -= OnDataChanged;
+    base.OnHandleDestroyed(e);
+}
         }
     }
 }
+
+
