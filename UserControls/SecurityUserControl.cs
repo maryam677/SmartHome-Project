@@ -19,12 +19,12 @@ namespace WinFormsApp2.UserControls
         public SecurityUserControl() : this(new SecurityService())
         {
         }
-       
+
         public SecurityUserControl(SecurityService service)
         {
             securityService = service;
             InitializeComponent();
-        
+
             if (LicenseManager.UsageMode == LicenseUsageMode.Designtime)
                 return;
 
@@ -221,7 +221,10 @@ namespace WinFormsApp2.UserControls
 
         }
 
-     
+        private void panel6_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 
     // Kept in the approved Security files so no extra project files are required.

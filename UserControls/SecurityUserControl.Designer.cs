@@ -116,15 +116,9 @@ namespace WinFormsApp2.UserControls
             chkAutoSim = new CheckBox();
             pnlsys = new Panel();
             btnsystem = new Button();
-            pnl6 = new Panel();
-            panel6 = new Panel();
             lblnet = new Label();
             pnl7 = new Panel();
-            pnl5 = new Panel();
-            panel3 = new Panel();
             lblpower = new Label();
-            pnlTrack = new Panel();
-            pnlfill = new Panel();
             pnl9 = new Panel();
             lblsecurity = new Label();
             lbl66 = new Label();
@@ -140,6 +134,9 @@ namespace WinFormsApp2.UserControls
             pictureBox1 = new PictureBox();
             lbldaily = new Label();
             lbl88 = new Label();
+            progressBar1 = new ProgressBar();
+            progressBar2 = new ProgressBar();
+            progressBar3 = new ProgressBar();
             cardStatAlarm.SuspendLayout();
             cardStatZones.SuspendLayout();
             cardStatEvents.SuspendLayout();
@@ -160,9 +157,6 @@ namespace WinFormsApp2.UserControls
             pnlGarageInfo.SuspendLayout();
             cardAlarm.SuspendLayout();
             pnlsys.SuspendLayout();
-            pnl6.SuspendLayout();
-            pnl5.SuspendLayout();
-            pnlTrack.SuspendLayout();
             panel1.SuspendLayout();
             panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
@@ -1393,13 +1387,13 @@ namespace WinFormsApp2.UserControls
             // pnlsys
             // 
             pnlsys.BorderStyle = BorderStyle.FixedSingle;
+            pnlsys.Controls.Add(progressBar3);
+            pnlsys.Controls.Add(progressBar2);
+            pnlsys.Controls.Add(progressBar1);
             pnlsys.Controls.Add(btnsystem);
-            pnlsys.Controls.Add(pnl6);
             pnlsys.Controls.Add(lblnet);
             pnlsys.Controls.Add(pnl7);
-            pnlsys.Controls.Add(pnl5);
             pnlsys.Controls.Add(lblpower);
-            pnlsys.Controls.Add(pnlTrack);
             pnlsys.Controls.Add(pnl9);
             pnlsys.Controls.Add(lblsecurity);
             pnlsys.Controls.Add(lbl66);
@@ -1421,23 +1415,6 @@ namespace WinFormsApp2.UserControls
             btnsystem.UseVisualStyleBackColor = false;
             btnsystem.Click += btnsystem_Click;
             // 
-            // pnl6
-            // 
-            pnl6.BorderStyle = BorderStyle.FixedSingle;
-            pnl6.Controls.Add(panel6);
-            pnl6.Location = new Point(408, 236);
-            pnl6.Name = "pnl6";
-            pnl6.Size = new Size(180, 23);
-            pnl6.TabIndex = 32;
-            // 
-            // panel6
-            // 
-            panel6.BackColor = Color.FromArgb(0, 192, 0);
-            panel6.Location = new Point(-1, -1);
-            panel6.Name = "panel6";
-            panel6.Size = new Size(46, 23);
-            panel6.TabIndex = 28;
-            // 
             // lblnet
             // 
             lblnet.Font = new Font("Segoe UI", 10F);
@@ -1455,24 +1432,6 @@ namespace WinFormsApp2.UserControls
             pnl7.Size = new Size(608, 11);
             pnl7.TabIndex = 30;
             // 
-            // pnl5
-            // 
-            pnl5.BorderStyle = BorderStyle.FixedSingle;
-            pnl5.Controls.Add(panel3);
-            pnl5.Location = new Point(408, 159);
-            pnl5.Name = "pnl5";
-            pnl5.Size = new Size(180, 23);
-            pnl5.TabIndex = 29;
-            pnl5.Paint += panel1_Paint;
-            // 
-            // panel3
-            // 
-            panel3.BackColor = Color.FromArgb(0, 192, 0);
-            panel3.Location = new Point(-3, 0);
-            panel3.Name = "panel3";
-            panel3.Size = new Size(87, 23);
-            panel3.TabIndex = 28;
-            // 
             // lblpower
             // 
             lblpower.Font = new Font("Segoe UI", 10F);
@@ -1481,23 +1440,6 @@ namespace WinFormsApp2.UserControls
             lblpower.Size = new Size(124, 23);
             lblpower.TabIndex = 28;
             lblpower.Text = "Power Resevo ";
-            // 
-            // pnlTrack
-            // 
-            pnlTrack.BorderStyle = BorderStyle.FixedSingle;
-            pnlTrack.Controls.Add(pnlfill);
-            pnlTrack.Location = new Point(408, 74);
-            pnlTrack.Name = "pnlTrack";
-            pnlTrack.Size = new Size(180, 23);
-            pnlTrack.TabIndex = 27;
-            // 
-            // pnlfill
-            // 
-            pnlfill.BackColor = Color.FromArgb(0, 192, 0);
-            pnlfill.Location = new Point(-1, -1);
-            pnlfill.Name = "pnlfill";
-            pnlfill.Size = new Size(120, 23);
-            pnlfill.TabIndex = 28;
             // 
             // pnl9
             // 
@@ -1636,6 +1578,30 @@ namespace WinFormsApp2.UserControls
             lbl88.TabIndex = 77;
             lbl88.Text = "Daily Security Overview ";
             // 
+            // progressBar1
+            // 
+            progressBar1.Location = new Point(408, 159);
+            progressBar1.Name = "progressBar1";
+            progressBar1.Size = new Size(180, 23);
+            progressBar1.TabIndex = 34;
+            progressBar1.Value = 30;
+            // 
+            // progressBar2
+            // 
+            progressBar2.Location = new Point(408, 86);
+            progressBar2.Name = "progressBar2";
+            progressBar2.Size = new Size(180, 24);
+            progressBar2.TabIndex = 35;
+            progressBar2.Value = 50;
+            // 
+            // progressBar3
+            // 
+            progressBar3.Location = new Point(408, 237);
+            progressBar3.Name = "progressBar3";
+            progressBar3.Size = new Size(179, 22);
+            progressBar3.TabIndex = 29;
+            progressBar3.Value = 42;
+            // 
             // SecurityUserControl
             // 
             AutoScaleMode = AutoScaleMode.None;
@@ -1679,9 +1645,6 @@ namespace WinFormsApp2.UserControls
             cardAlarm.ResumeLayout(false);
             pnlsys.ResumeLayout(false);
             pnlsys.PerformLayout();
-            pnl6.ResumeLayout(false);
-            pnl5.ResumeLayout(false);
-            pnlTrack.ResumeLayout(false);
             panel1.ResumeLayout(false);
             panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
@@ -1790,15 +1753,9 @@ namespace WinFormsApp2.UserControls
         private Label lbl66;
         private Label lblsecurity;
         private Panel pnl9;
-        private Panel pnlfill;
-        private Panel pnlTrack;
         private Label lblpower;
-        private Panel pnl6;
-        private Panel panel6;
         private Label lblnet;
         private Panel pnl7;
-        private Panel pnl5;
-        private Panel panel3;
         private Button btnsystem;
         private DataGridViewTextBoxColumn col4;
         private DataGridViewTextBoxColumn col3;
@@ -1812,6 +1769,9 @@ namespace WinFormsApp2.UserControls
         private Panel panel2;
         private Panel panel4;
         private Label lbl58;
+        private ProgressBar progressBar1;
+        private ProgressBar progressBar3;
+        private ProgressBar progressBar2;
     }
     internal partial class SecurityAlarmPopup
     {
