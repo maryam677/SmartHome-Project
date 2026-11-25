@@ -260,7 +260,7 @@
             pnlMorning.Controls.Add(lblMorningStatus);
             pnlMorning.Controls.Add(lblMorning);
             pnlMorning.Controls.Add(lblMorningDesc);
-            pnlMorning.Location = new Point(82, 117);
+            pnlMorning.Location = new Point(83, 117);
             pnlMorning.Name = "pnlMorning";
             pnlMorning.Size = new Size(307, 228);
             pnlMorning.TabIndex = 1;
@@ -341,7 +341,7 @@
             // 
             pnlSchedule.BackColor = Color.FromArgb(22, 29, 63);
             pnlSchedule.Controls.Add(lblScheduleTitle);
-            pnlSchedule.Location = new Point(82, 371);
+            pnlSchedule.Location = new Point(83, 362);
             pnlSchedule.Name = "pnlSchedule";
             pnlSchedule.Size = new Size(956, 265);
             pnlSchedule.TabIndex = 5;
@@ -380,9 +380,9 @@
             // 
             panel4.BackColor = Color.FromArgb(40, 47, 92);
             panel4.Controls.Add(lblLightLevel);
-            panel4.Location = new Point(250, 157);
+            panel4.Location = new Point(233, 155);
             panel4.Name = "panel4";
-            panel4.Size = new Size(85, 73);
+            panel4.Size = new Size(111, 73);
             panel4.TabIndex = 4;
             panel4.Tag = "Light Level";
             panel4.Click += OpenTrigger_Click;
@@ -390,10 +390,11 @@
             // lblLightLevel
             // 
             lblLightLevel.AutoSize = true;
+            lblLightLevel.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lblLightLevel.ForeColor = Color.White;
-            lblLightLevel.Location = new Point(2, 24);
+            lblLightLevel.Location = new Point(14, 27);
             lblLightLevel.Name = "lblLightLevel";
-            lblLightLevel.Size = new Size(80, 20);
+            lblLightLevel.Size = new Size(85, 20);
             lblLightLevel.TabIndex = 0;
             lblLightLevel.Text = "Light Level";
             lblLightLevel.TextAlign = ContentAlignment.MiddleCenter;
@@ -413,10 +414,11 @@
             // lblMotion
             // 
             lblMotion.AutoSize = true;
+            lblMotion.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lblMotion.ForeColor = Color.White;
-            lblMotion.Location = new Point(8, 23);
+            lblMotion.Location = new Point(12, 26);
             lblMotion.Name = "lblMotion";
-            lblMotion.Size = new Size(57, 20);
+            lblMotion.Size = new Size(60, 20);
             lblMotion.TabIndex = 1;
             lblMotion.Text = "Motion";
             lblMotion.TextAlign = ContentAlignment.MiddleCenter;
@@ -434,7 +436,7 @@
             // 
             panel6.BackColor = Color.FromArgb(40, 47, 92);
             panel6.Controls.Add(lblHumidity);
-            panel6.Location = new Point(142, 155);
+            panel6.Location = new Point(136, 155);
             panel6.Name = "panel6";
             panel6.Size = new Size(85, 73);
             panel6.TabIndex = 4;
@@ -445,10 +447,11 @@
             // 
             lblHumidity.AutoSize = true;
             lblHumidity.BackColor = Color.Transparent;
+            lblHumidity.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lblHumidity.ForeColor = Color.White;
             lblHumidity.Location = new Point(9, 26);
             lblHumidity.Name = "lblHumidity";
-            lblHumidity.Size = new Size(70, 20);
+            lblHumidity.Size = new Size(74, 20);
             lblHumidity.TabIndex = 0;
             lblHumidity.Text = "Humidity";
             lblHumidity.TextAlign = ContentAlignment.MiddleCenter;
@@ -457,9 +460,9 @@
             // 
             panel8.BackColor = Color.FromArgb(40, 47, 92);
             panel8.Controls.Add(lblTemperature);
-            panel8.Location = new Point(30, 155);
+            panel8.Location = new Point(14, 155);
             panel8.Name = "panel8";
-            panel8.Size = new Size(89, 73);
+            panel8.Size = new Size(110, 73);
             panel8.TabIndex = 4;
             panel8.Tag = "Temperature";
             panel8.Click += OpenTrigger_Click;
@@ -467,11 +470,11 @@
             // lblTemperature
             // 
             lblTemperature.AutoSize = true;
-            lblTemperature.Font = new Font("Segoe UI", 7.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lblTemperature.Font = new Font("Segoe UI", 7.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lblTemperature.ForeColor = Color.White;
-            lblTemperature.Location = new Point(3, 29);
+            lblTemperature.Location = new Point(16, 29);
             lblTemperature.Name = "lblTemperature";
-            lblTemperature.Size = new Size(82, 17);
+            lblTemperature.Size = new Size(86, 17);
             lblTemperature.TabIndex = 0;
             lblTemperature.Text = "Temperature";
             lblTemperature.TextAlign = ContentAlignment.MiddleCenter;
@@ -480,7 +483,7 @@
             // 
             panel9.BackColor = Color.FromArgb(40, 47, 92);
             panel9.Controls.Add(lblMore);
-            panel9.Location = new Point(358, 155);
+            panel9.Location = new Point(356, 155);
             panel9.Name = "panel9";
             panel9.Size = new Size(85, 73);
             panel9.TabIndex = 4;
@@ -490,10 +493,11 @@
             // lblMore
             // 
             lblMore.AutoSize = true;
+            lblMore.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lblMore.ForeColor = Color.White;
-            lblMore.Location = new Point(18, 24);
+            lblMore.Location = new Point(17, 26);
             lblMore.Name = "lblMore";
-            lblMore.Size = new Size(44, 20);
+            lblMore.Size = new Size(46, 20);
             lblMore.TabIndex = 0;
             lblMore.Text = "More";
             lblMore.TextAlign = ContentAlignment.MiddleCenter;
@@ -512,10 +516,11 @@
             // lblDoor
             // 
             lblDoor.AutoSize = true;
+            lblDoor.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lblDoor.ForeColor = Color.White;
             lblDoor.Location = new Point(18, 23);
             lblDoor.Name = "lblDoor";
-            lblDoor.Size = new Size(43, 20);
+            lblDoor.Size = new Size(44, 20);
             lblDoor.TabIndex = 0;
             lblDoor.Text = "Door";
             lblDoor.TextAlign = ContentAlignment.MiddleCenter;
@@ -534,11 +539,11 @@
             // lblLocation
             // 
             lblLocation.AutoSize = true;
-            lblLocation.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lblLocation.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lblLocation.ForeColor = Color.White;
-            lblLocation.Location = new Point(14, 26);
+            lblLocation.Location = new Point(10, 26);
             lblLocation.Name = "lblLocation";
-            lblLocation.Size = new Size(66, 20);
+            lblLocation.Size = new Size(69, 20);
             lblLocation.TabIndex = 0;
             lblLocation.Text = "Location";
             lblLocation.TextAlign = ContentAlignment.MiddleCenter;
@@ -557,11 +562,11 @@
             // lblTime
             // 
             lblTime.AutoSize = true;
-            lblTime.Font = new Font("Segoe UI", 7.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lblTime.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lblTime.ForeColor = Color.White;
             lblTime.Location = new Point(21, 26);
             lblTime.Name = "lblTime";
-            lblTime.Size = new Size(36, 17);
+            lblTime.Size = new Size(44, 20);
             lblTime.TabIndex = 0;
             lblTime.Text = "Time";
             lblTime.TextAlign = ContentAlignment.MiddleCenter;
@@ -622,11 +627,10 @@
             // 
             label4.Font = new Font("Segoe UI", 14F, FontStyle.Bold);
             label4.ForeColor = Color.White;
-            label4.Location = new Point(208, 68);
+            label4.Location = new Point(200, 79);
             label4.Name = "label4";
-            label4.Size = new Size(133, 125);
+            label4.Size = new Size(153, 125);
             label4.TabIndex = 3;
-            label4.Text = "5 Total\r\n 5 Enabled    \r\n 0 Disabled";
             // 
             // overviewTitle
             // 
@@ -654,7 +658,7 @@
             rulesPanel.Controls.Add(txtSearch);
             rulesPanel.Controls.Add(tableHeader);
             rulesPanel.Controls.Add(ruleRows);
-            rulesPanel.Location = new Point(82, 662);
+            rulesPanel.Location = new Point(82, 642);
             rulesPanel.Name = "rulesPanel";
             rulesPanel.Size = new Size(1085, 365);
             rulesPanel.TabIndex = 12;

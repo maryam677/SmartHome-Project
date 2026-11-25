@@ -37,7 +37,7 @@ namespace WinFormsApp2
                 label4.Text =
                     $"{chart.EnabledCount + (long)chart.DisabledCount} Total\n" +
                     $"{chart.EnabledCount} Enabled\n" +
-                    $"{chart.DisabledCount} Disabled";
+                    $"{chart.DisabledCount} Disabled\n";
             }
 
             chart.CountsChanged += (_, _) => UpdateOverviewCounts();
@@ -62,12 +62,40 @@ namespace WinFormsApp2
             timeline.BringToFront();
 
 
+            ApplyRoundedUI();
+
         }
 
 
 
 
+        private void ApplyRoundedUI()
+        {
+           
+            UiRoundHelper.ApplyRoundedRegion(pnlSchedule, 20);
+            UiRoundHelper.ApplyRoundedRegion(pnlOverview, 20);
+            UiRoundHelper.ApplyRoundedRegion(pnlMorning, 20);
+            UiRoundHelper.ApplyRoundedRegion(pnlAway, 20);
+            UiRoundHelper.ApplyRoundedRegion(pnlNight, 20);
+            UiRoundHelper.ApplyRoundedRegion(pnlVacation, 20);
+            UiRoundHelper.ApplyRoundedRegion(rulesPanel, 20);
+            UiRoundHelper.ApplyRoundedRegion(pnlTriggers, 20);
+            UiRoundHelper.ApplyRoundedRegion(panel2, 20);
+            UiRoundHelper.ApplyRoundedRegion(panel3, 20);
+            UiRoundHelper.ApplyRoundedRegion(panel4, 20);
+            UiRoundHelper.ApplyRoundedRegion(panel5, 20);
+            UiRoundHelper.ApplyRoundedRegion(panel11, 20);
+            UiRoundHelper.ApplyRoundedRegion(panel6, 20);
+            UiRoundHelper.ApplyRoundedRegion(panel8, 20);
+            UiRoundHelper.ApplyRoundedRegion(panel9, 20);
+            UiRoundHelper.ApplyRoundedRegion(btnCreateRoutine, 8);
+            UiRoundHelper.ApplyRoundedRegion(btnSchedule, 8);
 
+
+
+
+
+        }
 
         private void btnCreateRoutine_Click_1(object sender, EventArgs e)
         {
