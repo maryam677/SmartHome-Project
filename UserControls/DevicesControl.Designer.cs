@@ -1,4 +1,4 @@
-﻿namespace WinFormsApp2.UserControls
+namespace WinFormsApp2.UserControls
 {
     partial class DevicesControl
     {
@@ -55,7 +55,6 @@
             lblliving4 = new Label();
             lblSmartCurtains = new Label();
             btnDeleteDevice3 = new Button();
-            piccurtains = new PictureBox();
             pnlBackyardCamera = new Panel();
             picbackyard = new PictureBox();
             btnview6 = new Button();
@@ -63,7 +62,6 @@
             lblGarden = new Label();
             lblBackyardCamera = new Label();
             btnDeleteDevice5 = new Button();
-            piccamback = new PictureBox();
             pnlSmartLock = new Panel();
             picdoorlock = new PictureBox();
             btnview = new Button();
@@ -92,10 +90,8 @@
             ((System.ComponentModel.ISupportInitialize)piccamera1).BeginInit();
             pnlCurtains.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)picsmartcurtins).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)piccurtains).BeginInit();
             pnlBackyardCamera.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)picbackyard).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)piccamback).BeginInit();
             pnlSmartLock.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)picdoorlock).BeginInit();
             pnlSmartPlug.SuspendLayout();
@@ -395,14 +391,6 @@
             btnDeleteDevice3.UseVisualStyleBackColor = false;
             btnDeleteDevice3.Click += DeleteDevice_Click;
             // 
-            // piccurtains
-            // 
-            piccurtains.Location = new Point(26, 34);
-            piccurtains.Name = "piccurtains";
-            piccurtains.Size = new Size(164, 95);
-            piccurtains.TabIndex = 8;
-            piccurtains.TabStop = false;
-            // 
             // pnlBackyardCamera
             // 
             pnlBackyardCamera.BackColor = Color.FromArgb(32, 38, 77);
@@ -485,14 +473,6 @@
             btnDeleteDevice5.Text = "Delete";
             btnDeleteDevice5.UseVisualStyleBackColor = false;
             btnDeleteDevice5.Click += DeleteDevice_Click;
-            // 
-            // piccamback
-            // 
-            piccamback.Location = new Point(26, 31);
-            piccamback.Name = "piccamback";
-            piccamback.Size = new Size(164, 95);
-            piccamback.TabIndex = 8;
-            piccamback.TabStop = false;
             // 
             // pnlSmartLock
             // 
@@ -776,11 +756,9 @@
             pnlCurtains.ResumeLayout(false);
             pnlCurtains.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)picsmartcurtins).EndInit();
-            ((System.ComponentModel.ISupportInitialize)piccurtains).EndInit();
             pnlBackyardCamera.ResumeLayout(false);
             pnlBackyardCamera.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)picbackyard).EndInit();
-            ((System.ComponentModel.ISupportInitialize)piccamback).EndInit();
             pnlSmartLock.ResumeLayout(false);
             pnlSmartLock.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)picdoorlock).EndInit();
@@ -845,8 +823,6 @@
         private Button btnDeleteDevice4;
         private Button btnDeleteDevice5;
         private PictureBox piccamera1;
-        private PictureBox piccurtains;
-        private PictureBox piccamback;
         private PictureBox picdoorlock;
         private PictureBox picphoto3;
         private PictureBox picsmartcurtins;

@@ -298,6 +298,8 @@
             cardLivingRoom.RoomSubtitle = "Relax & Enjoy";
             cardLivingRoom.Size = new Size(304, 488);
             cardLivingRoom.TabIndex = 6;
+            cardLivingRoom.Load += cardLivingRoom_Load;
+            cardLivingRoom.Click += cardLivingRoom_Click;
             // 
             // cardBedroom
             // 
@@ -315,6 +317,7 @@
             cardBedroom.RoomSubtitle = "Sleep in Comfort";
             cardBedroom.Size = new Size(304, 488);
             cardBedroom.TabIndex = 7;
+            cardBedroom.Click += cardBedroom_Click;
             // 
             // cardKitchen
             // 
