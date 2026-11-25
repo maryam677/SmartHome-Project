@@ -187,7 +187,7 @@
             // picWelcomeHand
             // 
             picWelcomeHand.Image = (Image)resources.GetObject("picWelcomeHand.Image");
-            picWelcomeHand.Location = new Point(453, 10);
+            picWelcomeHand.Location = new Point(463, 13);
             picWelcomeHand.Name = "picWelcomeHand";
             picWelcomeHand.Size = new Size(62, 53);
             picWelcomeHand.TabIndex = 2;
