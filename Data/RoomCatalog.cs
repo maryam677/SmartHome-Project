@@ -146,6 +146,22 @@ public static class RoomCatalog
         };
     }
 
+    private static bool StripBathroomCameras()
+    {
+        bool changed = false;
+        foreach (RoomRecord room in rooms)
+        {
+            bool bathroom = room.Photo == RoomPhotoKind.Bathroom
+                || room.Name.Contains("Bath", StringComparison.OrdinalIgnoreCase);
+            if (!bathroom || room.Devices == null)
+                continue;
+            int removed = room.Devices.RemoveAll(device => device.Glyph == RoomDeviceGlyph.Camera);
+            if (removed > 0)
+                changed = true;
+        }
+        return changed;
+    }
+
     private static string FilePath => Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "rooms.json");
 
     private static void Load()
@@ -158,6 +174,8 @@ public static class RoomCatalog
                 if (loaded != null)
                 {
                     rooms.AddRange(loaded.Where(room => room.Devices != null));
+                    if (StripBathroomCameras())
+                        Save();
                     return;
                 }
             }
