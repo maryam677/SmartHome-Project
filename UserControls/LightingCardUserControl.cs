@@ -122,7 +122,8 @@ namespace WinFormsApp2.UserControls
                 lblBulbIcon.ForeColor = lightColor;
                 btnToggle.Text = "Turn Off";
                 btnToggle.BackColor = AppColors.PrimaryPurple;
-                btnToggle.FlatAppearance.BorderColor = AppColors.PrimaryPurple;
+                btnToggle.ForeColor = Color.FromArgb(248, 250, 252);
+                btnToggle.FlatAppearance.BorderSize = 0;
             }
             else
             {
@@ -130,8 +131,10 @@ namespace WinFormsApp2.UserControls
                 lblLightStatus.ForeColor = AppColors.SecondaryText;
                 lblBulbIcon.ForeColor = AppColors.SecondaryText;
                 btnToggle.Text = "Turn On";
-                btnToggle.BackColor = AppColors.SecondaryBackground;
-                btnToggle.FlatAppearance.BorderColor = AppColors.Border;
+                btnToggle.BackColor = Color.FromArgb(27, 21, 56);
+                btnToggle.ForeColor = Color.FromArgb(216, 204, 255);
+                btnToggle.FlatAppearance.BorderSize = 1;
+                btnToggle.FlatAppearance.BorderColor = AppColors.PrimaryPurple;
             }
         }
 
@@ -140,6 +143,7 @@ namespace WinFormsApp2.UserControls
             if (Room != null)
             {
                 Room.SetBrightness(trackBrightness.Value);
+                RefreshFromRoom();
                 AppData.NotifyDataChanged();
             }
             else
@@ -162,6 +166,7 @@ namespace WinFormsApp2.UserControls
             {
                 Room.TurnOn();
             }
+            RefreshFromRoom();
             AppData.NotifyDataChanged();
         }
 

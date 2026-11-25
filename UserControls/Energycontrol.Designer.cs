@@ -2,6 +2,7 @@
 {
     partial class Energycontrol
     {
+   
         /// <summary> 
         /// Required designer variable.
         /// </summary>
@@ -33,7 +34,7 @@
             lblMan = new Label();
             lblsticker = new Label();
             lblene = new Label();
-            panel3 = new Panel();
+            pnluse = new Panel();
             label6 = new Label();
             label7 = new Label();
             label8 = new Label();
@@ -41,7 +42,7 @@
             lblast = new Label();
             lblnum = new Label();
             lbltotal = new Label();
-            panel1 = new Panel();
+            pnlcost = new Panel();
             label1 = new Label();
             label2 = new Label();
             lblcost = new Label();
@@ -53,98 +54,28 @@
             lbltime = new Label();
             lblweather = new Label();
             label10 = new Label();
-            pnlMonthlyUsage = new Panel();
-            panel21 = new Panel();
-            lbljun = new Label();
-            lblnov = new Label();
-            panel8 = new Panel();
-            panel7 = new Panel();
-            panel6 = new Panel();
-            panel5 = new Panel();
-            panel4 = new Panel();
-            lbl = new Label();
-            lblsep = new Label();
-            lblaug = new Label();
-            lbljul = new Label();
-            lbl0 = new Label();
-            lbl120 = new Label();
-            lbl240 = new Label();
-            lbl360 = new Label();
-            lbl480 = new Label();
-            lbl600 = new Label();
-            lblkwh = new Label();
-            lbltex = new Label();
-            lblstick = new Label();
-            label9 = new Label();
-            lblmon = new Label();
-            panel9 = new Panel();
+            pnlpeak = new Panel();
             label11 = new Label();
             label12 = new Label();
             lblpeak = new Label();
-            pnlroom = new Panel();
-            lbldi7 = new Label();
-            lbldi6 = new Label();
-            lbldi5 = new Label();
-            lbldi4 = new Label();
-            lbldi3 = new Label();
-            lbldi2 = new Label();
-            lbldi1 = new Label();
-            lbltot7 = new Label();
-            lblco6 = new Label();
-            lblco5 = new Label();
-            lblco4 = new Label();
-            lblco3 = new Label();
-            lblco2 = new Label();
-            lblco1 = new Label();
-            lblsum = new Label();
-            lblnum6 = new Label();
-            lblnum5 = new Label();
-            lblnum4 = new Label();
-            lblnum3 = new Label();
-            lblnum2 = new Label();
-            lblnum1 = new Label();
-            panel15 = new Panel();
-            panel16 = new Panel();
-            panel17 = new Panel();
-            panel13 = new Panel();
-            panel12 = new Panel();
-            panel11 = new Panel();
-            lblother = new Label();
-            lbltot = new Label();
-            lblbath = new Label();
-            lblstudy = new Label();
-            lblbed = new Label();
-            lblkitch = new Label();
-            lblliving = new Label();
-            pnlline = new Panel();
-            lbldevice = new Label();
-            lblcos = new Label();
-            lblen = new Label();
-            lblroom = new Label();
-            lblenergy = new Label();
             pnltop = new Panel();
             lbl24 = new Label();
             lbl2 = new Label();
             lbl27 = new Label();
             lbl56 = new Label();
             lbl118 = new Label();
-            panel19 = new Panel();
             progressBar4 = new ProgressBar();
             lblwash = new Label();
-            panel18 = new Panel();
             progressBar3 = new ProgressBar();
             lblsmart = new Label();
-            panel14 = new Panel();
             progressBar2 = new ProgressBar();
             lblheater = new Label();
-            panel10 = new Panel();
             progressBar1 = new ProgressBar();
-            label13 = new Label();
-            pnlair = new Panel();
+            lblref = new Label();
             pbair = new ProgressBar();
             lblair = new Label();
             lbltop = new Label();
-            panel20 = new Panel();
+            pnleco = new Panel();
             lblsaving = new Label();
             chkeco = new CheckBox();
             lblactive = new Label();
@@ -157,7 +88,7 @@
             lblsolar = new Label();
             lblemo = new Label();
             llblev = new Label();
-            pnlenergy = new Panel();
+            pnlenergysum = new Panel();
             label15 = new Label();
             lbl368 = new Label();
             lblchange = new Label();
@@ -178,7 +109,7 @@
             label16 = new Label();
             lblplanner = new Label();
             lblwea = new Label();
-            pnladd = new Panel();
+            pnlmydev = new Panel();
             btnadd = new Button();
             lbloof = new Label();
             lblof = new Label();
@@ -211,20 +142,24 @@
             lbldec = new Label();
             lbldevices = new Label();
             lbladd = new Label();
-            panel3.SuspendLayout();
+            pnlchart = new Panel();
+            panel1 = new Panel();
+            dgvRooms = new DataGridView();
+            label9 = new Label();
+            pnluse.SuspendLayout();
             pnlTotalEnergy.SuspendLayout();
-            panel1.SuspendLayout();
+            pnlcost.SuspendLayout();
             pnlmain.SuspendLayout();
-            pnlMonthlyUsage.SuspendLayout();
-            panel9.SuspendLayout();
-            pnlroom.SuspendLayout();
+            pnlpeak.SuspendLayout();
             pnltop.SuspendLayout();
-            panel20.SuspendLayout();
+            pnleco.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             pnlback.SuspendLayout();
-            pnlenergy.SuspendLayout();
+            pnlenergysum.SuspendLayout();
             pnlwea.SuspendLayout();
-            pnladd.SuspendLayout();
+            pnlmydev.SuspendLayout();
+            panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)dgvRooms).BeginInit();
             SuspendLayout();
             // 
             // lblHome
@@ -268,24 +203,26 @@
             lblene.TabIndex = 4;
             lblene.Text = "Track and optimize your home energy usage";
             // 
-            // panel3
+            // pnluse
             // 
-            panel3.BackColor = Color.FromArgb(21, 23, 71);
-            panel3.Controls.Add(label6);
-            panel3.Controls.Add(label7);
-            panel3.Controls.Add(label8);
-            panel3.Location = new Point(15, 111);
-            panel3.Name = "panel3";
-            panel3.Size = new Size(174, 177);
-            panel3.TabIndex = 9;
+            pnluse.BackColor = Color.FromArgb(36, 43, 86);
+            pnluse.Controls.Add(label6);
+            pnluse.Controls.Add(label7);
+            pnluse.Controls.Add(label8);
+            pnluse.Location = new Point(15, 111);
+            pnluse.Name = "pnluse";
+            pnluse.Size = new Size(174, 177);
+            pnluse.TabIndex = 9;
+            pnluse.Paint += pnluse_Paint;
             // 
             // label6
             // 
+            label6.AutoSize = true;
             label6.BackColor = Color.Transparent;
             label6.ForeColor = Color.FromArgb(61, 220, 102);
-            label6.Location = new Point(18, 126);
+            label6.Location = new Point(18, 117);
             label6.Name = "label6";
-            label6.Size = new Size(156, 25);
+            label6.Size = new Size(119, 20);
             label6.TabIndex = 6;
             label6.Text = "-8% vs yesterday";
             label6.Click += label6_Click;
@@ -327,7 +264,7 @@
             // 
             lblast.BackColor = Color.Transparent;
             lblast.ForeColor = Color.FromArgb(61, 220, 102);
-            lblast.Location = new Point(7, 125);
+            lblast.Location = new Point(7, 116);
             lblast.Name = "lblast";
             lblast.Size = new Size(159, 25);
             lblast.TabIndex = 6;
@@ -357,23 +294,23 @@
             lbltotal.TabIndex = 0;
             lbltotal.Text = "Total energy";
             // 
-            // panel1
+            // pnlcost
             // 
-            panel1.BackColor = Color.FromArgb(36, 43, 86);
-            panel1.Controls.Add(label1);
-            panel1.Controls.Add(label2);
-            panel1.Controls.Add(lblcost);
-            panel1.Location = new Point(396, 113);
-            panel1.Name = "panel1";
-            panel1.Size = new Size(196, 175);
-            panel1.TabIndex = 11;
-            panel1.Paint += panel1_Paint;
+            pnlcost.BackColor = Color.FromArgb(36, 43, 86);
+            pnlcost.Controls.Add(label1);
+            pnlcost.Controls.Add(label2);
+            pnlcost.Controls.Add(lblcost);
+            pnlcost.Location = new Point(386, 113);
+            pnlcost.Name = "pnlcost";
+            pnlcost.Size = new Size(199, 175);
+            pnlcost.TabIndex = 11;
+            pnlcost.Paint += panel1_Paint;
             // 
             // label1
             // 
             label1.BackColor = Color.Transparent;
             label1.ForeColor = Color.FromArgb(61, 220, 102);
-            label1.Location = new Point(65, 124);
+            label1.Location = new Point(65, 115);
             label1.Name = "label1";
             label1.Size = new Size(81, 25);
             label1.TabIndex = 6;
@@ -410,7 +347,7 @@
             pnlmain.Controls.Add(label3);
             pnlmain.Controls.Add(label4);
             pnlmain.Controls.Add(label5);
-            pnlmain.Location = new Point(602, 113);
+            pnlmain.Location = new Point(595, 113);
             pnlmain.Name = "pnlmain";
             pnlmain.Size = new Size(186, 175);
             pnlmain.TabIndex = 12;
@@ -420,7 +357,7 @@
             // 
             label3.BackColor = Color.Transparent;
             label3.ForeColor = Color.FromArgb(61, 220, 102);
-            label3.Location = new Point(43, 124);
+            label3.Location = new Point(43, 115);
             label3.Name = "label3";
             label3.Size = new Size(74, 25);
             label3.TabIndex = 6;
@@ -485,289 +422,29 @@
             // 
             label10.Font = new Font("Segoe UI", 10F);
             label10.ForeColor = Color.Gold;
-            label10.Location = new Point(793, 11);
+            label10.Location = new Point(796, 11);
             label10.Name = "label10";
             label10.Size = new Size(32, 36);
             label10.TabIndex = 16;
             label10.Text = "🌤️";
             label10.Click += label10_Click;
             // 
-            // pnlMonthlyUsage
+            // pnlpeak
             // 
-            pnlMonthlyUsage.BackColor = Color.FromArgb(25, 28, 58);
-            pnlMonthlyUsage.Controls.Add(panel21);
-            pnlMonthlyUsage.Controls.Add(lbljun);
-            pnlMonthlyUsage.Controls.Add(lblnov);
-            pnlMonthlyUsage.Controls.Add(panel8);
-            pnlMonthlyUsage.Controls.Add(panel7);
-            pnlMonthlyUsage.Controls.Add(panel6);
-            pnlMonthlyUsage.Controls.Add(panel5);
-            pnlMonthlyUsage.Controls.Add(panel4);
-            pnlMonthlyUsage.Controls.Add(lbl);
-            pnlMonthlyUsage.Controls.Add(lblsep);
-            pnlMonthlyUsage.Controls.Add(lblaug);
-            pnlMonthlyUsage.Controls.Add(lbljul);
-            pnlMonthlyUsage.Controls.Add(lbl0);
-            pnlMonthlyUsage.Controls.Add(lbl120);
-            pnlMonthlyUsage.Controls.Add(lbl240);
-            pnlMonthlyUsage.Controls.Add(lbl360);
-            pnlMonthlyUsage.Controls.Add(lbl480);
-            pnlMonthlyUsage.Controls.Add(lbl600);
-            pnlMonthlyUsage.Controls.Add(lblkwh);
-            pnlMonthlyUsage.Controls.Add(lbltex);
-            pnlMonthlyUsage.Controls.Add(lblstick);
-            pnlMonthlyUsage.Controls.Add(label9);
-            pnlMonthlyUsage.Controls.Add(lblmon);
-            pnlMonthlyUsage.Location = new Point(1002, 3);
-            pnlMonthlyUsage.Name = "pnlMonthlyUsage";
-            pnlMonthlyUsage.Size = new Size(598, 285);
-            pnlMonthlyUsage.TabIndex = 17;
-            // 
-            // panel21
-            // 
-            panel21.BackColor = Color.FromArgb(117, 70, 184);
-            panel21.Location = new Point(327, 108);
-            panel21.Name = "panel21";
-            panel21.Size = new Size(24, 109);
-            panel21.TabIndex = 22;
-            // 
-            // lbljun
-            // 
-            lbljun.ForeColor = Color.FromArgb(214, 214, 224);
-            lbljun.Location = new Point(327, 220);
-            lbljun.Name = "lbljun";
-            lbljun.Size = new Size(42, 25);
-            lbljun.TabIndex = 21;
-            lbljun.Text = "Jun ";
-            // 
-            // lblnov
-            // 
-            lblnov.AutoSize = true;
-            lblnov.ForeColor = Color.FromArgb(214, 214, 224);
-            lblnov.Location = new Point(538, 220);
-            lblnov.Name = "lblnov";
-            lblnov.Size = new Size(36, 20);
-            lblnov.TabIndex = 20;
-            lblnov.Text = "Nov";
-            lblnov.Click += lblnov_Click;
-            // 
-            // panel8
-            // 
-            panel8.BackColor = Color.FromArgb(117, 70, 184);
-            panel8.Location = new Point(541, 162);
-            panel8.Name = "panel8";
-            panel8.Size = new Size(24, 55);
-            panel8.TabIndex = 19;
-            panel8.Paint += panel8_Paint;
-            // 
-            // panel7
-            // 
-            panel7.BackColor = Color.FromArgb(117, 70, 184);
-            panel7.Location = new Point(500, 146);
-            panel7.Name = "panel7";
-            panel7.Size = new Size(24, 71);
-            panel7.TabIndex = 18;
-            // 
-            // panel6
-            // 
-            panel6.BackColor = Color.FromArgb(117, 70, 184);
-            panel6.Location = new Point(460, 135);
-            panel6.Name = "panel6";
-            panel6.Size = new Size(24, 82);
-            panel6.TabIndex = 17;
-            panel6.Paint += panel6_Paint;
-            // 
-            // panel5
-            // 
-            panel5.BackColor = Color.FromArgb(117, 70, 184);
-            panel5.Location = new Point(418, 121);
-            panel5.Name = "panel5";
-            panel5.Size = new Size(24, 96);
-            panel5.TabIndex = 16;
-            // 
-            // panel4
-            // 
-            panel4.BackColor = Color.FromArgb(117, 70, 184);
-            panel4.Location = new Point(375, 114);
-            panel4.Name = "panel4";
-            panel4.Size = new Size(24, 103);
-            panel4.TabIndex = 15;
-            // 
-            // lbl
-            // 
-            lbl.AutoSize = true;
-            lbl.ForeColor = Color.FromArgb(214, 214, 224);
-            lbl.Location = new Point(500, 220);
-            lbl.Name = "lbl";
-            lbl.Size = new Size(32, 20);
-            lbl.TabIndex = 14;
-            lbl.Text = "Oct";
-            // 
-            // lblsep
-            // 
-            lblsep.AutoSize = true;
-            lblsep.ForeColor = Color.FromArgb(214, 214, 224);
-            lblsep.Location = new Point(460, 220);
-            lblsep.Name = "lblsep";
-            lblsep.Size = new Size(34, 20);
-            lblsep.TabIndex = 13;
-            lblsep.Text = "Sep";
-            lblsep.Click += lblsep_Click;
-            // 
-            // lblaug
-            // 
-            lblaug.AutoSize = true;
-            lblaug.ForeColor = Color.FromArgb(214, 214, 224);
-            lblaug.Location = new Point(418, 220);
-            lblaug.Name = "lblaug";
-            lblaug.Size = new Size(36, 20);
-            lblaug.TabIndex = 12;
-            lblaug.Text = "Aug";
-            // 
-            // lbljul
-            // 
-            lbljul.AutoSize = true;
-            lbljul.ForeColor = Color.FromArgb(214, 214, 224);
-            lbljul.Location = new Point(375, 220);
-            lbljul.Name = "lbljul";
-            lbljul.Size = new Size(26, 20);
-            lbljul.TabIndex = 11;
-            lbljul.Text = "Jul";
-            lbljul.Click += lbljul_Click;
-            // 
-            // lbl0
-            // 
-            lbl0.AutoSize = true;
-            lbl0.ForeColor = Color.FromArgb(214, 214, 224);
-            lbl0.Location = new Point(284, 217);
-            lbl0.Name = "lbl0";
-            lbl0.Size = new Size(17, 20);
-            lbl0.TabIndex = 10;
-            lbl0.Text = "0";
-            lbl0.Click += lbl0_Click;
-            // 
-            // lbl120
-            // 
-            lbl120.AutoSize = true;
-            lbl120.ForeColor = Color.FromArgb(214, 214, 224);
-            lbl120.Location = new Point(268, 197);
-            lbl120.Name = "lbl120";
-            lbl120.Size = new Size(33, 20);
-            lbl120.TabIndex = 9;
-            lbl120.Text = "120";
-            lbl120.Click += lbl120_Click;
-            // 
-            // lbl240
-            // 
-            lbl240.AutoSize = true;
-            lbl240.ForeColor = Color.FromArgb(214, 214, 224);
-            lbl240.Location = new Point(268, 170);
-            lbl240.Name = "lbl240";
-            lbl240.Size = new Size(33, 20);
-            lbl240.TabIndex = 8;
-            lbl240.Text = "240";
-            lbl240.Click += lbl240_Click;
-            // 
-            // lbl360
-            // 
-            lbl360.AutoSize = true;
-            lbl360.ForeColor = Color.FromArgb(214, 214, 224);
-            lbl360.Location = new Point(268, 146);
-            lbl360.Name = "lbl360";
-            lbl360.Size = new Size(33, 20);
-            lbl360.TabIndex = 7;
-            lbl360.Text = "360";
-            lbl360.Click += lbl360_Click;
-            // 
-            // lbl480
-            // 
-            lbl480.AutoSize = true;
-            lbl480.ForeColor = Color.FromArgb(214, 214, 224);
-            lbl480.Location = new Point(268, 121);
-            lbl480.Name = "lbl480";
-            lbl480.Size = new Size(33, 20);
-            lbl480.TabIndex = 6;
-            lbl480.Text = "480";
-            lbl480.Click += lbl480_Click;
-            // 
-            // lbl600
-            // 
-            lbl600.ForeColor = Color.FromArgb(214, 214, 224);
-            lbl600.Location = new Point(268, 94);
-            lbl600.Name = "lbl600";
-            lbl600.Size = new Size(40, 20);
-            lbl600.TabIndex = 5;
-            lbl600.Text = "600";
-            lbl600.Click += lbl600_Click;
-            // 
-            // lblkwh
-            // 
-            lblkwh.AutoSize = true;
-            lblkwh.ForeColor = Color.FromArgb(214, 214, 224);
-            lblkwh.Location = new Point(268, 64);
-            lblkwh.Name = "lblkwh";
-            lblkwh.Size = new Size(40, 20);
-            lblkwh.TabIndex = 4;
-            lblkwh.Text = "KWh";
-            // 
-            // lbltex
-            // 
-            lbltex.Font = new Font("Segoe UI", 10F);
-            lbltex.ForeColor = Color.FromArgb(54, 230, 154);
-            lbltex.Location = new Point(46, 195);
-            lbltex.Name = "lbltex";
-            lbltex.Size = new Size(216, 27);
-            lbltex.TabIndex = 3;
-            lbltex.Text = "-12% vs. last month";
-            // 
-            // lblstick
-            // 
-            lblstick.Font = new Font("Segoe UI", 12F);
-            lblstick.ForeColor = Color.FromArgb(183, 108, 255);
-            lblstick.Location = new Point(18, 25);
-            lblstick.Name = "lblstick";
-            lblstick.Size = new Size(38, 35);
-            lblstick.TabIndex = 2;
-            lblstick.Text = "📅";
-            lblstick.Click += lblstick_Click;
-            // 
-            // label9
-            // 
-            label9.Font = new Font("Segoe UI", 14F);
-            label9.ForeColor = Color.White;
-            label9.Location = new Point(74, 112);
-            label9.Name = "label9";
-            label9.Size = new Size(142, 32);
-            label9.TabIndex = 1;
-            label9.Text = "356.8 KWh";
-            label9.Click += label9_Click;
-            // 
-            // lblmon
-            // 
-            lblmon.Font = new Font("Segoe UI", 14F);
-            lblmon.ForeColor = Color.White;
-            lblmon.Location = new Point(62, 25);
-            lblmon.Name = "lblmon";
-            lblmon.Size = new Size(190, 42);
-            lblmon.TabIndex = 0;
-            lblmon.Text = "Monthly Usage ";
-            // 
-            // panel9
-            // 
-            panel9.BackColor = Color.FromArgb(36, 43, 86);
-            panel9.Controls.Add(label11);
-            panel9.Controls.Add(label12);
-            panel9.Controls.Add(lblpeak);
-            panel9.Location = new Point(800, 111);
-            panel9.Name = "panel9";
-            panel9.Size = new Size(187, 177);
-            panel9.TabIndex = 18;
+            pnlpeak.BackColor = Color.FromArgb(36, 43, 86);
+            pnlpeak.Controls.Add(label11);
+            pnlpeak.Controls.Add(label12);
+            pnlpeak.Controls.Add(lblpeak);
+            pnlpeak.Location = new Point(796, 111);
+            pnlpeak.Name = "pnlpeak";
+            pnlpeak.Size = new Size(187, 177);
+            pnlpeak.TabIndex = 18;
             // 
             // label11
             // 
             label11.BackColor = Color.Transparent;
             label11.ForeColor = Color.FromArgb(61, 220, 102);
-            label11.Location = new Point(46, 126);
+            label11.Location = new Point(48, 117);
             label11.Name = "label11";
             label11.Size = new Size(74, 25);
             label11.TabIndex = 6;
@@ -797,460 +474,21 @@
             lblpeak.Text = "Peak usage";
             lblpeak.Click += lblpeak_Click;
             // 
-            // pnlroom
-            // 
-            pnlroom.Controls.Add(lbldi7);
-            pnlroom.Controls.Add(lbldi6);
-            pnlroom.Controls.Add(lbldi5);
-            pnlroom.Controls.Add(lbldi4);
-            pnlroom.Controls.Add(lbldi3);
-            pnlroom.Controls.Add(lbldi2);
-            pnlroom.Controls.Add(lbldi1);
-            pnlroom.Controls.Add(lbltot7);
-            pnlroom.Controls.Add(lblco6);
-            pnlroom.Controls.Add(lblco5);
-            pnlroom.Controls.Add(lblco4);
-            pnlroom.Controls.Add(lblco3);
-            pnlroom.Controls.Add(lblco2);
-            pnlroom.Controls.Add(lblco1);
-            pnlroom.Controls.Add(lblsum);
-            pnlroom.Controls.Add(lblnum6);
-            pnlroom.Controls.Add(lblnum5);
-            pnlroom.Controls.Add(lblnum4);
-            pnlroom.Controls.Add(lblnum3);
-            pnlroom.Controls.Add(lblnum2);
-            pnlroom.Controls.Add(lblnum1);
-            pnlroom.Controls.Add(panel15);
-            pnlroom.Controls.Add(panel16);
-            pnlroom.Controls.Add(panel17);
-            pnlroom.Controls.Add(panel13);
-            pnlroom.Controls.Add(panel12);
-            pnlroom.Controls.Add(panel11);
-            pnlroom.Controls.Add(lblother);
-            pnlroom.Controls.Add(lbltot);
-            pnlroom.Controls.Add(lblbath);
-            pnlroom.Controls.Add(lblstudy);
-            pnlroom.Controls.Add(lblbed);
-            pnlroom.Controls.Add(lblkitch);
-            pnlroom.Controls.Add(lblliving);
-            pnlroom.Controls.Add(pnlline);
-            pnlroom.Controls.Add(lbldevice);
-            pnlroom.Controls.Add(lblcos);
-            pnlroom.Controls.Add(lblen);
-            pnlroom.Controls.Add(lblroom);
-            pnlroom.Controls.Add(lblenergy);
-            pnlroom.Location = new Point(15, 325);
-            pnlroom.Name = "pnlroom";
-            pnlroom.Size = new Size(485, 385);
-            pnlroom.TabIndex = 19;
-            // 
-            // lbldi7
-            // 
-            lbldi7.AutoSize = true;
-            lbldi7.ForeColor = Color.White;
-            lbldi7.Location = new Point(412, 352);
-            lbldi7.Name = "lbldi7";
-            lbldi7.Size = new Size(25, 20);
-            lbldi7.TabIndex = 37;
-            lbldi7.Text = "12";
-            // 
-            // lbldi6
-            // 
-            lbldi6.AutoSize = true;
-            lbldi6.ForeColor = Color.White;
-            lbldi6.Location = new Point(412, 309);
-            lbldi6.Name = "lbldi6";
-            lbldi6.Size = new Size(17, 20);
-            lbldi6.TabIndex = 36;
-            lbldi6.Text = "1";
-            // 
-            // lbldi5
-            // 
-            lbldi5.AutoSize = true;
-            lbldi5.ForeColor = Color.White;
-            lbldi5.Location = new Point(412, 271);
-            lbldi5.Name = "lbldi5";
-            lbldi5.Size = new Size(17, 20);
-            lbldi5.TabIndex = 35;
-            lbldi5.Text = "1";
-            // 
-            // lbldi4
-            // 
-            lbldi4.AutoSize = true;
-            lbldi4.ForeColor = Color.White;
-            lbldi4.Location = new Point(412, 233);
-            lbldi4.Name = "lbldi4";
-            lbldi4.Size = new Size(17, 20);
-            lbldi4.TabIndex = 34;
-            lbldi4.Text = "2";
-            // 
-            // lbldi3
-            // 
-            lbldi3.AutoSize = true;
-            lbldi3.ForeColor = Color.White;
-            lbldi3.Location = new Point(412, 198);
-            lbldi3.Name = "lbldi3";
-            lbldi3.Size = new Size(17, 20);
-            lbldi3.TabIndex = 33;
-            lbldi3.Text = "3";
-            // 
-            // lbldi2
-            // 
-            lbldi2.AutoSize = true;
-            lbldi2.ForeColor = Color.White;
-            lbldi2.Location = new Point(412, 156);
-            lbldi2.Name = "lbldi2";
-            lbldi2.Size = new Size(17, 20);
-            lbldi2.TabIndex = 32;
-            lbldi2.Text = "3";
-            // 
-            // lbldi1
-            // 
-            lbldi1.AutoSize = true;
-            lbldi1.ForeColor = Color.White;
-            lbldi1.Location = new Point(412, 118);
-            lbldi1.Name = "lbldi1";
-            lbldi1.Size = new Size(17, 20);
-            lbldi1.TabIndex = 31;
-            lbldi1.Text = "4";
-            // 
-            // lbltot7
-            // 
-            lbltot7.AutoSize = true;
-            lbltot7.ForeColor = Color.White;
-            lbltot7.Location = new Point(292, 352);
-            lbltot7.Name = "lbltot7";
-            lbltot7.Size = new Size(56, 20);
-            lbltot7.TabIndex = 30;
-            lbltot7.Text = "48.67 $";
-            // 
-            // lblco6
-            // 
-            lblco6.AutoSize = true;
-            lblco6.ForeColor = Color.White;
-            lblco6.Location = new Point(292, 309);
-            lblco6.Name = "lblco6";
-            lblco6.Size = new Size(48, 20);
-            lblco6.TabIndex = 29;
-            lblco6.Text = "7.32 $";
-            // 
-            // lblco5
-            // 
-            lblco5.AutoSize = true;
-            lblco5.ForeColor = Color.White;
-            lblco5.Location = new Point(292, 271);
-            lblco5.Name = "lblco5";
-            lblco5.Size = new Size(48, 20);
-            lblco5.TabIndex = 28;
-            lblco5.Text = "3.86 $";
-            // 
-            // lblco4
-            // 
-            lblco4.AutoSize = true;
-            lblco4.ForeColor = Color.White;
-            lblco4.Location = new Point(292, 238);
-            lblco4.Name = "lblco4";
-            lblco4.Size = new Size(48, 20);
-            lblco4.TabIndex = 27;
-            lblco4.Text = "5.74 $";
-            // 
-            // lblco3
-            // 
-            lblco3.AutoSize = true;
-            lblco3.ForeColor = Color.White;
-            lblco3.Location = new Point(292, 198);
-            lblco3.Name = "lblco3";
-            lblco3.Size = new Size(48, 20);
-            lblco3.TabIndex = 26;
-            lblco3.Text = "7.32 $";
-            // 
-            // lblco2
-            // 
-            lblco2.AutoSize = true;
-            lblco2.ForeColor = Color.White;
-            lblco2.Location = new Point(292, 156);
-            lblco2.Name = "lblco2";
-            lblco2.Size = new Size(48, 20);
-            lblco2.TabIndex = 25;
-            lblco2.Text = "8.84 $";
-            // 
-            // lblco1
-            // 
-            lblco1.AutoSize = true;
-            lblco1.ForeColor = Color.White;
-            lblco1.Location = new Point(292, 118);
-            lblco1.Name = "lblco1";
-            lblco1.Size = new Size(56, 20);
-            lblco1.TabIndex = 24;
-            lblco1.Text = "15.58 $";
-            // 
-            // lblsum
-            // 
-            lblsum.AutoSize = true;
-            lblsum.ForeColor = Color.White;
-            lblsum.Location = new Point(155, 352);
-            lblsum.Name = "lblsum";
-            lblsum.Size = new Size(75, 20);
-            lblsum.TabIndex = 23;
-            lblsum.Text = "356.8KWh";
-            // 
-            // lblnum6
-            // 
-            lblnum6.AutoSize = true;
-            lblnum6.ForeColor = Color.White;
-            lblnum6.Location = new Point(155, 309);
-            lblnum6.Name = "lblnum6";
-            lblnum6.Size = new Size(67, 20);
-            lblnum6.TabIndex = 22;
-            lblnum6.Text = "53.7KWh";
-            // 
-            // lblnum5
-            // 
-            lblnum5.AutoSize = true;
-            lblnum5.ForeColor = Color.White;
-            lblnum5.Location = new Point(155, 271);
-            lblnum5.Name = "lblnum5";
-            lblnum5.Size = new Size(67, 20);
-            lblnum5.TabIndex = 21;
-            lblnum5.Text = "28.3KWh";
-            // 
-            // lblnum4
-            // 
-            lblnum4.AutoSize = true;
-            lblnum4.ForeColor = Color.White;
-            lblnum4.Location = new Point(152, 233);
-            lblnum4.Name = "lblnum4";
-            lblnum4.Size = new Size(67, 20);
-            lblnum4.TabIndex = 20;
-            lblnum4.Text = "42.1KWh";
-            // 
-            // lblnum3
-            // 
-            lblnum3.AutoSize = true;
-            lblnum3.ForeColor = Color.White;
-            lblnum3.Location = new Point(152, 198);
-            lblnum3.Name = "lblnum3";
-            lblnum3.Size = new Size(67, 20);
-            lblnum3.TabIndex = 19;
-            lblnum3.Text = "53.7KWh";
-            // 
-            // lblnum2
-            // 
-            lblnum2.AutoSize = true;
-            lblnum2.ForeColor = Color.White;
-            lblnum2.Location = new Point(148, 156);
-            lblnum2.Name = "lblnum2";
-            lblnum2.Size = new Size(71, 20);
-            lblnum2.TabIndex = 18;
-            lblnum2.Text = "64.8 KWh";
-            // 
-            // lblnum1
-            // 
-            lblnum1.AutoSize = true;
-            lblnum1.ForeColor = Color.White;
-            lblnum1.Location = new Point(148, 118);
-            lblnum1.Name = "lblnum1";
-            lblnum1.Size = new Size(79, 20);
-            lblnum1.TabIndex = 17;
-            lblnum1.Text = "114.2 KWh";
-            // 
-            // panel15
-            // 
-            panel15.BackColor = Color.DimGray;
-            panel15.Location = new Point(8, 299);
-            panel15.Name = "panel15";
-            panel15.Size = new Size(471, 1);
-            panel15.TabIndex = 16;
-            // 
-            // panel16
-            // 
-            panel16.BackColor = Color.DimGray;
-            panel16.Location = new Point(8, 261);
-            panel16.Name = "panel16";
-            panel16.Size = new Size(471, 1);
-            panel16.TabIndex = 6;
-            // 
-            // panel17
-            // 
-            panel17.BackColor = Color.DimGray;
-            panel17.Location = new Point(8, 184);
-            panel17.Name = "panel17";
-            panel17.Size = new Size(471, 1);
-            panel17.TabIndex = 6;
-            // 
-            // panel13
-            // 
-            panel13.BackColor = Color.DimGray;
-            panel13.Location = new Point(14, 229);
-            panel13.Name = "panel13";
-            panel13.Size = new Size(471, 1);
-            panel13.TabIndex = 15;
-            // 
-            // panel12
-            // 
-            panel12.BackColor = Color.DimGray;
-            panel12.Location = new Point(8, 337);
-            panel12.Name = "panel12";
-            panel12.Size = new Size(471, 1);
-            panel12.TabIndex = 14;
-            // 
-            // panel11
-            // 
-            panel11.BackColor = Color.DimGray;
-            panel11.Location = new Point(8, 146);
-            panel11.Name = "panel11";
-            panel11.Size = new Size(471, 1);
-            panel11.TabIndex = 13;
-            // 
-            // lblother
-            // 
-            lblother.Font = new Font("Segoe UI", 9F);
-            lblother.ForeColor = Color.White;
-            lblother.Location = new Point(21, 309);
-            lblother.Name = "lblother";
-            lblother.Size = new Size(105, 25);
-            lblother.TabIndex = 12;
-            lblother.Text = "Other";
-            // 
-            // lbltot
-            // 
-            lbltot.Font = new Font("Segoe UI", 9F);
-            lbltot.ForeColor = Color.White;
-            lbltot.Location = new Point(21, 352);
-            lbltot.Name = "lbltot";
-            lbltot.Size = new Size(105, 25);
-            lbltot.TabIndex = 11;
-            lbltot.Text = "Total";
-            // 
-            // lblbath
-            // 
-            lblbath.Font = new Font("Segoe UI", 9F);
-            lblbath.ForeColor = Color.White;
-            lblbath.Location = new Point(21, 271);
-            lblbath.Name = "lblbath";
-            lblbath.Size = new Size(105, 25);
-            lblbath.TabIndex = 10;
-            lblbath.Text = "Bathroom";
-            // 
-            // lblstudy
-            // 
-            lblstudy.Font = new Font("Segoe UI", 9F);
-            lblstudy.ForeColor = Color.White;
-            lblstudy.Location = new Point(21, 233);
-            lblstudy.Name = "lblstudy";
-            lblstudy.Size = new Size(105, 25);
-            lblstudy.TabIndex = 9;
-            lblstudy.Text = "Study";
-            // 
-            // lblbed
-            // 
-            lblbed.Font = new Font("Segoe UI", 9F);
-            lblbed.ForeColor = Color.White;
-            lblbed.Location = new Point(21, 193);
-            lblbed.Name = "lblbed";
-            lblbed.Size = new Size(105, 25);
-            lblbed.TabIndex = 8;
-            lblbed.Text = "Bedroom";
-            // 
-            // lblkitch
-            // 
-            lblkitch.Font = new Font("Segoe UI", 9F);
-            lblkitch.ForeColor = Color.White;
-            lblkitch.Location = new Point(21, 156);
-            lblkitch.Name = "lblkitch";
-            lblkitch.Size = new Size(83, 25);
-            lblkitch.TabIndex = 7;
-            lblkitch.Text = "Kitchen";
-            // 
-            // lblliving
-            // 
-            lblliving.Font = new Font("Segoe UI", 9F);
-            lblliving.ForeColor = Color.White;
-            lblliving.Location = new Point(21, 118);
-            lblliving.Name = "lblliving";
-            lblliving.Size = new Size(105, 25);
-            lblliving.TabIndex = 6;
-            lblliving.Text = "Living room";
-            // 
-            // pnlline
-            // 
-            pnlline.BackColor = Color.DimGray;
-            pnlline.Location = new Point(8, 102);
-            pnlline.Name = "pnlline";
-            pnlline.Size = new Size(471, 1);
-            pnlline.TabIndex = 5;
-            // 
-            // lbldevice
-            // 
-            lbldevice.AutoSize = true;
-            lbldevice.ForeColor = Color.FromArgb(184, 179, 218);
-            lbldevice.Location = new Point(396, 79);
-            lbldevice.Name = "lbldevice";
-            lbldevice.Size = new Size(60, 20);
-            lbldevice.TabIndex = 4;
-            lbldevice.Text = "Devices";
-            // 
-            // lblcos
-            // 
-            lblcos.ForeColor = Color.FromArgb(184, 179, 218);
-            lblcos.Location = new Point(303, 79);
-            lblcos.Name = "lblcos";
-            lblcos.Size = new Size(72, 25);
-            lblcos.TabIndex = 3;
-            lblcos.Text = "Cost";
-            // 
-            // lblen
-            // 
-            lblen.ForeColor = Color.FromArgb(184, 179, 218);
-            lblen.Location = new Point(155, 79);
-            lblen.Name = "lblen";
-            lblen.Size = new Size(72, 25);
-            lblen.TabIndex = 2;
-            lblen.Text = "Energy";
-            // 
-            // lblroom
-            // 
-            lblroom.BackColor = Color.Transparent;
-            lblroom.Font = new Font("Segoe UI", 9F);
-            lblroom.ForeColor = Color.FromArgb(184, 179, 218);
-            lblroom.Location = new Point(21, 79);
-            lblroom.Name = "lblroom";
-            lblroom.Size = new Size(72, 25);
-            lblroom.TabIndex = 1;
-            lblroom.Text = "Room";
-            // 
-            // lblenergy
-            // 
-            lblenergy.BackColor = Color.Transparent;
-            lblenergy.Font = new Font("Segoe UI", 12F);
-            lblenergy.ForeColor = Color.White;
-            lblenergy.Location = new Point(12, 15);
-            lblenergy.Name = "lblenergy";
-            lblenergy.Size = new Size(317, 38);
-            lblenergy.TabIndex = 0;
-            lblenergy.Text = "Rooms: energy ,cost and devices";
-            // 
             // pnltop
             // 
-            pnltop.BorderStyle = BorderStyle.FixedSingle;
             pnltop.Controls.Add(lbl24);
             pnltop.Controls.Add(lbl2);
             pnltop.Controls.Add(lbl27);
             pnltop.Controls.Add(lbl56);
             pnltop.Controls.Add(lbl118);
-            pnltop.Controls.Add(panel19);
             pnltop.Controls.Add(progressBar4);
             pnltop.Controls.Add(lblwash);
-            pnltop.Controls.Add(panel18);
             pnltop.Controls.Add(progressBar3);
             pnltop.Controls.Add(lblsmart);
-            pnltop.Controls.Add(panel14);
             pnltop.Controls.Add(progressBar2);
             pnltop.Controls.Add(lblheater);
-            pnltop.Controls.Add(panel10);
             pnltop.Controls.Add(progressBar1);
-            pnltop.Controls.Add(label13);
-            pnltop.Controls.Add(pnlair);
+            pnltop.Controls.Add(lblref);
             pnltop.Controls.Add(pbair);
             pnltop.Controls.Add(lblair);
             pnltop.Controls.Add(lbltop);
@@ -1309,20 +547,13 @@
             lbl118.TabIndex = 16;
             lbl118.Text = "118.6 kWh";
             // 
-            // panel19
-            // 
-            panel19.BackColor = Color.FromArgb(117, 70, 184);
-            panel19.Location = new Point(15, 277);
-            panel19.Name = "panel19";
-            panel19.Size = new Size(19, 14);
-            panel19.TabIndex = 15;
-            // 
             // progressBar4
             // 
             progressBar4.Location = new Point(15, 277);
             progressBar4.Name = "progressBar4";
             progressBar4.Size = new Size(257, 14);
             progressBar4.TabIndex = 14;
+            progressBar4.Value = 8;
             // 
             // lblwash
             // 
@@ -1334,20 +565,13 @@
             lblwash.TabIndex = 13;
             lblwash.Text = "Washing Machine";
             // 
-            // panel18
-            // 
-            panel18.BackColor = Color.FromArgb(117, 70, 184);
-            panel18.Location = new Point(15, 233);
-            panel18.Name = "panel18";
-            panel18.Size = new Size(38, 14);
-            panel18.TabIndex = 12;
-            // 
             // progressBar3
             // 
             progressBar3.Location = new Point(15, 233);
             progressBar3.Name = "progressBar3";
             progressBar3.Size = new Size(257, 14);
             progressBar3.TabIndex = 11;
+            progressBar3.Value = 12;
             // 
             // lblsmart
             // 
@@ -1359,20 +583,13 @@
             lblsmart.TabIndex = 10;
             lblsmart.Text = "Smart TV";
             // 
-            // panel14
-            // 
-            panel14.BackColor = Color.FromArgb(117, 70, 184);
-            panel14.Location = new Point(15, 193);
-            panel14.Name = "panel14";
-            panel14.Size = new Size(50, 14);
-            panel14.TabIndex = 9;
-            // 
             // progressBar2
             // 
             progressBar2.Location = new Point(15, 193);
             progressBar2.Name = "progressBar2";
             progressBar2.Size = new Size(257, 14);
             progressBar2.TabIndex = 8;
+            progressBar2.Value = 22;
             // 
             // lblheater
             // 
@@ -1384,45 +601,31 @@
             lblheater.TabIndex = 7;
             lblheater.Text = "Heater";
             // 
-            // panel10
-            // 
-            panel10.BackColor = Color.FromArgb(117, 70, 184);
-            panel10.Location = new Point(15, 150);
-            panel10.Name = "panel10";
-            panel10.Size = new Size(55, 14);
-            panel10.TabIndex = 6;
-            // 
             // progressBar1
             // 
             progressBar1.Location = new Point(15, 150);
             progressBar1.Name = "progressBar1";
             progressBar1.Size = new Size(257, 14);
             progressBar1.TabIndex = 5;
+            progressBar1.Value = 30;
             // 
-            // label13
+            // lblref
             // 
-            label13.Font = new Font("Segoe UI", 11F);
-            label13.ForeColor = Color.White;
-            label13.Location = new Point(15, 122);
-            label13.Name = "label13";
-            label13.Size = new Size(138, 25);
-            label13.TabIndex = 4;
-            label13.Text = "Refrigerator";
-            // 
-            // pnlair
-            // 
-            pnlair.BackColor = Color.FromArgb(117, 70, 184);
-            pnlair.Location = new Point(15, 102);
-            pnlair.Name = "pnlair";
-            pnlair.Size = new Size(120, 14);
-            pnlair.TabIndex = 3;
+            lblref.Font = new Font("Segoe UI", 11F);
+            lblref.ForeColor = Color.White;
+            lblref.Location = new Point(15, 122);
+            lblref.Name = "lblref";
+            lblref.Size = new Size(138, 25);
+            lblref.TabIndex = 4;
+            lblref.Text = "Refrigerator";
             // 
             // pbair
             // 
-            pbair.Location = new Point(15, 102);
+            pbair.Location = new Point(14, 102);
             pbair.Name = "pbair";
             pbair.Size = new Size(257, 14);
             pbair.TabIndex = 2;
+            pbair.Value = 40;
             // 
             // lblair
             // 
@@ -1445,24 +648,23 @@
             lbltop.TabIndex = 0;
             lbltop.Text = "Top devices";
             // 
-            // panel20
+            // pnleco
             // 
-            panel20.BorderStyle = BorderStyle.FixedSingle;
-            panel20.Controls.Add(lblsaving);
-            panel20.Controls.Add(chkeco);
-            panel20.Controls.Add(lblactive);
-            panel20.Controls.Add(pictureBox1);
-            panel20.Controls.Add(lblEco);
-            panel20.Location = new Point(1195, 325);
-            panel20.Name = "panel20";
-            panel20.Size = new Size(396, 291);
-            panel20.TabIndex = 21;
+            pnleco.Controls.Add(lblsaving);
+            pnleco.Controls.Add(chkeco);
+            pnleco.Controls.Add(lblactive);
+            pnleco.Controls.Add(pictureBox1);
+            pnleco.Controls.Add(lblEco);
+            pnleco.Location = new Point(1195, 325);
+            pnleco.Name = "pnleco";
+            pnleco.Size = new Size(396, 291);
+            pnleco.TabIndex = 21;
             // 
             // lblsaving
             // 
             lblsaving.Font = new Font("Segoe UI", 11F);
             lblsaving.ForeColor = Color.White;
-            lblsaving.Location = new Point(68, 250);
+            lblsaving.Location = new Point(17, 250);
             lblsaving.Name = "lblsaving";
             lblsaving.Size = new Size(159, 25);
             lblsaving.TabIndex = 4;
@@ -1482,8 +684,9 @@
             chkeco.TabIndex = 3;
             chkeco.Text = "ON";
             chkeco.TextAlign = ContentAlignment.MiddleCenter;
-            chkeco.UseVisualStyleBackColor = true;
+            chkeco.UseVisualStyleBackColor = false;
             chkeco.CheckedChanged += checkBox1_CheckedChanged;
+            chkeco.Click += chkeco_Click;
             // 
             // lblactive
             // 
@@ -1521,7 +724,6 @@
             // pnlback
             // 
             pnlback.BackColor = Color.FromArgb(15, 17, 30);
-            pnlback.BorderStyle = BorderStyle.FixedSingle;
             pnlback.Controls.Add(lbllast);
             pnlback.Controls.Add(lblemoj);
             pnlback.Controls.Add(lblbattery);
@@ -1530,8 +732,9 @@
             pnlback.Controls.Add(llblev);
             pnlback.Location = new Point(1187, 657);
             pnlback.Name = "pnlback";
-            pnlback.Size = new Size(404, 204);
+            pnlback.Size = new Size(404, 389);
             pnlback.TabIndex = 21;
+            pnlback.Paint += pnlback_Paint;
             // 
             // lbllast
             // 
@@ -1593,20 +796,19 @@
             llblev.TabIndex = 1;
             llblev.Text = "solar / Battery";
             // 
-            // pnlenergy
+            // pnlenergysum
             // 
-            pnlenergy.BorderStyle = BorderStyle.FixedSingle;
-            pnlenergy.Controls.Add(label15);
-            pnlenergy.Controls.Add(lbl368);
-            pnlenergy.Controls.Add(lblchange);
-            pnlenergy.Controls.Add(label14);
-            pnlenergy.Controls.Add(lbl356);
-            pnlenergy.Controls.Add(lblmonth);
-            pnlenergy.Controls.Add(lblenrgy5);
-            pnlenergy.Location = new Point(15, 734);
-            pnlenergy.Name = "pnlenergy";
-            pnlenergy.Size = new Size(515, 307);
-            pnlenergy.TabIndex = 0;
+            pnlenergysum.Controls.Add(label15);
+            pnlenergysum.Controls.Add(lbl368);
+            pnlenergysum.Controls.Add(lblchange);
+            pnlenergysum.Controls.Add(label14);
+            pnlenergysum.Controls.Add(lbl356);
+            pnlenergysum.Controls.Add(lblmonth);
+            pnlenergysum.Controls.Add(lblenrgy5);
+            pnlenergysum.Location = new Point(15, 734);
+            pnlenergysum.Name = "pnlenergysum";
+            pnlenergysum.Size = new Size(515, 307);
+            pnlenergysum.TabIndex = 0;
             // 
             // label15
             // 
@@ -1681,7 +883,6 @@
             // 
             // pnlwea
             // 
-            pnlwea.BorderStyle = BorderStyle.Fixed3D;
             pnlwea.Controls.Add(lblpre);
             pnlwea.Controls.Add(lblac);
             pnlwea.Controls.Add(lbllogo);
@@ -1707,7 +908,7 @@
             lblpre.Name = "lblpre";
             lblpre.Size = new Size(253, 52);
             lblpre.TabIndex = 12;
-            lblpre.Text = "Pre-cololing / Battery prep Active\r\n\r\n";
+            lblpre.Text = "Pre-cooling / Battery prep Active\r\n\r\n\r\n";
             // 
             // lblac
             // 
@@ -1823,45 +1024,45 @@
             lblwea.TabIndex = 1;
             lblwea.Text = "Weather-Sync Energy";
             // 
-            // pnladd
+            // pnlmydev
             // 
-            pnladd.BorderStyle = BorderStyle.Fixed3D;
-            pnladd.Controls.Add(btnadd);
-            pnladd.Controls.Add(lbloof);
-            pnladd.Controls.Add(lblof);
-            pnladd.Controls.Add(lblnooo);
-            pnladd.Controls.Add(lblnoo);
-            pnladd.Controls.Add(lbl98);
-            pnladd.Controls.Add(lbl89);
-            pnladd.Controls.Add(lbl57);
-            pnladd.Controls.Add(lbl65);
-            pnladd.Controls.Add(lbloo);
-            pnladd.Controls.Add(lbling);
-            pnladd.Controls.Add(lblbd);
-            pnladd.Controls.Add(pnlst);
-            pnladd.Controls.Add(pnlic);
-            pnladd.Controls.Add(pnlke);
-            pnladd.Controls.Add(pnler);
-            pnladd.Controls.Add(lblmach);
-            pnladd.Controls.Add(lblTV);
-            pnladd.Controls.Add(lblHea);
-            pnladd.Controls.Add(lblch);
-            pnladd.Controls.Add(lbltor);
-            pnladd.Controls.Add(lbl11);
-            pnladd.Controls.Add(lbl78);
-            pnladd.Controls.Add(lblliv);
-            pnladd.Controls.Add(lblner);
-            pnladd.Controls.Add(pnlsa);
-            pnladd.Controls.Add(lblstat);
-            pnladd.Controls.Add(lblener);
-            pnladd.Controls.Add(lblrom);
-            pnladd.Controls.Add(lbldec);
-            pnladd.Controls.Add(lbldevices);
-            pnladd.Controls.Add(lbladd);
-            pnladd.Location = new Point(547, 723);
-            pnladd.Name = "pnladd";
-            pnladd.Size = new Size(620, 330);
-            pnladd.TabIndex = 24;
+            pnlmydev.BorderStyle = BorderStyle.Fixed3D;
+            pnlmydev.Controls.Add(btnadd);
+            pnlmydev.Controls.Add(lbloof);
+            pnlmydev.Controls.Add(lblof);
+            pnlmydev.Controls.Add(lblnooo);
+            pnlmydev.Controls.Add(lblnoo);
+            pnlmydev.Controls.Add(lbl98);
+            pnlmydev.Controls.Add(lbl89);
+            pnlmydev.Controls.Add(lbl57);
+            pnlmydev.Controls.Add(lbl65);
+            pnlmydev.Controls.Add(lbloo);
+            pnlmydev.Controls.Add(lbling);
+            pnlmydev.Controls.Add(lblbd);
+            pnlmydev.Controls.Add(pnlst);
+            pnlmydev.Controls.Add(pnlic);
+            pnlmydev.Controls.Add(pnlke);
+            pnlmydev.Controls.Add(pnler);
+            pnlmydev.Controls.Add(lblmach);
+            pnlmydev.Controls.Add(lblTV);
+            pnlmydev.Controls.Add(lblHea);
+            pnlmydev.Controls.Add(lblch);
+            pnlmydev.Controls.Add(lbltor);
+            pnlmydev.Controls.Add(lbl11);
+            pnlmydev.Controls.Add(lbl78);
+            pnlmydev.Controls.Add(lblliv);
+            pnlmydev.Controls.Add(lblner);
+            pnlmydev.Controls.Add(pnlsa);
+            pnlmydev.Controls.Add(lblstat);
+            pnlmydev.Controls.Add(lblener);
+            pnlmydev.Controls.Add(lblrom);
+            pnlmydev.Controls.Add(lbldec);
+            pnlmydev.Controls.Add(lbldevices);
+            pnlmydev.Controls.Add(lbladd);
+            pnlmydev.Location = new Point(547, 723);
+            pnlmydev.Name = "pnlmydev";
+            pnlmydev.Size = new Size(620, 330);
+            pnlmydev.TabIndex = 24;
             // 
             // btnadd
             // 
@@ -1877,43 +1078,51 @@
             // 
             // lbloof
             // 
+            lbloof.Cursor = Cursors.Hand;
             lbloof.Font = new Font("Segoe UI", 10F);
-            lbloof.ForeColor = Color.DarkGray;
+            lbloof.ForeColor = Color.Red;
             lbloof.Location = new Point(499, 253);
             lbloof.Name = "lbloof";
             lbloof.Size = new Size(75, 25);
             lbloof.TabIndex = 42;
-            lbloof.Text = "off";
+            lbloof.Text = "OFF";
+            lbloof.Click += lbloof_Click;
             // 
             // lblof
             // 
+            lblof.Cursor = Cursors.Hand;
             lblof.Font = new Font("Segoe UI", 10F);
-            lblof.ForeColor = Color.DarkGray;
+            lblof.ForeColor = Color.Red;
             lblof.Location = new Point(499, 213);
             lblof.Name = "lblof";
             lblof.Size = new Size(75, 25);
             lblof.TabIndex = 41;
-            lblof.Text = "off";
+            lblof.Text = "OFF";
+            lblof.Click += lblof_Click;
             // 
             // lblnooo
             // 
+            lblnooo.Cursor = Cursors.Hand;
             lblnooo.Font = new Font("Segoe UI", 10F);
             lblnooo.ForeColor = Color.LimeGreen;
             lblnooo.Location = new Point(499, 296);
             lblnooo.Name = "lblnooo";
             lblnooo.Size = new Size(75, 25);
             lblnooo.TabIndex = 40;
-            lblnooo.Text = "on";
+            lblnooo.Text = "ON";
+            lblnooo.Click += lblnooo_Click;
             // 
             // lblnoo
             // 
+            lblnoo.Cursor = Cursors.Hand;
             lblnoo.Font = new Font("Segoe UI", 10F);
             lblnoo.ForeColor = Color.LimeGreen;
             lblnoo.Location = new Point(499, 176);
             lblnoo.Name = "lblnoo";
             lblnoo.Size = new Size(75, 22);
             lblnoo.TabIndex = 39;
-            lblnoo.Text = "on";
+            lblnoo.Text = "ON";
+            lblnoo.Click += lblnoo_Click;
             // 
             // lbl98
             // 
@@ -2073,13 +1282,15 @@
             // 
             // lbl11
             // 
+            lbl11.Cursor = Cursors.Hand;
             lbl11.Font = new Font("Segoe UI", 10F);
             lbl11.ForeColor = Color.LimeGreen;
             lbl11.Location = new Point(499, 136);
             lbl11.Name = "lbl11";
             lbl11.Size = new Size(75, 25);
             lbl11.TabIndex = 22;
-            lbl11.Text = "on";
+            lbl11.Text = "ON";
+            lbl11.Click += lbl11_Click;
             // 
             // lbl78
             // 
@@ -2180,29 +1391,71 @@
             lbladd.TabIndex = 1;
             lbladd.Text = "My devices\r\n";
             // 
+            // pnlchart
+            // 
+            pnlchart.Location = new Point(993, -10);
+            pnlchart.Name = "pnlchart";
+            pnlchart.Size = new Size(598, 312);
+            pnlchart.TabIndex = 0;
+            pnlchart.Paint += pnlchart_Paint;
+            // 
+            // panel1
+            // 
+            panel1.Controls.Add(dgvRooms);
+            panel1.Controls.Add(label9);
+            panel1.Location = new Point(15, 308);
+            panel1.Name = "panel1";
+            panel1.Size = new Size(493, 402);
+            panel1.TabIndex = 20;
+            // 
+            // dgvRooms
+            // 
+            dgvRooms.AllowUserToAddRows = false;
+            dgvRooms.AllowUserToDeleteRows = false;
+            dgvRooms.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgvRooms.Location = new Point(12, 75);
+            dgvRooms.Name = "dgvRooms";
+            dgvRooms.ReadOnly = true;
+            dgvRooms.RowHeadersVisible = false;
+            dgvRooms.RowHeadersWidth = 51;
+            dgvRooms.Size = new Size(469, 309);
+            dgvRooms.TabIndex = 2;
+            // 
+            // label9
+            // 
+            label9.BackColor = Color.Transparent;
+            label9.Font = new Font("Segoe UI", 12F);
+            label9.ForeColor = Color.White;
+            label9.Location = new Point(12, 24);
+            label9.Name = "label9";
+            label9.Size = new Size(317, 38);
+            label9.TabIndex = 1;
+            label9.Text = "Rooms: energy , cost and devices";
+            // 
             // Energycontrol
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             AutoScroll = true;
+            AutoScrollMinSize = new Size(1603, 1056);
             BackColor = Color.FromArgb(15, 17, 30);
-            Controls.Add(pnladd);
-            Controls.Add(pnlwea);
-            Controls.Add(pnlenergy);
             Controls.Add(pnlback);
-            Controls.Add(panel20);
+            Controls.Add(panel1);
+            Controls.Add(pnlchart);
+            Controls.Add(pnlmydev);
+            Controls.Add(pnlwea);
+            Controls.Add(pnlenergysum);
+            Controls.Add(pnleco);
             Controls.Add(pnltop);
-            Controls.Add(pnlroom);
-            Controls.Add(panel9);
-            Controls.Add(pnlMonthlyUsage);
+            Controls.Add(pnlpeak);
             Controls.Add(label10);
             Controls.Add(lblweather);
             Controls.Add(lbltime);
             Controls.Add(lbldate);
             Controls.Add(pnlmain);
-            Controls.Add(panel1);
+            Controls.Add(pnlcost);
             Controls.Add(pnlTotalEnergy);
-            Controls.Add(panel3);
+            Controls.Add(pnluse);
             Controls.Add(lblene);
             Controls.Add(lblsticker);
             Controls.Add(lblMan);
@@ -2210,26 +1463,25 @@
             Name = "Energycontrol";
             Size = new Size(1603, 1056);
             Load += Energycontrol_Load;
-            panel3.ResumeLayout(false);
+            pnluse.ResumeLayout(false);
+            pnluse.PerformLayout();
             pnlTotalEnergy.ResumeLayout(false);
-            panel1.ResumeLayout(false);
+            pnlcost.ResumeLayout(false);
             pnlmain.ResumeLayout(false);
-            pnlMonthlyUsage.ResumeLayout(false);
-            pnlMonthlyUsage.PerformLayout();
-            panel9.ResumeLayout(false);
-            pnlroom.ResumeLayout(false);
-            pnlroom.PerformLayout();
+            pnlpeak.ResumeLayout(false);
             pnltop.ResumeLayout(false);
             pnltop.PerformLayout();
-            panel20.ResumeLayout(false);
-            panel20.PerformLayout();
+            pnleco.ResumeLayout(false);
+            pnleco.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             pnlback.ResumeLayout(false);
-            pnlenergy.ResumeLayout(false);
+            pnlenergysum.ResumeLayout(false);
             pnlwea.ResumeLayout(false);
             pnlwea.PerformLayout();
-            pnladd.ResumeLayout(false);
-            pnladd.PerformLayout();
+            pnlmydev.ResumeLayout(false);
+            pnlmydev.PerformLayout();
+            panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)dgvRooms).EndInit();
             ResumeLayout(false);
         }
 
@@ -2239,7 +1491,7 @@
         private Label lblMan;
         private Label lblsticker;
         private Label lblene;
-        private Panel panel3;
+        private Panel pnluse;
         private Label label6;
         private Label label7;
         private Label label8;
@@ -2247,7 +1499,7 @@
         private Label lblast;
         private Label lblnum;
         private Label lbltotal;
-        private Panel panel1;
+        private Panel pnlcost;
         private Label label1;
         private Label label2;
         private Label lblcost;
@@ -2259,105 +1511,35 @@
         private Label lbltime;
         private Label lblweather;
         private Label label10;
-        private Panel pnlMonthlyUsage;
-        private Label lblnov;
-        private Panel panel8;
-        private Panel panel7;
-        private Panel panel6;
-        private Panel panel5;
-        private Panel panel4;
-        private Label lbl;
-        private Label lblsep;
-        private Label lblaug;
-        private Label lbljul;
-        private Label lbl0;
-        private Label lbl120;
-        private Label lbl240;
-        private Label lbl360;
-        private Label lbl480;
-        private Label lbl600;
-        private Label lblkwh;
-        private Label lbltex;
-        private Label lblstick;
-        private Label label9;
-        private Label lblmon;
-        private Panel panel9;
+        private Panel pnlpeak;
         private Label label11;
         private Label label12;
         private Label lblpeak;
-        private Panel pnlroom;
-        private Label lblenergy;
-        private Label lblroom;
-        private Label lblen;
-        private Label lbldevice;
-        private Label lblcos;
-        private Panel pnlline;
-        private Label lblliving;
-        private Label lblkitch;
-        private Label lblstudy;
-        private Label lblbed;
-        private Label lblbath;
-        private Panel panel15;
-        private Panel panel16;
-        private Panel panel17;
-        private Panel panel13;
-        private Panel panel12;
-        private Panel panel11;
-        private Label lblother;
-        private Label lbltot;
-        private Label lblnum1;
-        private Label lblnum3;
-        private Label lblnum2;
-        private Label lblco6;
-        private Label lblco5;
-        private Label lblco4;
-        private Label lblco3;
-        private Label lblco2;
-        private Label lblco1;
-        private Label lblsum;
-        private Label lblnum6;
-        private Label lblnum5;
-        private Label lblnum4;
-        private Label lbltot7;
-        private Label lbldi3;
-        private Label lbldi2;
-        private Label lbldi1;
-        private Label lbldi7;
-        private Label lbldi6;
-        private Label lbldi5;
-        private Label lbldi4;
         private Panel pnltop;
         private Label lbltop;
         private ProgressBar pbair;
         private Label lblair;
-        private Label label13;
-        private Panel pnlair;
-        private Panel panel10;
+        private Label lblref;
         private ProgressBar progressBar1;
-        private Panel panel14;
         private ProgressBar progressBar2;
         private Label lblheater;
         private Label lblwash;
-        private Panel panel18;
         private ProgressBar progressBar3;
         private Label lblsmart;
-        private Panel panel19;
         private ProgressBar progressBar4;
         private Label lbl118;
         private Label lbl2;
         private Label lbl27;
         private Label lbl56;
         private Label lbl24;
-        private Panel panel20;
+        private Panel pnleco;
         private Label lblEco;
         private PictureBox pictureBox1;
         private Label lblactive;
         private CheckBox chkeco;
         private Label lblsaving;
-        private Label lbljun;
-        private Panel panel21;
         private Panel pnlback;
-        private Panel pnlenergy;
+        private Panel pnlenergysum;
         private Label lblmonth;
         private Label lblenrgy5;
         private Label lbl356;
@@ -2384,7 +1566,7 @@
         private Label lbllogo;
         private Label lblac;
         private Label lblpre;
-        private Panel pnladd;
+        private Panel pnlmydev;
         private Label lbladd;
         private Panel pnlsa;
         private Label lblstat;
@@ -2417,5 +1599,9 @@
         private Label lblof;
         private Label lblnooo;
         private Button btnadd;
+        private Panel pnlchart;
+        private Panel panel1;
+        private DataGridView dgvRooms;
+        private Label label9;
     }
 }

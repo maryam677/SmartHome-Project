@@ -11,6 +11,14 @@ namespace WinFormsApp2.UserControls
         public LightingDashboardUserControl()
         {
             InitializeComponent();
+
+            Load += (s, e) =>
+            {
+                if (cardLivingRoom.Room == null)
+                {
+                    LoadData();
+                }
+            };
         }
 
         // Called once by MainForm when the application starts
@@ -23,8 +31,23 @@ namespace WinFormsApp2.UserControls
 
             RefreshData();
 
+            AppData.DataChanged += OnDataChanged;
+
+            visualizationPanel.StartListening();
+
             UpdateClock();
             timerClock.Start();
+        }
+
+        private void OnDataChanged()
+        {
+            if (IsDisposed) return;
+            if (InvokeRequired)
+            {
+                BeginInvoke(new Action(OnDataChanged));
+                return;
+            }
+            RefreshData();
         }
 
         // Called every time the lighting data changes
@@ -35,6 +58,7 @@ namespace WinFormsApp2.UserControls
             cardKitchen.RefreshFromRoom();
             cardBathroom.RefreshFromRoom();
             systemOverview.RefreshData();
+            visualizationPanel?.RefreshVisuals();
         }
 
         private void UpdateClock()
@@ -48,29 +72,35 @@ namespace WinFormsApp2.UserControls
             UpdateClock();
         }
 
-        private void cardLivingRoom_Load(object sender, EventArgs e)
-        {
-        }
+private void cardLivingRoom_Load(object sender, EventArgs e)
+{
+}
 
-        private void btnLight_Click(object sender, EventArgs e)
-        {
-            Form1 popup = new Form1();
-            popup.ShowDialog();
-        }
+private void btnLight_Click(object sender, EventArgs e)
+{
+    Form1 popup = new Form1();
+    popup.ShowDialog();
+}
 
-        private void cardLivingRoom_Click(object sender, EventArgs e)
-        {
-        }
+private void cardLivingRoom_Click(object sender, EventArgs e)
+{
+}
 
-        private void btnSettings_Click(object sender, EventArgs e)
-        {
-            Form1 popup = new Form1();
-            popup.ShowDialog();
-        }
+private void btnSettings_Click(object sender, EventArgs e)
+{
+    Form1 popup = new Form1();
+    popup.ShowDialog();
+}
 
-        private void cardBedroom_Click(object sender, EventArgs e)
-        {
+private void cardBedroom_Click(object sender, EventArgs e)
+{
+}
 
+protected override void OnHandleDestroyed(EventArgs e)
+{
+    AppData.DataChanged -= OnDataChanged;
+    base.OnHandleDestroyed(e);
+}
         }
     }
 }

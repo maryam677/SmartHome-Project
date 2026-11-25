@@ -7,7 +7,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using WinFormsApp2.classes;
 using WinFormsApp2.Popups;
+
 
 
 namespace WinFormsApp2
@@ -17,12 +19,84 @@ namespace WinFormsApp2
         public auth()
         {
             InitializeComponent();
+
+            int overviewInset = pnlOverview.ClientSize.Width * 15 / 353;
+            int chartSize = Math.Min(180, label4.Left - 2 * overviewInset);
+            AutomationDonutChart chart = new AutomationDonutChart
+            {
+                EnabledCount = 4,
+                DisabledCount = 1,
+                Size = new Size(chartSize, chartSize),
+                Location = new Point(overviewInset, overviewTitle.Bottom + overviewInset)
+            };
+
+            pnlOverview.Controls.Add(chart);
+            chart.BringToFront();
+
+            void UpdateOverviewCounts()
+            {
+                label4.Text =
+                    $"{chart.EnabledCount + (long)chart.DisabledCount} Total\n" +
+                    $"{chart.EnabledCount} Enabled\n" +
+                    $"{chart.DisabledCount} Disabled\n";
+            }
+
+            chart.CountsChanged += (_, _) => UpdateOverviewCounts();
+            UpdateOverviewCounts();
+
+            int scheduleInset = lblScheduleTitle.Left;
+            int timelineTop = lblScheduleTitle.Bottom + 8;
+            AutomationTimeline timeline = new AutomationTimeline
+            {
+                Location = new Point(scheduleInset, timelineTop),
+                Size = new Size(
+                    pnlSchedule.ClientSize.Width - 2 * scheduleInset,
+                    pnlSchedule.ClientSize.Height - timelineTop - scheduleInset
+                ),
+                Anchor = AnchorStyles.Top |
+                         AnchorStyles.Left |
+                         AnchorStyles.Right |
+                         AnchorStyles.Bottom
+            };
+
+            pnlSchedule.Controls.Add(timeline);
+            timeline.BringToFront();
+
+
+            ApplyRoundedUI();
+
         }
 
-        
 
-       
 
+
+        private void ApplyRoundedUI()
+        {
+           
+            UiRoundHelper.ApplyRoundedRegion(pnlSchedule, 20);
+            UiRoundHelper.ApplyRoundedRegion(pnlOverview, 20);
+            UiRoundHelper.ApplyRoundedRegion(pnlMorning, 20);
+            UiRoundHelper.ApplyRoundedRegion(pnlAway, 20);
+            UiRoundHelper.ApplyRoundedRegion(pnlNight, 20);
+            UiRoundHelper.ApplyRoundedRegion(pnlVacation, 20);
+            UiRoundHelper.ApplyRoundedRegion(rulesPanel, 20);
+            UiRoundHelper.ApplyRoundedRegion(pnlTriggers, 20);
+            UiRoundHelper.ApplyRoundedRegion(panel2, 20);
+            UiRoundHelper.ApplyRoundedRegion(panel3, 20);
+            UiRoundHelper.ApplyRoundedRegion(panel4, 20);
+            UiRoundHelper.ApplyRoundedRegion(panel5, 20);
+            UiRoundHelper.ApplyRoundedRegion(panel11, 20);
+            UiRoundHelper.ApplyRoundedRegion(panel6, 20);
+            UiRoundHelper.ApplyRoundedRegion(panel8, 20);
+            UiRoundHelper.ApplyRoundedRegion(panel9, 20);
+            UiRoundHelper.ApplyRoundedRegion(btnCreateRoutine, 8);
+            UiRoundHelper.ApplyRoundedRegion(btnSchedule, 8);
+
+
+
+
+
+        }
 
         private void btnCreateRoutine_Click_1(object sender, EventArgs e)
         {
@@ -132,8 +206,6 @@ namespace WinFormsApp2
                 form.ShowDialog(this);
             }
         }
-
-
 
     }
 }

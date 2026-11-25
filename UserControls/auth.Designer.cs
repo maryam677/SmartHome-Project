@@ -43,23 +43,6 @@
             lblMorning = new Label();
             lblMorningDesc = new Label();
             pnlSchedule = new Panel();
-            lblmode_night = new Label();
-            lblevening = new Label();
-            lblmodeaway = new Label();
-            lblmodemorning = new Label();
-            lblmodenight = new Label();
-            pnlTimeline = new Panel();
-            pnlEveningTime = new Panel();
-            pnlAwayTime = new Panel();
-            pnlMorningTime = new Panel();
-            lbl3PM = new Label();
-            lbl6PM = new Label();
-            lbl9PM = new Label();
-            lbl6AM = new Label();
-            lbl9AM = new Label();
-            lbl12PM = new Label();
-            lbl3AM = new Label();
-            lbl12AM = new Label();
             lblScheduleTitle = new Label();
             pnlTriggers = new Panel();
             panel4 = new Panel();
@@ -146,7 +129,6 @@
             pnlMorning.SuspendLayout();
             pnlMorningBottom.SuspendLayout();
             pnlSchedule.SuspendLayout();
-            pnlTimeline.SuspendLayout();
             pnlTriggers.SuspendLayout();
             panel4.SuspendLayout();
             panel5.SuspendLayout();
@@ -278,7 +260,7 @@
             pnlMorning.Controls.Add(lblMorningStatus);
             pnlMorning.Controls.Add(lblMorning);
             pnlMorning.Controls.Add(lblMorningDesc);
-            pnlMorning.Location = new Point(82, 117);
+            pnlMorning.Location = new Point(83, 117);
             pnlMorning.Name = "pnlMorning";
             pnlMorning.Size = new Size(307, 228);
             pnlMorning.TabIndex = 1;
@@ -358,199 +340,11 @@
             // pnlSchedule
             // 
             pnlSchedule.BackColor = Color.FromArgb(22, 29, 63);
-            pnlSchedule.Controls.Add(lblmode_night);
-            pnlSchedule.Controls.Add(lblevening);
-            pnlSchedule.Controls.Add(lblmodeaway);
-            pnlSchedule.Controls.Add(lblmodemorning);
-            pnlSchedule.Controls.Add(lblmodenight);
-            pnlSchedule.Controls.Add(pnlTimeline);
-            pnlSchedule.Controls.Add(lbl3PM);
-            pnlSchedule.Controls.Add(lbl6PM);
-            pnlSchedule.Controls.Add(lbl9PM);
-            pnlSchedule.Controls.Add(lbl6AM);
-            pnlSchedule.Controls.Add(lbl9AM);
-            pnlSchedule.Controls.Add(lbl12PM);
-            pnlSchedule.Controls.Add(lbl3AM);
-            pnlSchedule.Controls.Add(lbl12AM);
             pnlSchedule.Controls.Add(lblScheduleTitle);
-            pnlSchedule.Location = new Point(82, 371);
+            pnlSchedule.Location = new Point(83, 362);
             pnlSchedule.Name = "pnlSchedule";
-            pnlSchedule.Size = new Size(956, 210);
+            pnlSchedule.Size = new Size(956, 265);
             pnlSchedule.TabIndex = 5;
-            // 
-            // lblmode_night
-            // 
-            lblmode_night.AutoSize = true;
-            lblmode_night.ForeColor = Color.LightGray;
-            lblmode_night.Location = new Point(751, 139);
-            lblmode_night.Name = "lblmode_night";
-            lblmode_night.Size = new Size(89, 20);
-            lblmode_night.TabIndex = 14;
-            lblmode_night.Text = "Night Mode";
-            // 
-            // lblevening
-            // 
-            lblevening.AutoSize = true;
-            lblevening.ForeColor = Color.LightGray;
-            lblevening.Location = new Point(558, 139);
-            lblevening.Name = "lblevening";
-            lblevening.Size = new Size(116, 20);
-            lblevening.TabIndex = 13;
-            lblevening.Text = "Evening Routine";
-            // 
-            // lblmodeaway
-            // 
-            lblmodeaway.AutoSize = true;
-            lblmodeaway.ForeColor = Color.LightGray;
-            lblmodeaway.Location = new Point(388, 139);
-            lblmodeaway.Name = "lblmodeaway";
-            lblmodeaway.Size = new Size(88, 20);
-            lblmodeaway.TabIndex = 12;
-            lblmodeaway.Text = "Away Mode";
-            // 
-            // lblmodemorning
-            // 
-            lblmodemorning.AutoSize = true;
-            lblmodemorning.ForeColor = Color.LightGray;
-            lblmodemorning.Location = new Point(213, 139);
-            lblmodemorning.Name = "lblmodemorning";
-            lblmodemorning.Size = new Size(120, 20);
-            lblmodemorning.TabIndex = 11;
-            lblmodemorning.Text = "Morning Routine";
-            // 
-            // lblmodenight
-            // 
-            lblmodenight.AutoSize = true;
-            lblmodenight.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lblmodenight.ForeColor = Color.LightGray;
-            lblmodenight.Location = new Point(78, 137);
-            lblmodenight.Name = "lblmodenight";
-            lblmodenight.Size = new Size(89, 20);
-            lblmodenight.TabIndex = 10;
-            lblmodenight.Text = "Night Mode";
-            // 
-            // pnlTimeline
-            // 
-            pnlTimeline.BackColor = Color.FromArgb(80, 52, 170);
-            pnlTimeline.Controls.Add(pnlEveningTime);
-            pnlTimeline.Controls.Add(pnlAwayTime);
-            pnlTimeline.Controls.Add(pnlMorningTime);
-            pnlTimeline.Location = new Point(54, 75);
-            pnlTimeline.Name = "pnlTimeline";
-            pnlTimeline.Size = new Size(826, 36);
-            pnlTimeline.TabIndex = 9;
-            // 
-            // pnlEveningTime
-            // 
-            pnlEveningTime.BackColor = Color.FromArgb(134, 60, 177);
-            pnlEveningTime.Location = new Point(534, 0);
-            pnlEveningTime.Name = "pnlEveningTime";
-            pnlEveningTime.Size = new Size(136, 36);
-            pnlEveningTime.TabIndex = 2;
-            // 
-            // pnlAwayTime
-            // 
-            pnlAwayTime.BackColor = Color.FromArgb(45, 100, 187);
-            pnlAwayTime.Location = new Point(315, 0);
-            pnlAwayTime.Name = "pnlAwayTime";
-            pnlAwayTime.Size = new Size(129, 36);
-            pnlAwayTime.TabIndex = 1;
-            // 
-            // pnlMorningTime
-            // 
-            pnlMorningTime.BackColor = Color.FromArgb(177, 137, 54);
-            pnlMorningTime.Location = new Point(159, 0);
-            pnlMorningTime.Name = "pnlMorningTime";
-            pnlMorningTime.Size = new Size(112, 36);
-            pnlMorningTime.TabIndex = 0;
-            // 
-            // lbl3PM
-            // 
-            lbl3PM.AutoSize = true;
-            lbl3PM.Font = new Font("Segoe UI", 7.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lbl3PM.ForeColor = Color.FromArgb(170, 175, 205);
-            lbl3PM.Location = new Point(475, 55);
-            lbl3PM.Name = "lbl3PM";
-            lbl3PM.Size = new Size(38, 17);
-            lbl3PM.TabIndex = 8;
-            lbl3PM.Text = "3 PM";
-            // 
-            // lbl6PM
-            // 
-            lbl6PM.AutoSize = true;
-            lbl6PM.Font = new Font("Segoe UI", 7.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lbl6PM.ForeColor = Color.FromArgb(170, 175, 205);
-            lbl6PM.Location = new Point(570, 55);
-            lbl6PM.Name = "lbl6PM";
-            lbl6PM.Size = new Size(38, 17);
-            lbl6PM.TabIndex = 7;
-            lbl6PM.Text = "6 PM";
-            // 
-            // lbl9PM
-            // 
-            lbl9PM.AutoSize = true;
-            lbl9PM.Font = new Font("Segoe UI", 7.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lbl9PM.ForeColor = Color.FromArgb(170, 175, 205);
-            lbl9PM.Location = new Point(686, 55);
-            lbl9PM.Name = "lbl9PM";
-            lbl9PM.Size = new Size(38, 17);
-            lbl9PM.TabIndex = 6;
-            lbl9PM.Text = "9 PM";
-            // 
-            // lbl6AM
-            // 
-            lbl6AM.AutoSize = true;
-            lbl6AM.Font = new Font("Segoe UI", 7.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lbl6AM.ForeColor = Color.FromArgb(170, 175, 205);
-            lbl6AM.Location = new Point(203, 55);
-            lbl6AM.Name = "lbl6AM";
-            lbl6AM.Size = new Size(39, 17);
-            lbl6AM.TabIndex = 5;
-            lbl6AM.Text = "6 AM";
-            // 
-            // lbl9AM
-            // 
-            lbl9AM.AutoSize = true;
-            lbl9AM.Font = new Font("Segoe UI", 7.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lbl9AM.ForeColor = Color.FromArgb(170, 175, 205);
-            lbl9AM.Location = new Point(300, 55);
-            lbl9AM.Name = "lbl9AM";
-            lbl9AM.Size = new Size(39, 17);
-            lbl9AM.TabIndex = 4;
-            lbl9AM.Text = "9 AM";
-            // 
-            // lbl12PM
-            // 
-            lbl12PM.AutoSize = true;
-            lbl12PM.Font = new Font("Segoe UI", 7.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lbl12PM.ForeColor = Color.FromArgb(170, 175, 205);
-            lbl12PM.Location = new Point(356, 55);
-            lbl12PM.Name = "lbl12PM";
-            lbl12PM.Size = new Size(45, 17);
-            lbl12PM.TabIndex = 3;
-            lbl12PM.Text = "12 PM";
-            // 
-            // lbl3AM
-            // 
-            lbl3AM.AutoSize = true;
-            lbl3AM.Font = new Font("Segoe UI", 7.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lbl3AM.ForeColor = Color.FromArgb(170, 175, 205);
-            lbl3AM.Location = new Point(137, 55);
-            lbl3AM.Name = "lbl3AM";
-            lbl3AM.Size = new Size(39, 17);
-            lbl3AM.TabIndex = 2;
-            lbl3AM.Text = "3 AM";
-            // 
-            // lbl12AM
-            // 
-            lbl12AM.AutoSize = true;
-            lbl12AM.Font = new Font("Segoe UI", 7.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lbl12AM.ForeColor = Color.FromArgb(170, 175, 205);
-            lbl12AM.Location = new Point(54, 55);
-            lbl12AM.Name = "lbl12AM";
-            lbl12AM.Size = new Size(46, 17);
-            lbl12AM.TabIndex = 1;
-            lbl12AM.Text = "12 AM";
             // 
             // lblScheduleTitle
             // 
@@ -586,9 +380,9 @@
             // 
             panel4.BackColor = Color.FromArgb(40, 47, 92);
             panel4.Controls.Add(lblLightLevel);
-            panel4.Location = new Point(250, 157);
+            panel4.Location = new Point(233, 155);
             panel4.Name = "panel4";
-            panel4.Size = new Size(85, 73);
+            panel4.Size = new Size(111, 73);
             panel4.TabIndex = 4;
             panel4.Tag = "Light Level";
             panel4.Click += OpenTrigger_Click;
@@ -596,10 +390,11 @@
             // lblLightLevel
             // 
             lblLightLevel.AutoSize = true;
+            lblLightLevel.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lblLightLevel.ForeColor = Color.White;
-            lblLightLevel.Location = new Point(2, 24);
+            lblLightLevel.Location = new Point(14, 27);
             lblLightLevel.Name = "lblLightLevel";
-            lblLightLevel.Size = new Size(80, 20);
+            lblLightLevel.Size = new Size(85, 20);
             lblLightLevel.TabIndex = 0;
             lblLightLevel.Text = "Light Level";
             lblLightLevel.TextAlign = ContentAlignment.MiddleCenter;
@@ -619,10 +414,11 @@
             // lblMotion
             // 
             lblMotion.AutoSize = true;
+            lblMotion.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lblMotion.ForeColor = Color.White;
-            lblMotion.Location = new Point(8, 23);
+            lblMotion.Location = new Point(12, 26);
             lblMotion.Name = "lblMotion";
-            lblMotion.Size = new Size(57, 20);
+            lblMotion.Size = new Size(60, 20);
             lblMotion.TabIndex = 1;
             lblMotion.Text = "Motion";
             lblMotion.TextAlign = ContentAlignment.MiddleCenter;
@@ -640,7 +436,7 @@
             // 
             panel6.BackColor = Color.FromArgb(40, 47, 92);
             panel6.Controls.Add(lblHumidity);
-            panel6.Location = new Point(142, 155);
+            panel6.Location = new Point(136, 155);
             panel6.Name = "panel6";
             panel6.Size = new Size(85, 73);
             panel6.TabIndex = 4;
@@ -651,10 +447,11 @@
             // 
             lblHumidity.AutoSize = true;
             lblHumidity.BackColor = Color.Transparent;
+            lblHumidity.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lblHumidity.ForeColor = Color.White;
             lblHumidity.Location = new Point(9, 26);
             lblHumidity.Name = "lblHumidity";
-            lblHumidity.Size = new Size(70, 20);
+            lblHumidity.Size = new Size(74, 20);
             lblHumidity.TabIndex = 0;
             lblHumidity.Text = "Humidity";
             lblHumidity.TextAlign = ContentAlignment.MiddleCenter;
@@ -663,9 +460,9 @@
             // 
             panel8.BackColor = Color.FromArgb(40, 47, 92);
             panel8.Controls.Add(lblTemperature);
-            panel8.Location = new Point(30, 155);
+            panel8.Location = new Point(14, 155);
             panel8.Name = "panel8";
-            panel8.Size = new Size(89, 73);
+            panel8.Size = new Size(110, 73);
             panel8.TabIndex = 4;
             panel8.Tag = "Temperature";
             panel8.Click += OpenTrigger_Click;
@@ -673,11 +470,11 @@
             // lblTemperature
             // 
             lblTemperature.AutoSize = true;
-            lblTemperature.Font = new Font("Segoe UI", 7.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lblTemperature.Font = new Font("Segoe UI", 7.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lblTemperature.ForeColor = Color.White;
-            lblTemperature.Location = new Point(3, 29);
+            lblTemperature.Location = new Point(16, 29);
             lblTemperature.Name = "lblTemperature";
-            lblTemperature.Size = new Size(82, 17);
+            lblTemperature.Size = new Size(86, 17);
             lblTemperature.TabIndex = 0;
             lblTemperature.Text = "Temperature";
             lblTemperature.TextAlign = ContentAlignment.MiddleCenter;
@@ -686,7 +483,7 @@
             // 
             panel9.BackColor = Color.FromArgb(40, 47, 92);
             panel9.Controls.Add(lblMore);
-            panel9.Location = new Point(358, 155);
+            panel9.Location = new Point(356, 155);
             panel9.Name = "panel9";
             panel9.Size = new Size(85, 73);
             panel9.TabIndex = 4;
@@ -696,10 +493,11 @@
             // lblMore
             // 
             lblMore.AutoSize = true;
+            lblMore.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lblMore.ForeColor = Color.White;
-            lblMore.Location = new Point(18, 24);
+            lblMore.Location = new Point(17, 26);
             lblMore.Name = "lblMore";
-            lblMore.Size = new Size(44, 20);
+            lblMore.Size = new Size(46, 20);
             lblMore.TabIndex = 0;
             lblMore.Text = "More";
             lblMore.TextAlign = ContentAlignment.MiddleCenter;
@@ -718,10 +516,11 @@
             // lblDoor
             // 
             lblDoor.AutoSize = true;
+            lblDoor.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lblDoor.ForeColor = Color.White;
             lblDoor.Location = new Point(18, 23);
             lblDoor.Name = "lblDoor";
-            lblDoor.Size = new Size(43, 20);
+            lblDoor.Size = new Size(44, 20);
             lblDoor.TabIndex = 0;
             lblDoor.Text = "Door";
             lblDoor.TextAlign = ContentAlignment.MiddleCenter;
@@ -740,11 +539,11 @@
             // lblLocation
             // 
             lblLocation.AutoSize = true;
-            lblLocation.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lblLocation.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lblLocation.ForeColor = Color.White;
-            lblLocation.Location = new Point(14, 26);
+            lblLocation.Location = new Point(10, 26);
             lblLocation.Name = "lblLocation";
-            lblLocation.Size = new Size(66, 20);
+            lblLocation.Size = new Size(69, 20);
             lblLocation.TabIndex = 0;
             lblLocation.Text = "Location";
             lblLocation.TextAlign = ContentAlignment.MiddleCenter;
@@ -763,11 +562,11 @@
             // lblTime
             // 
             lblTime.AutoSize = true;
-            lblTime.Font = new Font("Segoe UI", 7.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lblTime.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lblTime.ForeColor = Color.White;
             lblTime.Location = new Point(21, 26);
             lblTime.Name = "lblTime";
-            lblTime.Size = new Size(36, 17);
+            lblTime.Size = new Size(44, 20);
             lblTime.TabIndex = 0;
             lblTime.Text = "Time";
             lblTime.TextAlign = ContentAlignment.MiddleCenter;
@@ -819,7 +618,7 @@
             pnlOverview.Controls.Add(label4);
             pnlOverview.Controls.Add(overviewTitle);
             pnlOverview.Controls.Add(lblActivity);
-            pnlOverview.Location = new Point(1183, 606);
+            pnlOverview.Location = new Point(1183, 661);
             pnlOverview.Name = "pnlOverview";
             pnlOverview.Size = new Size(353, 306);
             pnlOverview.TabIndex = 13;
@@ -828,11 +627,10 @@
             // 
             label4.Font = new Font("Segoe UI", 14F, FontStyle.Bold);
             label4.ForeColor = Color.White;
-            label4.Location = new Point(20, 78);
+            label4.Location = new Point(200, 79);
             label4.Name = "label4";
-            label4.Size = new Size(550, 125);
+            label4.Size = new Size(153, 125);
             label4.TabIndex = 3;
-            label4.Text = "5 Total Automations    \r\n 5 Enabled    \r\n 0 Disabled";
             // 
             // overviewTitle
             // 
@@ -840,14 +638,14 @@
             overviewTitle.ForeColor = Color.White;
             overviewTitle.Location = new Point(20, 15);
             overviewTitle.Name = "overviewTitle";
-            overviewTitle.Size = new Size(500, 38);
+            overviewTitle.Size = new Size(313, 38);
             overviewTitle.TabIndex = 0;
             overviewTitle.Text = "Automation Overview";
             // 
             // lblActivity
             // 
             lblActivity.ForeColor = Color.LightGray;
-            lblActivity.Location = new Point(20, 215);
+            lblActivity.Location = new Point(20, 257);
             lblActivity.Name = "lblActivity";
             lblActivity.Size = new Size(1020, 25);
             lblActivity.TabIndex = 2;
@@ -860,7 +658,7 @@
             rulesPanel.Controls.Add(txtSearch);
             rulesPanel.Controls.Add(tableHeader);
             rulesPanel.Controls.Add(ruleRows);
-            rulesPanel.Location = new Point(82, 607);
+            rulesPanel.Location = new Point(82, 642);
             rulesPanel.Name = "rulesPanel";
             rulesPanel.Size = new Size(1085, 365);
             rulesPanel.TabIndex = 12;
@@ -1508,7 +1306,6 @@
             pnlMorningBottom.PerformLayout();
             pnlSchedule.ResumeLayout(false);
             pnlSchedule.PerformLayout();
-            pnlTimeline.ResumeLayout(false);
             pnlTriggers.ResumeLayout(false);
             pnlTriggers.PerformLayout();
             panel4.ResumeLayout(false);
@@ -1592,24 +1389,7 @@
         private Label lblawayStatus;
         private Label lblAway;
         private Label lblAwayDesc;
-        private Label lbl12AM;
         private Label lblScheduleTitle;
-        private Label lbl3PM;
-        private Label lbl6PM;
-        private Label lbl9PM;
-        private Label lbl6AM;
-        private Label lbl9AM;
-        private Label lbl12PM;
-        private Label lbl3AM;
-        private Panel pnlTimeline;
-        private Panel pnlEveningTime;
-        private Panel pnlAwayTime;
-        private Panel pnlMorningTime;
-        private Label lblmode_night;
-        private Label lblevening;
-        private Label lblmodeaway;
-        private Label lblmodemorning;
-        private Label lblmodenight;
         private Panel rulesPanel;
         private Label rulesTitle;
         private TextBox txtSearch;

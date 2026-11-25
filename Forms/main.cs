@@ -30,6 +30,11 @@ namespace WinFormsApp2
             pnlMainArea.Controls.Add(home);
 
         }
+        public void OpenDevicesPage()
+        {
+           
+            btnDevices.PerformClick();
+        }
 
 
         private void button5_Click(object sender, EventArgs e)
@@ -228,7 +233,8 @@ namespace WinFormsApp2
 
             pnlMainArea.Controls.Clear();
 
-            page.Dock = DockStyle.Fill;
+            page.Dock = DockStyle.Top;
+            page.Height = 1450;
             pnlMainArea.Controls.Add(page);
 
             pnlProfileMenu.Visible = false;

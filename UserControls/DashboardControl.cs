@@ -9,8 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Drawing.Drawing2D;
-using System.Linq;
+using WinFormsApp2.Data;
 
 namespace Smarthome_.net9
 {
@@ -19,22 +18,26 @@ namespace Smarthome_.net9
         public dashboard()
         {
             InitializeComponent();
-            this.DoubleBuffered = true;
-            climatePanelPaint.Paint += climatePanel_Paint;
-            typeof(Panel).InvokeMember("DoubleBuffered",
+this.DoubleBuffered = true;
+
+climatePanelPaint.Paint += climatePanel_Paint;
+
+typeof(Panel).InvokeMember("DoubleBuffered",
     System.Reflection.BindingFlags.SetProperty |
     System.Reflection.BindingFlags.Instance |
     System.Reflection.BindingFlags.NonPublic,
     null, pnlChart, new object[] { true });
 
+pnlChart.Paint += PnlChart_Paint;
 
-            pnlChart.Paint += PnlChart_Paint;
-            ApplyRoundedCorners(pnlChart);
-            ApplyRoundedCorners(climatePanelPaint);
-            ApplyRoundedCorners(panel3);
-            ApplyRoundedCorners(RoundPanel);
-            ApplyRoundedCorners(pnlsecurity);
-            ApplyRoundedCorners(piclivingroom);
+ApplyRoundedCorners(pnlChart);
+ApplyRoundedCorners(climatePanelPaint);
+ApplyRoundedCorners(panel3);
+ApplyRoundedCorners(RoundPanel);
+ApplyRoundedCorners(pnlsecurity);
+ApplyRoundedCorners(piclivingroom);
+
+ApplyLiveRoomStats();
         }
 
         private void ApplyRoundedCorners(Control p, int radius = 15)
@@ -119,6 +122,25 @@ namespace Smarthome_.net9
             }
 
             g.FillEllipse(Brushes.White, pts[pts.Length - 1].X - 4, pts[pts.Length - 1].Y - 4, 8, 8);
+        }
+
+        private void ApplyLiveRoomStats()
+        {
+            lblnodevices.Text = RoomCatalog.DeviceCount + " Devices";
+            lblCLOCK.Text = RoomCatalog.LiveKwh.ToString("0.0") + " Kwh";
+
+            int lampsOn = RoomCatalog.CountOn(RoomDeviceGlyph.Bulb);
+            int coolingOn = RoomCatalog.CountOn(RoomDeviceGlyph.Snowflake);
+            int screensOn = RoomCatalog.CountOn(RoomDeviceGlyph.Screen);
+            lblonn.Text = lampsOn == 0 ? "Off" : lampsOn + " On";
+            lblonn2.Text = coolingOn == 0 ? "Off" : coolingOn + " On";
+            lblonn3.Text = screensOn == 0 ? "Off" : screensOn + " On";
+
+            RoomDevice? livingLamp = RoomCatalog.Rooms
+                .FirstOrDefault(room => room.Name == "Living Room")
+                ?.Devices.FirstOrDefault(device => device.Glyph == RoomDeviceGlyph.Bulb);
+            floorLampOn = livingLamp?.IsOn ?? false;
+            btnon1.Text = floorLampOn ? "ON" : "OFF";
         }
 
         private void lblwelcome_Click(object sender, EventArgs e)
@@ -240,6 +262,19 @@ namespace Smarthome_.net9
                 {
                     floorLampOn = popup.IsOn;
                     btnon1.Text = floorLampOn ? "ON" : "OFF";
+if (sender == btnon1)
+{
+    RoomDevice? livingLamp = RoomCatalog.Rooms
+        .FirstOrDefault(room => room.Name == "Living Room")
+        ?.Devices.FirstOrDefault(device => device.Glyph == RoomDeviceGlyph.Bulb);
+
+    if (livingLamp != null)
+    {
+        livingLamp.IsOn = floorLampOn;
+        RoomCatalog.Save();
+        ApplyLiveRoomStats();
+    }
+}
                 }
             }
         }
