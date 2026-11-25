@@ -18,26 +18,26 @@ namespace Smarthome_.net9
         public dashboard()
         {
             InitializeComponent();
-this.DoubleBuffered = true;
+            this.DoubleBuffered = true;
 
-climatePanelPaint.Paint += climatePanel_Paint;
+            climatePanelPaint.Paint += climatePanel_Paint;
 
-typeof(Panel).InvokeMember("DoubleBuffered",
-    System.Reflection.BindingFlags.SetProperty |
-    System.Reflection.BindingFlags.Instance |
-    System.Reflection.BindingFlags.NonPublic,
-    null, pnlChart, new object[] { true });
+            typeof(Panel).InvokeMember("DoubleBuffered",
+                System.Reflection.BindingFlags.SetProperty |
+                System.Reflection.BindingFlags.Instance |
+                System.Reflection.BindingFlags.NonPublic,
+                null, pnlChart, new object[] { true });
 
-pnlChart.Paint += PnlChart_Paint;
+            pnlChart.Paint += PnlChart_Paint;
 
-ApplyRoundedCorners(pnlChart);
-ApplyRoundedCorners(climatePanelPaint);
-ApplyRoundedCorners(panel3);
-ApplyRoundedCorners(RoundPanel);
-ApplyRoundedCorners(pnlsecurity);
-ApplyRoundedCorners(piclivingroom);
+            ApplyRoundedCorners(pnlChart);
+            ApplyRoundedCorners(climatePanelPaint);
+            ApplyRoundedCorners(panel3);
+            ApplyRoundedCorners(RoundPanel);
+            ApplyRoundedCorners(pnlsecurity);
+            ApplyRoundedCorners(piclivingroom);
 
-ApplyLiveRoomStats();
+            ApplyLiveRoomStats();
         }
 
         private void ApplyRoundedCorners(Control p, int radius = 15)
@@ -262,19 +262,19 @@ ApplyLiveRoomStats();
                 {
                     floorLampOn = popup.IsOn;
                     btnon1.Text = floorLampOn ? "ON" : "OFF";
-if (sender == btnon1)
-{
-    RoomDevice? livingLamp = RoomCatalog.Rooms
-        .FirstOrDefault(room => room.Name == "Living Room")
-        ?.Devices.FirstOrDefault(device => device.Glyph == RoomDeviceGlyph.Bulb);
+                    if (sender == btnon1)
+                    {
+                        RoomDevice? livingLamp = RoomCatalog.Rooms
+                            .FirstOrDefault(room => room.Name == "Living Room")
+                            ?.Devices.FirstOrDefault(device => device.Glyph == RoomDeviceGlyph.Bulb);
 
-    if (livingLamp != null)
-    {
-        livingLamp.IsOn = floorLampOn;
-        RoomCatalog.Save();
-        ApplyLiveRoomStats();
-    }
-}
+                        if (livingLamp != null)
+                        {
+                            livingLamp.IsOn = floorLampOn;
+                            RoomCatalog.Save();
+                            ApplyLiveRoomStats();
+                        }
+                    }
                 }
             }
         }

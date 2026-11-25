@@ -227,7 +227,7 @@
             climatePanelPaint.Controls.Add(picair);
             climatePanelPaint.Controls.Add(pichumidity);
             climatePanelPaint.Controls.Add(pictemp);
-            climatePanelPaint.Location = new Point(3, 62);
+            climatePanelPaint.Location = new Point(22, 65);
             climatePanelPaint.Name = "climatePanelPaint";
             climatePanelPaint.Size = new Size(450, 159);
             climatePanelPaint.TabIndex = 7;
@@ -295,7 +295,7 @@
             // picleaves
             // 
             picleaves.Image = (Image)resources.GetObject("picleaves.Image");
-            picleaves.Location = new Point(257, 13);
+            picleaves.Location = new Point(281, 13);
             picleaves.Name = "picleaves";
             picleaves.Size = new Size(54, 46);
             picleaves.TabIndex = 6;
