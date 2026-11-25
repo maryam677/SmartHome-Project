@@ -1,13 +1,15 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Drawing.Drawing2D;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using WinFormsApp2.Popups;
+using WinFormsApp2.Controls;
 
 namespace WinFormsApp2.UserControls
 {
@@ -16,10 +18,71 @@ namespace WinFormsApp2.UserControls
         public DevicesControl()
         {
             InitializeComponent();
+            DoubleBuffered = true;
+            ApplyDeviceStyling();
             UpdateDeviceCounters();
         }
 
+        private void ApplyDeviceStyling()
+        {
+            foreach (Panel card in DeviceCards)
+            {
+                StylePanel(card, 20);
+                foreach (Button button in card.Controls.OfType<Button>())
+                    RoundControl(button, 9);
+            }
 
+            foreach (Panel summary in new[] { pnlTotalDevices, pnlOnlineDevices, pnlOfflineDevices })
+                StylePanel(summary, 16);
+
+            RoundControl(btnAddDevice, 11);
+            foreach (Label status in new[] { lblCameraStatus, lblonline, lblonline3, lblonline4, lblonline5, lblOffline })
+            {
+                status.BackColor = status == lblOffline
+                    ? Color.FromArgb(69, 38, 54)
+                    : Color.FromArgb(25, 61, 55);
+                RoundControl(status, 5);
+            }
+        }
+
+        private static void StylePanel(Panel panel, int radius)
+        {
+            Color start = panel.BackColor;
+            Color end = Color.FromArgb(start.R + 4, start.G - 6, start.B + 5);
+            panel.BackColor = Color.Transparent;
+            panel.SizeChanged += (_, _) => panel.Invalidate();
+            panel.Paint += (_, e) =>
+            {
+                Rectangle bounds = Rectangle.Inflate(panel.ClientRectangle, -1, -1);
+                if (bounds.Width <= 0 || bounds.Height <= 0)
+                    return;
+
+                var state = e.Graphics.Save();
+                e.Graphics.SmoothingMode = SmoothingMode.AntiAlias;
+                using GraphicsPath path = RoundedPanel.GetRoundedRectPath(bounds, radius);
+                using var fill = new LinearGradientBrush(bounds, start, end, LinearGradientMode.ForwardDiagonal);
+                using var border = new Pen(Color.FromArgb(84, 68, 132));
+                e.Graphics.FillPath(fill, path);
+                e.Graphics.DrawPath(border, path);
+                e.Graphics.Restore(state);
+            };
+        }
+
+        private static void RoundControl(Control control, int radius)
+        {
+            void UpdateRegion()
+            {
+                Rectangle bounds = control.ClientRectangle;
+                if (bounds.Width <= 0 || bounds.Height <= 0)
+                    return;
+
+                using GraphicsPath path = RoundedPanel.GetRoundedRectPath(bounds, radius);
+                control.Region = new Region(path);
+            }
+
+            control.SizeChanged += (_, _) => UpdateRegion();
+            UpdateRegion();
+        }
 
         private IEnumerable<Panel> DeviceCards =>
             new[] { pnlCamera, pnlSmartLock, pnlGarage, pnlCurtains, pnlSmartPlug, pnlBackyardCamera }.Where(card => card.Parent == this);
@@ -97,6 +160,6 @@ namespace WinFormsApp2.UserControls
             }
         }
 
-    
+
     }
 }
