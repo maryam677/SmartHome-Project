@@ -267,7 +267,7 @@
             // picair
             // 
             picair.Image = (Image)resources.GetObject("picair.Image");
-            picair.Location = new Point(266, 107);
+            picair.Location = new Point(254, 107);
             picair.Name = "picair";
             picair.Size = new Size(37, 43);
             picair.TabIndex = 3;
