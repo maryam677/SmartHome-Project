@@ -299,7 +299,7 @@ public sealed class RoomCardControl : Control
             RoomPhotoKind.Living => Properties.Resources.living_room,
             RoomPhotoKind.Bedroom => Properties.Resources.bedroom,
             RoomPhotoKind.Kitchen => Properties.Resources.kitchen,
-            RoomPhotoKind.Bathroom => Properties.Resources.bathroom,
+            RoomPhotoKind.Bathroom => null,
             RoomPhotoKind.Kids => Properties.Resources.bedroom,
             _ => null
         };
@@ -322,6 +322,22 @@ public sealed class RoomCardControl : Control
             using SolidBrush screen = new SolidBrush(Color.FromArgb(36, 92, 168));
             g.FillRectangle(Brushes.DimGray, monitor);
             g.FillRectangle(screen, monitor.X + 2, monitor.Y + 2, monitor.Width - 4, monitor.Height - 6);
+            return;
+        }
+
+        if (Photo == RoomPhotoKind.Bathroom)
+        {
+            using LinearGradientBrush wall = new LinearGradientBrush(photo, Color.FromArgb(214, 228, 236), Color.FromArgb(150, 176, 194), 90f);
+            g.FillRectangle(wall, photo);
+            Rectangle mirror = new Rectangle(photo.X + photo.Width / 2 - 22, photo.Y + 8, 44, 28);
+            using SolidBrush mirrorFill = new SolidBrush(Color.FromArgb(186, 214, 228));
+            g.FillRectangle(mirrorFill, mirror);
+            g.DrawRectangle(Pens.White, mirror);
+            Rectangle basin = new Rectangle(photo.X + 18, photo.Bottom - 30, photo.Width - 36, 16);
+            using SolidBrush basinFill = new SolidBrush(Color.FromArgb(236, 240, 244));
+            g.FillEllipse(basinFill, basin);
+            g.DrawEllipse(Pens.DimGray, basin);
+            g.DrawLine(Pens.DimGray, photo.X + photo.Width / 2, photo.Y + 36, photo.X + photo.Width / 2, photo.Bottom - 26);
             return;
         }
 
@@ -490,12 +506,31 @@ public sealed class DeviceStatusDonut : Control
             g.DrawArc(green, arc, -90 + inactiveSweep, activeSweep);
         }
 
-        TextRenderer.DrawText(g, total.ToString(), RoomsTheme.DonutNumber,
-            new Rectangle(ring.X, ring.Y + ring.Height / 2 - 24, ring.Width, 30), Color.White,
-            TextFormatFlags.HorizontalCenter | TextFormatFlags.VerticalCenter | TextFormatFlags.NoPadding);
-        TextRenderer.DrawText(g, "Devices", RoomsTheme.Small,
-            new Rectangle(ring.X, ring.Y + ring.Height / 2 + 6, ring.Width, 18), RoomsTheme.Muted,
-            TextFormatFlags.HorizontalCenter | TextFormatFlags.VerticalCenter | TextFormatFlags.NoPadding);
+        int hole = Math.Max(36, arc.Width - thickness - 8);
+        Rectangle holeBox = new Rectangle(
+            arc.X + (arc.Width - hole) / 2,
+            arc.Y + (arc.Height - hole) / 2,
+            hole,
+            hole);
+        using (SolidBrush holeFill = new SolidBrush(RoomsTheme.Card))
+            g.FillEllipse(holeFill, holeBox);
+
+        float numberSize = Math.Max(11f, Math.Min(18f, hole / 4.2f));
+        using Font numberFont = new Font("Segoe UI", numberSize, FontStyle.Bold, GraphicsUnit.Point);
+        using Font captionFont = new Font("Segoe UI", Math.Max(7.5f, numberSize * 0.48f), FontStyle.Regular, GraphicsUnit.Point);
+        using SolidBrush numberBrush = new SolidBrush(Color.White);
+        using SolidBrush captionBrush = new SolidBrush(RoomsTheme.Muted);
+        using StringFormat centered = new StringFormat
+        {
+            Alignment = StringAlignment.Center,
+            LineAlignment = StringAlignment.Center,
+            FormatFlags = StringFormatFlags.NoWrap
+        };
+        g.TextRenderingHint = System.Drawing.Text.TextRenderingHint.AntiAliasGridFit;
+        RectangleF numberRect = new RectangleF(holeBox.X, holeBox.Y + hole * 0.22f, holeBox.Width, hole * 0.40f);
+        RectangleF captionRect = new RectangleF(holeBox.X, holeBox.Y + hole * 0.56f, holeBox.Width, hole * 0.24f);
+        g.DrawString(total.ToString(), numberFont, numberBrush, numberRect, centered);
+        g.DrawString("Devices", captionFont, captionBrush, captionRect, centered);
 
         int legendX = ring.Right + 18;
         int legendW = Math.Max(40, Width - legendX - 16);
