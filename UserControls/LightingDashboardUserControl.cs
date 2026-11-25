@@ -11,6 +11,14 @@ namespace WinFormsApp2.UserControls
         public LightingDashboardUserControl()
         {
             InitializeComponent();
+
+            Load += (s, e) =>
+            {
+                if (cardLivingRoom.Room == null)
+                {
+                    LoadData();
+                }
+            };
         }
 
         // Called once by MainForm when the application starts
@@ -22,6 +30,8 @@ namespace WinFormsApp2.UserControls
             cardBathroom.Room = AppData.Rooms[3];
 
             RefreshData();
+
+            visualizationPanel.StartListening();
 
             UpdateClock();
             timerClock.Start();
@@ -35,6 +45,7 @@ namespace WinFormsApp2.UserControls
             cardKitchen.RefreshFromRoom();
             cardBathroom.RefreshFromRoom();
             systemOverview.RefreshData();
+            visualizationPanel?.RefreshVisuals();
         }
 
         private void UpdateClock()

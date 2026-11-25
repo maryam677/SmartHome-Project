@@ -382,6 +382,16 @@
             timerClock.Interval = 1000;
             timerClock.Tick += timerClock_Tick;
             // 
+            // visualizationPanel
+            // 
+            visualizationPanel = new WinFormsApp2.UserControls.LightingVisualizationControl();
+            visualizationPanel.BackColor = Color.FromArgb(9, 8, 23);
+            visualizationPanel.Location = new Point(27, 940);
+            visualizationPanel.Margin = new Padding(3, 5, 3, 5);
+            visualizationPanel.Name = "visualizationPanel";
+            visualizationPanel.Size = new Size(1300, 480);
+            visualizationPanel.TabIndex = 13;
+            // 
             // LightingDashboardUserControl
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -400,9 +410,10 @@
             Controls.Add(colorControl);
             Controls.Add(quickActions);
             Controls.Add(systemOverview);
+            Controls.Add(visualizationPanel);
             Margin = new Padding(3, 4, 3, 4);
             Name = "LightingDashboardUserControl";
-            Size = new Size(1603, 1056);
+            Size = new Size(1603, 1450);
             pnlTitleIcon.ResumeLayout(false);
             pnlTitleIcon.PerformLayout();
             pnlSystemOnline.ResumeLayout(false);
@@ -441,6 +452,7 @@
         private WinFormsApp2.UserControls.ColorControlUserControl colorControl;
         private WinFormsApp2.UserControls.QuickActionsUserControl quickActions;
         private WinFormsApp2.UserControls.SystemOverviewUserControl systemOverview;
+        private WinFormsApp2.UserControls.LightingVisualizationControl visualizationPanel;
         private System.Windows.Forms.Timer timerClock;
     }
 }
