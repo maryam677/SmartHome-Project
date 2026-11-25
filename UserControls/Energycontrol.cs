@@ -19,7 +19,8 @@ namespace SmartHome
         {
             InitializeComponent();
 
-         
+            
+
             Action updateClock = () =>
             {
                 lbldate.Text = DateTime.Now.ToString("ddd, MMM d, yyyy"); 
@@ -70,6 +71,8 @@ namespace SmartHome
             AddRoundedBorder(pnlenergysum, borderCol);
             AddRoundedBorder(pnlwea, borderCol);
             AddRoundedBorder(pnlback, borderCol);
+            pnlback.Paint -= pnlback_Paint;
+            pnlback.Paint += pnlback_Paint;
             AddRoundedBorder(pnltop,borderCol);
             AddRoundedBorder(pnleco, borderCol);
 
@@ -643,42 +646,44 @@ namespace SmartHome
 
         private void pnlback_Paint(object sender, PaintEventArgs e)
         {
+            Control target = sender as Control;
+            if (target == null) return;
+
             Graphics g = e.Graphics;
-            g.SmoothingMode = System.Drawing.Drawing2D.SmoothingMode.AntiAlias; // لتنعيم حواف الدائرة
+            g.SmoothingMode = SmoothingMode.AntiAlias;
 
-            int percentage = 82; // النسبة اللي هتظهر جوه الحلقة
+            int percentage = 82;
             int diameter = 150;
-            int thickness = 15;  // سُمك الحلقة
+            int thickness = 15;
 
-            // توسيط الحلقة جوه الكارت
+            // رسمها في أول البانل مؤقتاً عشان نتأكد إنها ظاهرة
             int x = (pnlback.Width - diameter) / 2;
-            int y = 200;
+            int y = pnlback.Height - diameter - 20;
 
             Rectangle rect = new Rectangle(x, y, diameter, diameter);
 
-            // 1. رسم الحلقة الخلفية الغامقة (المسار الكامل 360 درجة)
             using (Pen bgPen = new Pen(Color.FromArgb(35, 48, 95), thickness))
             {
                 g.DrawArc(bgPen, rect, 0, 360);
             }
 
-            // 2. رسم قوس النسبة المضيء (يبدأ من فوق عند زاوية -90)
             float sweepAngle = (percentage / 100f) * 360f;
             using (Pen progressPen = new Pen(Color.FromArgb(46, 204, 113), thickness))
             {
-                progressPen.StartCap = System.Drawing.Drawing2D.LineCap.Round;
-                progressPen.EndCap = System.Drawing.Drawing2D.LineCap.Round;
+                progressPen.StartCap = LineCap.Round;
+                progressPen.EndCap = LineCap.Round;
                 g.DrawArc(progressPen, rect, -90, sweepAngle);
             }
 
-            
             string text = percentage + "%";
-            using (Font font = new Font("Segoe UI", 16, FontStyle.Bold))
+            using (Font font = new Font("Segoe UI", 14, FontStyle.Bold))
             using (Brush textBrush = new SolidBrush(Color.White))
             {
-                StringFormat sf = new StringFormat();
-                sf.Alignment = StringAlignment.Center;
-                sf.LineAlignment = StringAlignment.Center;
+                StringFormat sf = new StringFormat
+                {
+                    Alignment = StringAlignment.Center,
+                    LineAlignment = StringAlignment.Center
+                };
                 g.DrawString(text, font, textBrush, rect, sf);
             }
         }
