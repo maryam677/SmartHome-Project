@@ -1,7 +1,7 @@
 using System.Drawing.Drawing2D;
 using System.Globalization;
 
-namespace WinFormsApp2
+namespace WinFormsApp2.classes
 {
     public class AutomationTimeline : Control
     {
@@ -111,8 +111,8 @@ namespace WinFormsApp2
             float columnWidth = legendWidth / columns;
             for (int i = 0; i < Segments.Length; i++)
             {
-                float x = 8 + (i % columns) * columnWidth;
-                float y = 143 + (i / columns) * 19;
+                float x = 8 + i % columns * columnWidth;
+                float y = 143 + i / columns * 19;
                 using SolidBrush swatch = new SolidBrush(Segments[i].Color);
                 using GraphicsPath swatchPath = RoundedRect(new RectangleF(x, y + 3, 12, 12), 3);
                 graphics.FillPath(swatch, swatchPath);

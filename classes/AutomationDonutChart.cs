@@ -4,7 +4,7 @@ using System.Drawing;
 using System.Drawing.Drawing2D;
 using System.Windows.Forms;
 using System.ComponentModel;
-namespace WinFormsApp2
+namespace WinFormsApp2.classes
 {
     public class AutomationDonutChart : Control
     {
