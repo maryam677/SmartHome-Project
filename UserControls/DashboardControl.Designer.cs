@@ -33,10 +33,7 @@
             PanelHeader = new Panel();
             picWelcomeHand = new PictureBox();
             lblsubtitles = new Label();
-            pnllivingroom = new Panel();
-            piclivingroom = new PictureBox();
-            lbllivingroom = new Label();
-            pnlindoor = new Panel();
+            RoundPanel = new Panel();
             climatePanelPaint = new Panel();
             lbltemp = new Label();
             lblhumid = new Label();
@@ -126,11 +123,10 @@
             btnon1 = new Button();
             tableLayoutPanel1 = new TableLayoutPanel();
             pictureBox1 = new PictureBox();
+            piclivingroom = new PictureBox();
             PanelHeader.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)picWelcomeHand).BeginInit();
-            pnllivingroom.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)piclivingroom).BeginInit();
-            pnlindoor.SuspendLayout();
+            RoundPanel.SuspendLayout();
             climatePanelPaint.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)picair).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pichumidity).BeginInit();
@@ -162,6 +158,7 @@
             ((System.ComponentModel.ISupportInitialize)picsecuritycamera).BeginInit();
             tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)piclivingroom).BeginInit();
             SuspendLayout();
             // 
             // lblwelcome
@@ -207,53 +204,20 @@
             lblsubtitles.TabIndex = 1;
             lblsubtitles.Text = "Monitor and control your home from one place";
             // 
-            // pnllivingroom
+            // RoundPanel
             // 
-            pnllivingroom.BackColor = Color.FromArgb(25, 29, 58);
-            pnllivingroom.Controls.Add(piclivingroom);
-            pnllivingroom.Controls.Add(lbllivingroom);
-            pnllivingroom.Location = new Point(3, 115);
-            pnllivingroom.Name = "pnllivingroom";
-            pnllivingroom.Size = new Size(734, 300);
-            pnllivingroom.TabIndex = 2;
-            // 
-            // piclivingroom
-            // 
-            piclivingroom.BackColor = Color.FromArgb(37, 43, 74);
-            piclivingroom.Image = (Image)resources.GetObject("piclivingroom.Image");
-            piclivingroom.Location = new Point(3, 3);
-            piclivingroom.Name = "piclivingroom";
-            piclivingroom.Size = new Size(728, 294);
-            piclivingroom.SizeMode = PictureBoxSizeMode.Zoom;
-            piclivingroom.TabIndex = 1;
-            piclivingroom.TabStop = false;
-            piclivingroom.Click += piclivingroom_Click;
-            // 
-            // lbllivingroom
-            // 
-            lbllivingroom.AutoSize = true;
-            lbllivingroom.Font = new Font("Segoe UI", 16.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lbllivingroom.ForeColor = Color.White;
-            lbllivingroom.Location = new Point(0, 0);
-            lbllivingroom.Name = "lbllivingroom";
-            lbllivingroom.Size = new Size(169, 38);
-            lbllivingroom.TabIndex = 0;
-            lbllivingroom.Text = "living room";
-            lbllivingroom.Click += lbllivingroom_Click;
-            // 
-            // pnlindoor
-            // 
-            pnlindoor.BackColor = Color.FromArgb(26, 27, 38);
-            pnlindoor.Controls.Add(climatePanelPaint);
-            pnlindoor.Controls.Add(picleaves);
-            pnlindoor.Controls.Add(lblcomfortable);
-            pnlindoor.Controls.Add(picclimate1);
-            pnlindoor.Controls.Add(lblliving6);
-            pnlindoor.Controls.Add(lblindoorclimate);
-            pnlindoor.Location = new Point(947, 10);
-            pnlindoor.Name = "pnlindoor";
-            pnlindoor.Size = new Size(496, 228);
-            pnlindoor.TabIndex = 4;
+            RoundPanel.BackColor = Color.FromArgb(26, 27, 38);
+            RoundPanel.Controls.Add(climatePanelPaint);
+            RoundPanel.Controls.Add(picleaves);
+            RoundPanel.Controls.Add(lblcomfortable);
+            RoundPanel.Controls.Add(picclimate1);
+            RoundPanel.Controls.Add(lblliving6);
+            RoundPanel.Controls.Add(lblindoorclimate);
+            RoundPanel.Location = new Point(947, 10);
+            RoundPanel.Name = "RoundPanel";
+            RoundPanel.Size = new Size(496, 228);
+            RoundPanel.TabIndex = 4;
+            RoundPanel.Paint += RoundPanel_Paint;
             // 
             // climatePanelPaint
             // 
@@ -1288,11 +1252,24 @@
             pictureBox1.TabIndex = 30;
             pictureBox1.TabStop = false;
             // 
+            // piclivingroom
+            // 
+            piclivingroom.BackColor = Color.FromArgb(37, 43, 74);
+            piclivingroom.Image = (Image)resources.GetObject("piclivingroom.Image");
+            piclivingroom.Location = new Point(30, 96);
+            piclivingroom.Name = "piclivingroom";
+            piclivingroom.Size = new Size(526, 294);
+            piclivingroom.SizeMode = PictureBoxSizeMode.Zoom;
+            piclivingroom.TabIndex = 1;
+            piclivingroom.TabStop = false;
+            piclivingroom.Click += piclivingroom_Click;
+            // 
             // dashboard
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(10, 15, 38);
+            Controls.Add(piclivingroom);
             Controls.Add(lblDeviceOverview);
             Controls.Add(tableLayoutPanel1);
             Controls.Add(lblnodevices);
@@ -1300,8 +1277,7 @@
             Controls.Add(lblSEARCH);
             Controls.Add(pnlChart);
             Controls.Add(panel3);
-            Controls.Add(pnlindoor);
-            Controls.Add(pnllivingroom);
+            Controls.Add(RoundPanel);
             Controls.Add(PanelHeader);
             Location = new Point(15, 10);
             Name = "dashboard";
@@ -1310,11 +1286,8 @@
             PanelHeader.ResumeLayout(false);
             PanelHeader.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)picWelcomeHand).EndInit();
-            pnllivingroom.ResumeLayout(false);
-            pnllivingroom.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)piclivingroom).EndInit();
-            pnlindoor.ResumeLayout(false);
-            pnlindoor.PerformLayout();
+            RoundPanel.ResumeLayout(false);
+            RoundPanel.PerformLayout();
             climatePanelPaint.ResumeLayout(false);
             climatePanelPaint.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)picair).EndInit();
@@ -1352,6 +1325,7 @@
             tableLayoutPanel1.ResumeLayout(false);
             tableLayoutPanel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)piclivingroom).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -1361,9 +1335,6 @@
         private Label lblwelcome;
         private Panel PanelHeader;
         private Label lblsubtitles;
-        private Panel pnllivingroom;
-        private Label lbllivingroom;
-        private PictureBox piclivingroom;
         private Label lblonn2;
         private PictureBox picDEVICE;
         private Panel panel2;
@@ -1371,7 +1342,7 @@
         private Label lblliving6;
         private Label label3;
         private PictureBox picWelcomeHand;
-        private Panel pnlindoor;
+        private Panel RoundPanel;
         private Label lblindoorclimate;
         private PictureBox picclimate1;
         private PictureBox picleaves;
@@ -1474,6 +1445,7 @@
         private Button btnon1;
         private TableLayoutPanel tableLayoutPanel1;
         private PictureBox pictureBox1;
+        private PictureBox piclivingroom;
     }
 }
 

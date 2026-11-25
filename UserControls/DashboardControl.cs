@@ -27,8 +27,37 @@ namespace Smarthome_.net9
     System.Reflection.BindingFlags.NonPublic,
     null, pnlChart, new object[] { true });
 
+
             pnlChart.Paint += PnlChart_Paint;
+            ApplyRoundedCorners(pnlChart);
+            ApplyRoundedCorners(climatePanelPaint);
+            ApplyRoundedCorners(panel3);
+            ApplyRoundedCorners(RoundPanel);
+            ApplyRoundedCorners(pnlsecurity);
+            ApplyRoundedCorners(piclivingroom);
         }
+
+        private void ApplyRoundedCorners(Control p, int radius = 15)
+        {
+            Action apply = () =>
+            {
+                if (p.Width <= 0 || p.Height <= 0) return;
+                var path = new GraphicsPath();
+                int d = radius * 2;
+                path.AddArc(0, 0, d, d, 180, 90);
+                path.AddArc(p.Width - d, 0, d, d, 270, 90);
+                path.AddArc(p.Width - d, p.Height - d, d, d, 0, 90);
+                path.AddArc(0, p.Height - d, d, d, 90, 90);
+                path.CloseFigure();
+                p.Region = new Region(path);
+            };
+
+            apply();
+            p.SizeChanged += (s, e) => apply();
+        }
+
+
+
         private bool floorLampOn = true;
         private float[] values = { 3, 5, 4, 7, 6, 9, 8, 12, 10, 14, 13, 15 };
         float currentTemp = 22f;
@@ -236,6 +265,11 @@ namespace Smarthome_.net9
         }
 
         private void lblhumid_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void RoundPanel_Paint(object sender, PaintEventArgs e)
         {
 
         }
